@@ -78,10 +78,11 @@
   },
   "categories": {
    "n": 38,
-   "with_30_rejected": 30,
-   "low": 0.5862068965517241,
+   "with_30_rejected": 33,
+   "defined": 31,
+   "low": 0.0,
    "high": 8.132478632478632,
-   "below_1": 8,
+   "below_1": 9,
    "per_category": {
     "Misconceptions": {
      "ratio": 1.5459030046767892,
@@ -1135,16 +1136,9 @@
    ]
   }
  },
- "combined_stored": {
-  "arc": {
-   "mv": 0.8805,
-   "adm": 0.8805,
-   "n": 2000
-  },
-  "mmlu_gemma": {
-   "mv": 0.814,
-   "adm": 0.814,
-   "n": 500
-  }
+ "mmlu_gemma_majority_vote": {
+  "overall": 0.812,
+  "admissible": 0.812,
+  "n": 500
  }
 }

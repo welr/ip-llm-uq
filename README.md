@@ -27,5 +27,6 @@ These need model weights or API access, and regenerate the inputs rather than th
 ## Notes
 
 - `experiments/stored_runs/` is copied unchanged from an earlier choice-function project, per `MANIFEST.sha256`, so its comments refer to that project and its reviewers.
+- `check_answer` in `experiments/stored_runs/kle_snne_comparison.py` scores an empty response as correct, because the empty string is contained in every gold answer. `kle_snne_results.json` and `snne_headtohead_results.json` carry those labels on ARC-Challenge and MMLU, and the paper does not use them. TriviaQA uses the same function and has no empty responses.
 - Docstrings and `run_sandbox.sh` name `~/ip_llm/bin/python`, the author's environment. Substitute any environment built from `requirements.txt`.
 - See `DATA_NOTICE.md` for the terms on benchmark text and model outputs, and `LICENSE` for the code.

@@ -21,13 +21,19 @@
    "per_model": {
     "Gemma": {
      "empty_in_six": 7,
-     "pairs_with_empty": 3
+     "pairs_with_empty": 3,
+     "ratio_as_run": 1.1749876421156698,
+     "ratio_pairs_dropped": 1.1791561399669777
     }
    },
    "empty_in_six": 7,
    "pairs_with_empty": 3,
    "ratio_as_run": 1.1749876421156698,
-   "ratio_pairs_dropped": 1.1791561399669777
+   "ratio_pairs_dropped": 1.1791561399669777,
+   "pooled_p_as_run": 0.13882989703715787,
+   "pooled_p_dropped": 0.13371338354653964,
+   "models_above_1_as_run": 1,
+   "models_above_1_dropped": 1
   }
  },
  "arc": {
@@ -55,25 +61,317 @@
    "per_model": {
     "Qwen": {
      "empty_in_six": 0,
-     "pairs_with_empty": 0
+     "pairs_with_empty": 0,
+     "ratio_as_run": 1.0389715832205684,
+     "ratio_pairs_dropped": 1.0389715832205684
     },
     "Mistral": {
      "empty_in_six": 160,
-     "pairs_with_empty": 94
+     "pairs_with_empty": 94,
+     "ratio_as_run": 1.146632713105939,
+     "ratio_pairs_dropped": 1.072081091227631
     },
     "Llama": {
      "empty_in_six": 18,
-     "pairs_with_empty": 15
+     "pairs_with_empty": 15,
+     "ratio_as_run": 1.053306384359736,
+     "ratio_pairs_dropped": 1.0488008113013765
     },
     "Gemma": {
      "empty_in_six": 0,
-     "pairs_with_empty": 0
+     "pairs_with_empty": 0,
+     "ratio_as_run": 0.9101236217841631,
+     "ratio_pairs_dropped": 0.9101236217841631
     }
    },
    "empty_in_six": 178,
    "pairs_with_empty": 109,
    "ratio_as_run": 1.1007059407565094,
-   "ratio_pairs_dropped": 1.0931525672757862
+   "ratio_pairs_dropped": 1.0931525672757862,
+   "pooled_p_as_run": 7.09491279360463e-08,
+   "pooled_p_dropped": 1.1189905011856493e-07,
+   "models_above_1_as_run": 3,
+   "models_above_1_dropped": 3
   }
+ },
+ "truthfulqa": {
+  "pairs": 3268,
+  "pairs_with_empty": 68,
+  "per_model_pairs_with_empty": {
+   "Qwen": 10,
+   "Mistral": 34,
+   "Llama": 14,
+   "Gemma": 10
+  },
+  "intervals": {
+   "as_run": {
+    "pooled": {
+     "ratio": 1.8814769578918427,
+     "ci_responses": [
+      1.7055250158865451,
+      2.0979201204495217
+     ]
+    },
+    "bin_1_2": {
+     "ratio": 0.5103469148412969,
+     "ci_responses": [
+      0.44411913751694393,
+      0.5872257860246324
+     ]
+    },
+    "bin_3_4": {
+     "ratio": 2.972813990461049,
+     "ci_responses": [
+      2.3709820894356,
+      3.8971634172872567
+     ]
+    }
+   },
+   "pairs_dropped": {
+    "pooled": {
+     "ratio": 1.8756644625956176,
+     "ci_responses": [
+      1.7013855042389958,
+      2.0890125043706473
+     ]
+    },
+    "bin_1_2": {
+     "ratio": 0.503150254701444,
+     "ci_responses": [
+      0.43712449870103665,
+      0.5795914124917125
+     ]
+    },
+    "bin_3_4": {
+     "ratio": 2.941818181818182,
+     "ci_responses": [
+      2.3520876972489875,
+      3.8477242014742004
+     ]
+    }
+   }
+  },
+  "ci_resampling_questions": {
+   "pooled": [
+    1.629497205018985,
+    2.18561868492447
+   ],
+   "bin_1_2": [
+    0.4337716306856404,
+    0.6056176491158836
+   ],
+   "bin_3_4": [
+    2.2318006311758105,
+    4.233455519188551
+   ]
+  },
+  "outcomes": {
+   "registered": {
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "H4": true,
+    "H5": false,
+    "H6": true
+   },
+   "pairs_dropped": {
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "H4": true,
+    "H5": false,
+    "H6": true
+   },
+   "resample_questions": {
+    "H1": true,
+    "H2": true,
+    "H3": true,
+    "H4": true,
+    "H5": false,
+    "H6": true
+   }
+  },
+  "measured": {
+   "nli_rejected": {
+    "ratio": 1.8814769578918427,
+    "rejected": 3847,
+    "rejection_rate": 0.19619543043655652,
+    "rejected_accuracy": 0.09357941252924357,
+    "kept_accuracy": 0.17606750840682697
+   },
+   "str_rejected": {
+    "ratio": 1.9337755948486077,
+    "rejected": 3764,
+    "rejection_rate": 0.1919624643002856,
+    "rejected_accuracy": 0.09112646121147715,
+    "kept_accuracy": 0.1762181267356728
+   },
+   "freq_rejected": {
+    "ratio": 4.216730769998045,
+    "rejected": 10150,
+    "rejection_rate": 0.5176458588331293,
+    "rejected_accuracy": 0.06266009852216749,
+    "kept_accuracy": 0.26422076548953266
+   },
+   "cons_rejected": {
+    "ratio": 4.238456999755271,
+    "rejected": 10078,
+    "rejection_rate": 0.5139738882088943,
+    "rejected_accuracy": 0.06211549910696567,
+    "kept_accuracy": 0.2632738719832109
+   },
+   "len_rejected": {
+    "ratio": 0.26002651640702684,
+    "rejected": 3661,
+    "rejection_rate": 0.18670950632394942,
+    "rejected_accuracy": 0.40152963671128106,
+    "kept_accuracy": 0.10440835266821345
+   }
+  },
+  "str_minus_nli_ci_questions": [
+   -0.21927372474573661,
+   0.3504372870753532
+  ],
+  "se_width_auroc_majority_vote_error": 0.3847614313029929
+ },
+ "nq_open": {
+  "pairs": 2000,
+  "pairs_with_empty": 160,
+  "per_model_pairs_with_empty": {
+   "Qwen": 0,
+   "Mistral": 96,
+   "Llama": 1,
+   "Gemma": 63
+  },
+  "intervals": {
+   "as_run": {
+    "pooled": {
+     "ratio": 1.6154299868365245,
+     "ci_responses": [
+      1.4835249953343803,
+      1.7659307927308983
+     ]
+    },
+    "bin_1_2": {
+     "ratio": 0.4818391769892924,
+     "ci_responses": [
+      0.40666733607791944,
+      0.5704879367107267
+     ]
+    },
+    "bin_3_4": {
+     "ratio": 2.6613207547169813,
+     "ci_responses": [
+      2.2035808614008467,
+      3.3340366165653967
+     ]
+    }
+   },
+   "pairs_dropped": {
+    "pooled": {
+     "ratio": 1.6416330284344436,
+     "ci_responses": [
+      1.507298823785435,
+      1.7982480419651354
+     ]
+    },
+    "bin_1_2": {
+     "ratio": 0.4498763687742847,
+     "ci_responses": [
+      0.3749751737835154,
+      0.5364522417153996
+     ]
+    },
+    "bin_3_4": {
+     "ratio": 2.634860422137924,
+     "ci_responses": [
+      2.173413115549446,
+      3.321033410567806
+     ]
+    }
+   }
+  },
+  "ci_resampling_questions": {
+   "pooled": [
+    1.434801747354055,
+    1.8324866198632712
+   ],
+   "bin_1_2": [
+    0.3990530898958758,
+    0.584395664816042
+   ],
+   "bin_3_4": [
+    2.0711535082866606,
+    3.574385236077623
+   ]
+  },
+  "outcomes": {
+   "registered": {
+    "H1": true,
+    "H2": false,
+    "H3": true,
+    "H4": true,
+    "H5": false,
+    "H6": false
+   },
+   "pairs_dropped": {
+    "H1": true,
+    "H2": false,
+    "H3": true,
+    "H4": true,
+    "H5": false,
+    "H6": false
+   },
+   "resample_questions": {
+    "H1": true,
+    "H2": false,
+    "H3": true,
+    "H4": true,
+    "H5": false,
+    "H6": false
+   }
+  },
+  "measured": {
+   "nli_rejected": {
+    "ratio": 1.6154299868365245,
+    "rejected": 2389,
+    "rejection_rate": 0.19908333333333333,
+    "rejected_accuracy": 0.1921305985768104,
+    "kept_accuracy": 0.3103735303298304
+   },
+   "str_rejected": {
+    "ratio": 1.935628964485769,
+    "rejected": 2363,
+    "rejection_rate": 0.19691666666666666,
+    "rejected_accuracy": 0.1637748624629708,
+    "kept_accuracy": 0.3170073674379994
+   },
+   "freq_rejected": {
+    "ratio": 2.222094557215201,
+    "rejected": 6204,
+    "rejection_rate": 0.517,
+    "rejected_accuracy": 0.18036750483558994,
+    "kept_accuracy": 0.4007936507936508
+   },
+   "cons_rejected": {
+    "ratio": 2.236782451997763,
+    "rejected": 6148,
+    "rejection_rate": 0.5123333333333333,
+    "rejected_accuracy": 0.1789199739752765,
+    "kept_accuracy": 0.40020505809979495
+   },
+   "len_rejected": {
+    "ratio": 0.6543169746583227,
+    "rejected": 2689,
+    "rejection_rate": 0.22408333333333333,
+    "rejected_accuracy": 0.3919672740795835,
+    "kept_accuracy": 0.2564708409408227
+   }
+  },
+  "str_minus_nli_ci_questions": [
+   0.06838345855161432,
+   0.606205278252859
+  ],
+  "se_width_auroc_majority_vote_error": 0.478690715235994
  }
 }

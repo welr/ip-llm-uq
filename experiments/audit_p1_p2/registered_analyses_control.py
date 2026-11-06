@@ -1,6 +1,6 @@
-"""Control for registered_analyses.py: do its signals, joined to the labels behind the manuscript's AUROCs, return the manuscript's values?
+"""Control for registered_analyses.py: do its signals, joined to the pipeline's labels, return the pipeline's AUROCs?
 
-Manuscript, 1-maxCP, SE(0.75), KLE, SNNE: TriviaQA .773 .774 .786 .788; ARC-Challenge .712 .702 .695 .722."""
+Pipeline values, 1-maxCP, SE(0.75), KLE, SNNE: TriviaQA .773 .774 .786 .788, which the manuscript reports; ARC-Challenge .712 .702 .695 .722, which it no longer reports, because those labels score empty responses as correct."""
 import json, os, sys
 import numpy as np
 from sklearn.metrics import roc_auc_score

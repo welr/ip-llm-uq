@@ -4,7 +4,7 @@
 \setlength{\tabcolsep}{3pt}
 \begin{tabular}{llcccccc}
 \toprule
-Benchmark & Status & $n_{\text{rej}}$ & Rejected & Adm.\ Acc & Rej.\ Acc & Ratio [response CI] & Question CI \\
+Benchmark & Status & $n_{\text{rej}}$ & Rejected & Adm.\ Acc & Rej.\ Acc & Ratio [response CI] & Pair CI \\
 \midrule
 TriviaQA & Discovery & 627 & 5.2\% & 77.9\% & 26.2\% & 2.98$\times$ [2.64, 3.42] & [2.53, 3.60] \\
 MMLU & Registered* & 618 & 5.1\% & 77.9\% & 65.9\% & 1.18$\times$ [1.12, 1.25] & [1.11, 1.27] \\
@@ -14,6 +14,6 @@ TruthfulQA (judge) & Post hoc & 3847 & 19.6\% & 27.5\% & 25.4\% & 1.08$\times$ [
 NQ-Open & Registered & 2389 & 19.9\% & 31.0\% & 19.2\% & 1.62$\times$ [1.49, 1.77] & [1.45, 1.81] \\
 \bottomrule
 \end{tabular}
-\caption{Admissible versus rejected accuracy, pooled over four base models (Qwen2.5-7B, Mistral-7B, Llama-3.1-8B, Gemma-2-9B) with similarity from bidirectional NLI entailment. The ratio is admissible accuracy over rejected accuracy. Response CI: bootstrap over responses, the registered method (10,000 resamples). Question CI: bootstrap over question-model pairs (2,000 resamples, post hoc), which respects dependence among responses to one question. *With deviations from the registered prompt format and retention rule, and a lenient letter rule in the scorer; see the text. Per-model values: Table~\ref{tab:pred3-permodel}.}
+\caption{Admissible versus rejected accuracy, pooled over four base models (Qwen2.5-7B, Mistral-7B, Llama-3.1-8B, Gemma-2-9B) with similarity from bidirectional NLI entailment. The ratio is admissible accuracy over rejected accuracy. Response CI: bootstrap over responses, the registered method (10,000 resamples). Pair CI: bootstrap over question-model pairs (2,000 resamples, post hoc), which respects dependence among responses to one question. *With deviations from the registered prompt format and retention rule, and a lenient letter rule in the scorer; see the text. Per-model values: Table~\ref{tab:pred3-permodel}.}
 \label{tab:pred3-results}
 \end{table}

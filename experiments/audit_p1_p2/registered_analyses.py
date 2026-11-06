@@ -3,7 +3,7 @@
 All of it is run after the fact on stored responses, labels, partitions and similarity matrices. Writes registered_analyses.json.
 Metric code is imported from the choice-function experiments so definitions match the TriviaQA and ARC-Challenge values in the manuscript; ARC-Challenge runs as the control.
 TruthfulQA signals use cached matrices that reproduce 2964 of 3268 partitions, so they are indicative. Its stored partition still supplies the admissible and rejected groups.
-The majority-vote label picks the same winner as the TriviaQA and ARC-Challenge pipeline and takes its accuracy from the stored registered labels; registered_analyses_control.py shows that pipeline's signals return the manuscript's AUROCs when joined to its labels.
+The majority-vote label picks the same winner as the choice-function pipeline and takes its accuracy from the stored registered labels, not the pipeline's: kle_snne_comparison.check_answer scores an empty response as correct, because the empty string is contained in every gold answer. TriviaQA has no empty responses, so only ARC-Challenge and MMLU differ. registered_analyses_control.py shows the signals match the pipeline's, so that gap is the labels.
 The MMLU domain assignment below is ours, made now: the registration names the three domains and no mapping.
 Dependencies already in the environment: numpy, scipy (BSD-3-Clause), scikit-learn (BSD-3-Clause), datasets (Apache-2.0).
 """
@@ -72,8 +72,8 @@ for m in MODELS:
         for j in range(6):
             g = 'adm' if j in adm else 'rej'; ov[g + '_n'] += 1; ov[g + '_incorrect'] += hit(r['top6_texts'][j], q['incorrect_answers'])
 OUT['truthfulqa']['strata'] = {f'{a}:{b}': dict(group(v), ci_pairs=boot(v) if group(v)['ratio'] else None) for (a, b), v in S.items() if a == 'type'}
-cat = {b: group(v) for (a, b), v in S.items() if a == 'category'}; big = {b: v for b, v in cat.items() if v['ratio'] and v['rejected'] >= 30}
-OUT['truthfulqa']['categories'] = dict(n=len(cat), with_30_rejected=len(big), low=min(v['ratio'] for v in big.values()), high=max(v['ratio'] for v in big.values()), below_1=sum(v['ratio'] < 1 for v in big.values()), per_category=cat)
+cat = {b: group(v) for (a, b), v in S.items() if a == 'category'}; ge30 = [v for v in cat.values() if v['rejected'] >= 30]; big = [v for v in ge30 if v['ratio'] is not None]  # 0.0 is a result; None means no rejected response was correct
+OUT['truthfulqa']['categories'] = dict(n=len(cat), with_30_rejected=len(ge30), defined=len(big), low=min(v['ratio'] for v in big), high=max(v['ratio'] for v in big), below_1=sum(v['ratio'] < 1 for v in big), per_category=cat)
 OUT['truthfulqa']['overlap_incorrect'] = dict(rejected=ov['rej_incorrect'] / ov['rej_n'], admissible=ov['adm_incorrect'] / ov['adm_n'], rejected_n=ov['rej_n'], admissible_n=ov['adm_n'], pairs_unmatched=idx_miss)
 # MMLU domains, Jaccard overlap with the heuristic filters, and range width.
 dom = collections.defaultdict(list); J = {}
@@ -108,11 +108,11 @@ def sweep(ds, models):
                             if len(c) == q: adm |= c
                     tot += counts(r['accuracies'], adm)
             res.append(dict(theta_min=a, theta_max=b, ratio=ratio(*tot), rejection_rate=float(tot[3] / (tot[1] + tot[3]))))
-    v = [x for x in res if x['ratio']]
+    v = [x for x in res if x['ratio'] is not None]
     return dict(pairs=len(res), ratio_low=min(x['ratio'] for x in v), ratio_high=max(x['ratio'] for x in v), rej_low=min(x['rejection_rate'] for x in res), rej_high=max(x['rejection_rate'] for x in res), below_1=sum(x['ratio'] < 1 for x in v), detail=res)
 OUT['range_width'] = dict(nq_open_control=sweep('nq_open', MODELS), arc=sweep('arc', MODELS), mmlu_gemma=sweep('mmlu', ['Gemma']))
-d = json.load(open(C + 'kle_snne_results.json')); arc = [r for r in d if r['dataset'] == 'arc']; gm = [r for r in d if r['dataset'] == 'mmlu']
-OUT['combined_stored'] = dict(arc=dict(mv=float(np.mean([r['mv_correct'] for r in arc])), adm=float(np.mean([r['adm_mv_correct'] for r in arc])), n=len(arc)), mmlu_gemma=dict(mv=float(np.mean([r['mv_correct'] for r in gm])), adm=float(np.mean([r['adm_mv_correct'] for r in gm])), n=len(gm)))
+G = json.load(open(C + 'modal_data/checkpoint_gen_mmlu_Gemma.json')); mg = [(lambda X: (mv(X, r['accuracies']), mv(X, r['accuracies'], set(r['nli_admissible']))))([x['text'] for x in G[k]['responses'][:6]]) for k, r in load('mmlu', 'Gemma').items()]
+OUT['mmlu_gemma_majority_vote'] = dict(overall=float(np.mean([a for a, _ in mg])), admissible=float(np.mean([b for _, b in mg])), n=len(mg))
 json.dump(OUT, open('registered_analyses.json', 'w'), indent=1, default=lambda x: x.item() if hasattr(x, 'item') else str(x))
 for ds in ['arc', 'nq_open', 'truthfulqa']:
     o = OUT[ds]; print(ds, 'n', o['n'], {k: round(v, 3) for k, v in o['auroc'].items()}, 'MV', round(o['mv_overall'], 4), round(o['mv_admissible'], 4), 'SE width 1-2/6', round(o['se_width_detects_1_2'], 3), 'grid', {k: round(v, 3) for k, v in o['grid'].items()})
@@ -123,4 +123,4 @@ print('overlap', OUT['truthfulqa']['overlap_incorrect'])
 print('domains', {k: (round(v['ratio'], 2), [round(x, 2) for x in v['ci_pairs']], v['rejected'], v['pairs']) for k, v in OUT['mmlu_domains'].items()})
 print('jaccard', {k: {f: round(x, 3) for f, x in v.items()} for k, v in J.items()})
 print('range', {k: {f: (round(x, 4) if isinstance(x, float) else x) for f, x in v.items() if f != 'detail'} for k, v in OUT['range_width'].items()})
-print('combined', OUT['combined_stored'])
+print('Gemma majority vote', OUT['mmlu_gemma_majority_vote'])

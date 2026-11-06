@@ -22,5 +22,5 @@ for (kind, name), P in G.items():
 json.dump(OUT, open('audit_registered_strata.json', 'w'), indent=1)
 for k in ['all:all'] + sorted(x for x in OUT if x.startswith('type')):
     v = OUT[k]; print(f"{k:28s} pairs {v['pairs']} rejected {v['rejected']} ({100*v['rejection_rate']:.1f}%) adm {v['adm_acc']:.3f} rej {v['rej_acc']:.3f} ratio {v['ratio']:.2f} {[round(x,2) for x in v['ci_pairs']]}")
-c = [v for k, v in OUT.items() if k.startswith('category')]; d = [v for v in c if v['ratio'] and v['rejected'] >= 30]
+c = [v for k, v in OUT.items() if k.startswith('category')]; d = [v for v in c if v['ratio'] is not None and v['rejected'] >= 30]
 print('categories', len(c), 'with at least 30 rejected', len(d), 'ratio range', round(min(v['ratio'] for v in d), 2), round(max(v['ratio'] for v in d), 2), 'below 1:', sum(v['ratio'] < 1 for v in d))

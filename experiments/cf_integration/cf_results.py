@@ -148,7 +148,6 @@ OUT['embedding_triviaqa'] = LT('embedding_similarity_ablation_results.json')['po
 OUT['logprob'] = LT('genprob_reweighting_results.json')['logprob']['pooled']
 OUT['nli_agg'] = LT('nli_aggregation_ablation_results.json')['results']
 OUT['scalar_triviaqa'] = LT('self_consistency_results.json')['metrics']
-s = L('snne_headtohead_results.json'); OUT['scalar_arc'] = s['ARC']['signals']; OUT['scalar_mmlu'] = s['MMLU']['signals']
 sw = LT('interval_endpoint_sweep_results.json')['datasets']
 OUT['endpoint_sweep'] = {ds: dict(ratio=[min(c['ratio'] for c in v), max(c['ratio'] for c in v)], rej=[min(c['rejection_rate'] for c in v), max(c['rejection_rate'] for c in v)],
     ci_lo_min=min(c['ratio_ci_lo'] for c in v), auroc=[min(c['auroc_one_minus_maxcp'] for c in v), max(c['auroc_one_minus_maxcp'] for c in v)], n_cells=len(v)) for ds, v in sw.items()}
