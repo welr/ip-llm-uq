@@ -1,4 +1,4 @@
-"""MMLU/ARC under the tie rule in the OSF text (uk7bq/preregistration.md, section 3.5): largest cluster, ties broken by lowest cluster index.
+"""MMLU/ARC under the tie rule in the OSF text (ady3k/preregistration.md, section 3.5): largest cluster, ties broken by lowest cluster index.
 
 The run marks every tied cluster. Post hoc; reads stored labels and similarity matrices; writes audit_registered_tie.json.
 "Lowest cluster index" is not defined further in the registration. Here clusters are ordered by smallest member, so the first response in generation order wins a tie.
