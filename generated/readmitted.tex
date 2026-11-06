@@ -1,0 +1,18 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lccc}
+\toprule
+Benchmark & Rejected by $C_{\text{sem}}$ & Readmitted: singleton tie & Readmitted: cluster of $\geq 2$ \\
+\midrule
+TriviaQA & 0.262 & 0.206 ($n=233$) & 0.316 ($n=76$) \\
+NQ-Open & 0.192 & 0.131 ($n=814$) & 0.181 ($n=94$) \\
+TruthfulQA$^\dagger$ & 0.102 & 0.066 ($n=1107$) & 0.223 ($n=292$) \\
+ARC-Challenge$^\dagger$ & 0.777 & 0.643 ($n=1059$) & 0.937 ($n=174$) \\
+MMLU (Gemma)$^\dagger$ & 0.652 & 0.596 ($n=433$) & 0.722 ($n=36$) \\
+\bottomrule
+\end{tabular}
+\caption{Post hoc: accuracy of responses that plurality at $\theta_{\min}$ rejects and the union over thresholds readmits, against accuracy of the responses the union rejects. $^\dagger$As in Table~\ref{tab:decision-rules}.}
+\label{tab:readmitted}
+\end{table}

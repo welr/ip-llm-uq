@@ -1,0 +1,27 @@
+{
+ "arc_Qwen": {
+  "n": 7500,
+  "registered_acc": 0.9225333333333333,
+  "strict_acc": 0.8152
+ },
+ "arc_Mistral": {
+  "n": 7500,
+  "registered_acc": 0.7454666666666667,
+  "strict_acc": 0.45226666666666665
+ },
+ "arc_Llama": {
+  "n": 7500,
+  "registered_acc": 0.7928,
+  "strict_acc": 0.47173333333333334
+ },
+ "arc_Gemma": {
+  "n": 7500,
+  "registered_acc": 0.8534666666666667,
+  "strict_acc": 0.6945333333333333
+ },
+ "mmlu_Gemma": {
+  "n": 7500,
+  "registered_acc": 0.7617333333333334,
+  "strict_acc": 0.5424
+ }
+}

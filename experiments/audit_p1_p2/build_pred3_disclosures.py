@@ -1,0 +1,53 @@
+"""Writes the Prediction 3 disclosure text and the table of registered analyses, so every number comes from a results file.
+
+Sources: audit_p3.json, audit_p3_checks.json, audit_p3_outcomes.json, audit_registered_tie.json, registered_analyses.json, audit_registered_form.json. Run from this folder.
+"""
+import json
+L = lambda f: json.load(open(f)); P3 = L('audit_p3.json'); CK = L('audit_p3_checks.json'); OC = L('audit_p3_outcomes.json'); TIE = L('audit_registered_tie.json'); RA = L('registered_analyses.json'); FM = L('audit_registered_form.json')
+x = lambda v: f"{v:.2f}$\\times$"; ci = lambda c: f"[{c[0]:.2f}, {c[1]:.2f}]"; pc = lambda v: f"{100 * v:.1f}\\%"; a3 = lambda v: f"{v:.3f}".lstrip('0'); n = lambda v: f"{v:,}"
+A, G = TIE['arc'], TIE['mmlu']; AR, AT = A['registered_lowest_index'], A['ties_included_as_run']; GR, GT = G['registered_lowest_index']['per_model']['Gemma'], G['ties_included_as_run']['per_model']['Gemma']
+tq_labels = sum(v['mismatches_cap500'] for v in CK['labels']['truthfulqa'].values()); tq_total = sum(v['total'] for v in CK['labels']['truthfulqa'].values())
+F = {k: (CK[k]['base']['ratio'], CK[k]['without_fragments']['ratio']) for k in ['triviaqa', 'nq_open', 'truthfulqa']}; IP = {k: CK[k]['identical_pairs'] for k in F}; FO = {k: CK[k]['identical_forced'] for k in F}
+open('../../generated/pred3_tie_sentence.tex', 'w').write(f"Ties for the largest cluster were kept, where the registration breaks them by lowest cluster index. Under the registered rule ARC-Challenge gives {x(AR['ratio'])} {ci(AR['ci_pairs'])} at {pc(AR['rejection_rate'])} rejection (post hoc), with no registered ARC-Challenge outcome changed.%\n")
+open('../../generated/pred3_disclosures.tex', 'w').write(rf"""\paragraph{{Protocol details missing from the registrations.}} All four registered runs gave base models the same prompt: \texttt{{Answer the following question concisely.}}, then \texttt{{Q: [question]}} and \texttt{{A:}} on separate lines, with the answer options inside the question on MMLU and ARC-Challenge. The registrations say ``No system prompt; question presented directly''. That is accurate on the system prompt and not on the question. The TriviaQA discovery runs used a different prompt, two worked question-answer pairs followed by the question, although the NQ-Open registration describes its design as the same protocol. Each response was cut at its first newline and then its first period before similarity and scoring, a step no registration states. The cut truncates at abbreviations and can leave an empty string. Normalized text was capped at 100 characters in the runs before April 17, 2026, including TruthfulQA, and at 500 in the NQ-Open run; a 500 cap would change {tq_labels} of {n(tq_total)} TruthfulQA labels.
+
+Post hoc, these choices change the pooled ratios as follows. Removing empty responses from the table takes NQ-Open ({P3['nq_open']['empty']} empty) from {x(P3['nq_open']['ratio'])} to {x(P3['nq_open']['ratio_no_empty'])}, TruthfulQA ({P3['truthfulqa']['empty']}) from {x(P3['truthfulqa']['ratio'])} to {x(P3['truthfulqa']['ratio_no_empty'])}, and ARC-Challenge ({P3['arc']['empty']}) from {x(P3['arc']['ratio'])} to {x(P3['arc']['ratio_no_empty'])}. Removing responses that end in an abbreviation or initial gives {x(F['triviaqa'][1])} on TriviaQA, {x(F['nq_open'][1])} on NQ-Open, and {x(F['truthfulqa'][1])} on TruthfulQA. The NLI model also scores identical strings below 1: among identical pairs, {pc(IP['triviaqa']['below_95'])} on TriviaQA, {pc(IP['nq_open']['below_95'])} on NQ-Open, and {pc(IP['truthfulqa']['below_95'])} on TruthfulQA score below 0.95. Setting identical pairs to 1 gives {x(FO['triviaqa']['ratio'])} on TriviaQA at {n(FO['triviaqa']['rejected'])} rejected and {x(FO['nq_open']['ratio'])} on NQ-Open at {n(FO['nq_open']['rejected'])}, which would clear H6's 1.71$\times$. On the cached TruthfulQA matrices it moves the ratio from {x(OC['truthfulqa_cached']['baseline_ratio'])} to {x(OC['truthfulqa_cached']['forced_ratio'])}. These are post hoc, and every registered outcome stands as registered.
+
+\paragraph{{Tie rule on MMLU and ARC-Challenge.}} The MMLU/ARC registration breaks ties for the largest cluster by lowest cluster index. The runs keep all tied clusters, which is the rule the TruthfulQA and NQ-Open registrations state. We recompute with the registered rule (post hoc), taking the cluster with the smallest response index, since the registration does not define the index further. On the same cached matrices, ARC-Challenge goes from {x(AT['ratio'])} at {pc(AT['rejection_rate'])} rejection to {x(AR['ratio'])} {ci(AR['ci_pairs'])} at {pc(AR['rejection_rate'])}, with {AR['models_above_1']} of 4 models above 1 rather than {AT['models_above_1']}. H2a, H2b, and H2c keep their outcomes. The stored 1.10$\times$ differs from {x(AT['ratio'])} because {AT['stored_partition_reproduced'][1] - AT['stored_partition_reproduced'][0]} of {n(AT['stored_partition_reproduced'][1])} partitions do not reproduce from the cached matrices. On MMLU only Gemma's matrices are stored; its ratio goes from {x(GT['ratio'])} to {x(GR['ratio'])} and its rejected responses from {GT['rejected']} to {GR['rejected']}. H1a, H1b, and H1c cannot be recomputed under this rule, and neither can H3, because three MMLU models stored no samples.
+
+\paragraph{{Filing and code.}} Registration records date the filings to April 9, April 15, and April 18, 2026, and the first runs followed on April 10, April 16, and later on April 18. The NQ-Open run used a later revision of its frozen script; the changes are checkpoint frequency, command-line checks, and comments. The MMLU/ARC code entered version control on April 11, after those runs began, so its state at registration cannot be verified from the repository.
+
+\paragraph{{Analyses named in the registrations.}} The registrations say the analyses in Table~\ref{{tab:registered-analyses}} will be reported. We computed them after the fact from stored data. Two results bear on the method. Rejected TruthfulQA responses match a listed incorrect answer less often than admissible ones ({pc(RA['truthfulqa']['overlap_incorrect']['rejected'])} and {pc(RA['truthfulqa']['overlap_incorrect']['admissible'])}), so the partition does not single out the benchmark's listed falsehoods. And SE interval width does not detect the 1--2/6 bin on NQ-Open (AUROC {a3(RA['nq_open']['se_width_detects_1_2'])}).
+""")
+N, T = RA['nq_open'], RA['truthfulqa']; S = T['strata']; D = RA['mmlu_domains']; J = RA['jaccard']; W = RA['range_width']; C = RA['combined_stored']; K = T['categories']
+au = lambda o, keys: ', '.join(f"{lab} {a3(o['auroc'][k])}" for lab, k in keys)
+dm = lambda d: f"{x(D[d]['ratio'])} {ci(D[d]['ci_pairs'])}"
+jc = lambda d: ', '.join(a3(J[d][k]) for k in ['freq_rejected', 'cons_rejected', 'len_rejected'])
+rg = lambda o: f"{o['ratio_low']:.2f}$\\times$ to {o['ratio_high']:.2f}$\\times$, rejection {pc(o['rej_low'])} to {pc(o['rej_high'])}"
+bs = lambda d: f"{pc(FM[d]['best_of_six_all'])}, {pc(FM[d]['best_of_six_admissible'])}"
+sg = lambda v: f"${v:.2f}$".replace('$-', '$-')
+rd = lambda d: f"Spearman $\\rho={FM[d]['rate_vs_difficulty']['rho']:.2f}$ [{sg(FM[d]['rate_vs_difficulty']['ci_questions'][0])}, {sg(FM[d]['rate_vs_difficulty']['ci_questions'][1])}]"
+rows = [('NQ-Open', 'AUROC for majority-vote error', au(N, [('KLE', 'kle'), ('averaged KLE', 'kle_avg'), ('averaged SE', 'se_avg'), ('$1-\\max$CP', 'one_minus_maxcp'), ('SE(0.75)', 'se_075'), ('SNNE', 'neg_snne')])),
+ ('', 'Majority-vote accuracy, all and admissible', f"{pc(N['mv_overall'])}, {pc(N['mv_admissible'])}"),
+ ('', 'SE width as detector of the 1--2/6 bin', f"AUROC {a3(N['se_width_detects_1_2'])}"),
+ ('', 'Distinct largest-cluster sets across the grid', f"mean {N['grid']['mean_distinct']:.2f}; one set on {pc(N['grid']['share_one'])}"),
+ ('TruthfulQA', 'AUROC for majority-vote error', au(T, [('KLE', 'kle'), ('SE(0.75)', 'se_075'), ('$1-\\max$CP', 'one_minus_maxcp'), ('SNNE', 'neg_snne')])),
+ ('', 'Majority-vote accuracy, all and admissible', f"{pc(T['mv_overall'])}, {pc(T['mv_admissible'])}"),
+ ('', 'Adversarial; non-adversarial', f"{x(S['type:Adversarial']['ratio'])} {ci(S['type:Adversarial']['ci_pairs'])}; {x(S['type:Non-Adversarial']['ratio'])} {ci(S['type:Non-Adversarial']['ci_pairs'])}"),
+ ('', 'By category', f"{K['with_30_rejected']} of {K['n']} have at least 30 rejected: {K['low']:.2f}$\\times$ to {K['high']:.2f}$\\times$, {K['below_1']} below 1"),
+ ('', 'Matches a listed incorrect answer, rejected and admissible', f"{pc(T['overlap_incorrect']['rejected'])}, {pc(T['overlap_incorrect']['admissible'])}"),
+ ('MMLU', 'STEM; social sciences; humanities', f"{dm('STEM')}; {dm('Social sciences')}; {dm('Humanities')}"),
+ ('', 'Jaccard with frequency, consistency, length filters', jc('mmlu')),
+ ('', 'Threshold range, 35 endpoint pairs (Gemma)', rg(W['mmlu_gemma'])),
+ ('', 'Majority vote, all and admissible (Gemma)', f"{pc(C['mmlu_gemma']['mv'])}, {pc(C['mmlu_gemma']['adm'])}"),
+ ('', 'Best of six, read as at least one correct: all, admissible', bs('mmlu')),
+ ('', 'Admissibility rate against difficulty', rd('mmlu')),
+ ('ARC-Challenge', 'Jaccard with frequency, consistency, length filters', jc('arc')),
+ ('', 'Threshold range, 35 endpoint pairs', rg(W['arc'])),
+ ('', 'Majority vote, all and admissible: stored labels; recomputed from text', f"{pc(C['arc']['mv'])}, {pc(C['arc']['adm'])}; {pc(RA['arc']['mv_overall'])}, {pc(RA['arc']['mv_admissible'])}"),
+ ('', 'Best of six, read as at least one correct: all, admissible', bs('arc')),
+ ('', 'Admissibility rate against difficulty', rd('arc'))]
+b = "\\begin{table}[h]\n\\centering\n\\footnotesize\n\\begin{tabular}{lp{5.4cm}p{6.2cm}}\n\\toprule\nBenchmark & Analysis & Result \\\\\n\\midrule\n" + ''.join(f"{r[0]} & {r[1]} & {r[2]} \\\\\n" for r in rows)
+b += f"\\bottomrule\n\\end{{tabular}}\n\\caption{{Secondary and exploratory analyses named in the registrations, computed after the fact from stored data. Intervals resample question-model pairs, except those on Spearman correlations, which resample questions. Best of six is our reading of an analysis the MMLU/ARC form names without defining. TruthfulQA AUROCs use cached matrices that reproduce {n(P3['truthfulqa']['sim_reproduces']['same'])} of {n(P3['truthfulqa']['sim_reproduces']['checked'])} partitions and are indicative. The MMLU domain assignment is ours. Jaccard values pool over question-model pairs.}}\n\\label{{tab:registered-analyses}}\n\\end{{table}}\n"
+open('../../generated/registered_analyses.tex', 'w').write(b)
+print(open('../../generated/pred3_tie_sentence.tex').read()); print(open('../../generated/pred3_disclosures.tex').read()); print(b)

@@ -1,0 +1,20 @@
+Control sandbox against stored results; every file should report differ 0.
+kle_snne_triviaqa_results.json: leaves 50000 vs 50000, common 50000, differ 0 []
+multi_argmax_stratification_all_results.json: leaves 54 vs 54, common 54, differ 0 []
+partition_baselines_results.json: leaves 156 vs 156, common 156, differ 0 []
+matched_retention_w1_results.json: leaves 33 vs 33, common 33, differ 0 []
+genprob_reweighting_results.json: leaves 101 vs 101, common 101, differ 0 []
+self_consistency_results.json: leaves 26 vs 26, common 26, differ 0 []
+interval_endpoint_sweep_results.json: leaves 853 vs 853, common 853, differ 0 []
+retention_policy_ablation_results.json: leaves 144 vs 144, common 144, differ 0 []
+goldilocks_external_proxy_results.json: leaves 197 vs 197, common 197, differ 0 []
+embedding_similarity_ablation_results.json: leaves 51 vs 51, common 51, differ 0 []
+nli_aggregation_ablation_results.json: leaves 21 vs 21, common 21, differ 0 []
+
+String filters and self-consistency on stored labels. Paper table: string 63.9 14.2 7.1 4.49; consistency 63.4 18.1 6.9 3.51; frequency 63.6 20.8 7.6 3.06; length 52.8 70.1 43.5 0.75. Stored self-consistency counts: 6889/10715, 349/1285.
+string 63.9 14.2 7.1 4.49
+consistency 63.4 18.1 6.9 3.51
+frequency 63.6 20.8 7.6 3.06
+length 52.8 70.1 43.5 0.75
+self-consistency {'ac': 6889, 'at': 10715, 'rc': 349, 'rt': 1285, 'ratio': 2.3672368355958695, 'rej_rate': 0.10708333333333334}
+random baseline 60.3 per model {'Qwen': 6.51, 'Mistral': 4.12, 'Llama': 4.44, 'Gemma': 3.33}

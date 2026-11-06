@@ -1,0 +1,18 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccccc}
+\toprule
+Model & Rejection & Adm.\ Acc & Rej.\ Acc & Ratio [95\% CI] & $n_{\text{rej}}$ & Fisher $p$ \\
+\midrule
+Claude Sonnet 4.6 & 4.3\% & 86.4\% & 75.0\% & 1.15$\times$ [1.00, 1.38] & 52 & 0.038 \\
+Gemini 2.5 Flash & 2.7\% & 77.1\% & 90.6\% & 0.85$\times$ [0.77, 0.98] & 32 & 0.085 \\
+Base models, subset & 20.9\% & 28.0\% & 22.9\% & 1.22$\times$ [1.04, 1.48] & 502 & 0.024 \\
+Llama-3.1-8B-Instruct & 7.3\% & 52.8\% & 55.7\% & 0.95$\times$ [0.86, 1.05] & 359 & 0.297 \\
+Gemma-4-26B-it & 11.3\% & 72.8\% & 67.4\% & 1.08$\times$ [1.02, 1.15] & 552 & 0.009 \\
+\bottomrule
+\end{tabular}
+\caption{Exploratory, not pre-registered: TruthfulQA under LLM-judge scoring. Frontier rows use $n=200$ questions and their directions disagree. Bootstrap intervals and Fisher tests can disagree at this rejected-pool size; both are reported.}
+\label{tab:scope-exploratory}
+\end{table}

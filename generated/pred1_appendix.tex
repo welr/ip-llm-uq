@@ -1,0 +1,95 @@
+\paragraph{Protocol.} For each question: (1) generate 15 base-model responses (3 samples $\times$ 5 temperatures); (2) compute semantic diversity as proportion of unique normalized responses; (3) measure base accuracy (average over 15 samples) and instruct accuracy (one response sampled at $T=1.0$, top-p 0.95); (4) stratify by diversity quartile. All results are exploratory. Section~\ref{sec:pred1} gives the defects in these runs and the corrected comparisons.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lcccc|cccc}
+\toprule
+ & \multicolumn{4}{c}{Qwen} & \multicolumn{4}{c}{Mistral} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Quartile & $n$ & Base & Inst & $\Delta$ & $n$ & Base & Inst & $\Delta$ \\
+\midrule
+Q1 (low) & 198 & 96.1 & 94.4 & $-$1.7 & 207 & 97.4 & 84.1 & $-$13.4 \\
+Q2 & 59 & 71.3 & 71.2 & $-$0.1 & 88 & 82.6 & 77.3 & $-$5.3 \\
+Q3 & 121 & 56.1 & 47.1 & $-$9.0 & 88 & 67.4 & 62.5 & $-$4.9 \\
+Q4 (high) & 122 & 17.2 & 17.2 & 0.0 & 117 & 32.1 & 33.3 & $+$1.2 \\
+Overall & 500 & 64.3 & 61.4 & $-$2.9 & 500 & 74.3 & 67.2 & $-$7.1 \\
+\midrule
+ & \multicolumn{4}{c}{Llama} & \multicolumn{4}{c}{Gemma} \\
+\cmidrule(lr){2-5} \cmidrule(lr){6-9}
+Quartile & $n$ & Base & Inst & $\Delta$ & $n$ & Base & Inst & $\Delta$ \\
+\midrule
+Q1 (low) & 209 & 94.5 & 85.6 & $-$8.9 & 217 & 95.9 & 95.4 & $-$0.5 \\
+Q2 & 76 & 81.3 & 78.9 & $-$2.4 & 87 & 77.8 & 81.6 & $+$3.8 \\
+Q3 & 98 & 65.8 & 68.4 & $+$2.6 & 100 & 68.1 & 72.0 & $+$3.9 \\
+Q4 (high) & 117 & 30.1 & 35.0 & $+$5.0 & 96 & 32.5 & 38.5 & $+$6.0 \\
+Overall & 500 & 71.8 & 69.4 & $-$2.4 & 500 & 75.0 & 77.4 & $+$2.4 \\
+\bottomrule
+\end{tabular}
+\caption{Accuracy (\%) by base-model diversity quartile in the stored runs, before the corrections in \S\ref{sec:pred1}. Base averages 15 responses over five temperatures; instruct is one response at $T=1.0$.}
+\label{tab:pred1-stored}
+\end{table}
+
+\paragraph{Matched rerun.} Both arms were regenerated locally on an Apple GPU at 16-bit precision (Gemma at bfloat16), with raw text kept: three responses per question at $T=1.0$, top-p 0.95, up to 50 new tokens. Instruct models took the stored direct prompt (\texttt{Answer the following trivia question with a brief, direct answer.}) in each model's chat format. Base models took the stored two-shot prompt. Qwen-Instruct was run with and without its chat template, and Llama-Instruct with one and two begin-of-text tokens. Table~\ref{tab:pred1-scorers} gives the scorer sensitivity and Table~\ref{tab:pred1-strata} the stratification checks.
+
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{llccccc}
+\toprule
+Model & Scorer & Q1 (low) & Q2 & Q3 & Q4 (high) & Overall \\
+\midrule
+Qwen & Cut, two-way & $-$7.9 & $+$1.7 & $+$1.4 & $+$6.3 & $-$1.1 \\
+Qwen & Cut, word-bounded & $-$8.1 & $+$2.3 & $+$1.1 & $+$6.8 & $-$1.0 \\
+Qwen & Full text, two-way & $-$6.7 & $+$2.3 & $+$1.7 & $+$6.0 & $-$0.5 \\
+Mistral & Cut, two-way & $-$6.9 & $-$6.1 & $-$0.8 & $+$9.1 & $-$1.9 \\
+Mistral & Cut, word-bounded & $-$7.1 & $-$6.4 & $+$1.1 & $+$8.3 & $-$1.9 \\
+Mistral & Full text, two-way & $-$5.0 & $-$4.5 & $+$3.0 & $+$11.7 & $+$0.4 \\
+Llama & Cut, two-way & $-$1.4 & $-$4.8 & $+$7.5 & $+$7.7 & $+$1.9 \\
+Llama & Cut, word-bounded & $-$1.4 & $-$4.8 & $+$8.2 & $+$7.4 & $+$2.0 \\
+Llama & Full text, two-way & $-$1.3 & $-$4.4 & $+$8.5 & $+$8.5 & $+$2.5 \\
+Gemma & Cut, two-way & $+$0.2 & $-$3.1 & $+$3.7 & $+$4.5 & $+$1.1 \\
+Gemma & Cut, word-bounded & $+$0.5 & $-$4.2 & $+$4.0 & $+$3.1 & $+$0.9 \\
+Gemma & Full text, two-way & $+$0.2 & $-$3.1 & $+$3.7 & $+$4.5 & $+$1.1 \\
+\bottomrule
+\end{tabular}
+\caption{Matched instruct minus base accuracy (percentage points) under three scorers, with prompts corrected (exploratory). Cut is the repaired first-sentence cut. The two-way rule is the substring rule of the stored runs, the word-bounded rule accepts a gold answer only at word boundaries, and the full-text scorer drops the cut and stops at an invented next question.}
+\label{tab:pred1-scorers}
+\end{table}
+
+\begin{table}[h]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{llcccc}
+\toprule
+Model & Strata & Q1 (low) & Q2 & Q3 & Q4 (high) \\
+\midrule
+Qwen & Own quartiles & $-$8.0 [$-$12, $-$4] & $+$1.7 [$-$7, $+$10] & $+$1.4 [$-$6, $+$8] & $+$6.3 [$+$2, $+$11] \\
+ & Other models' quartiles & $-$7.4 [$-$12, $-$3] & $-$3.6 [$-$10, $+$2] & $-$2.8 [$-$9, $+$3] & $+$10.6 [$+$5, $+$16] \\
+Mistral & Own quartiles & $-$7.0 [$-$11, $-$4] & $-$6.1 [$-$14, $+$1] & $-$0.8 [$-$9, $+$8] & $+$8.6 [$+$1, $+$16] \\
+ & Other models' quartiles & $-$1.1 [$-$4, $+$2] & $-$5.2 [$-$11, 0] & $-$6.9 [$-$14, 0] & $+$4.8 [$-$3, $+$13] \\
+Llama & Own quartiles & $-$1.4 [$-$4, $+$1] & $-$4.8 [$-$11, $+$1] & $+$7.5 [0, $+$15] & $+$7.7 [$+$1, $+$15] \\
+ & Other models' quartiles & $-$0.2 [$-$2, $+$2] & $+$4.2 [$-$2, $+$10] & $+$0.5 [$-$6, $+$7] & $+$4.3 [$-$2, $+$11] \\
+Gemma & Own quartiles & $+$0.2 [$-$2, $+$2] & $-$3.1 [$-$11, $+$5] & $+$3.7 [$-$3, $+$11] & $+$4.5 [$-$3, $+$13] \\
+ & Other models' quartiles & $+$0.2 [$-$1, $+$2] & 0.0 [$-$5, $+$5] & $+$4.2 [$-$1, $+$10] & $-$0.3 [$-$8, $+$7] \\
+\bottomrule
+\end{tabular}
+
+\medskip
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{lcccc}
+\toprule
+Base models & Q1 (low) & Q2 & Q3 & Q4 (high) \\
+\midrule
+Llama minus Mistral & $-$5.3 [$-$8, $-$3] & $-$3.8 [$-$10, $+$3] & $-$3.0 [$-$12, $+$5] & $+$9.5 [$+$3, $+$16] \\
+Gemma minus Mistral & $-$0.6 [$-$3, $+$1] & $-$2.7 [$-$9, $+$4] & $+$2.7 [$-$5, $+$10] & $+$8.6 [$+$2, $+$16] \\
+Mistral minus Llama & $-$0.6 [$-$4, $+$2] & $-$5.3 [$-$11, 0] & $+$8.8 [$+$1, $+$17] & $+$2.3 [$-$5, $+$9] \\
+Gemma minus Llama & $+$0.6 [$-$1, $+$3] & $-$0.4 [$-$7, $+$5] & $+$9.9 [$+$3, $+$17] & $+$3.4 [$-$3, $+$10] \\
+Mistral minus Gemma & $-$3.1 [$-$6, $-$1] & $-$7.7 [$-$14, $-$2] & $-$1.3 [$-$8, $+$5] & $+$6.2 [$-$1, $+$14] \\
+Llama minus Gemma & $-$3.7 [$-$6, $-$1] & $-$11.5 [$-$18, $-$6] & 0.0 [$-$7, $+$7] & $+$3.5 [$-$3, $+$10] \\
+\bottomrule
+\end{tabular}
+\caption{Stratification checks, in percentage points with 95\% bootstrap intervals (exploratory). Top: instruct minus base with prompts corrected, on the model's own quartiles and on quartiles of the other three models' mean diversity. Bottom: one base model minus another, with no tuning involved, on the second model's quartiles. Questions are the 498 distinct ones among the 500, so own-quartile values can differ slightly from Table~\ref{tab:pred1-matched}.}
+\label{tab:pred1-strata}
+\end{table}

@@ -1,0 +1,13 @@
+Llama-3.1-70B gives 2.21$\times$ [1.97, 2.52] and Gemma-2-9B gives 4.18$\times$ [2.24, 13.75]. These ratios do not establish that incoherence degrades calibration. The checks below are post hoc and exploratory.
+
+\paragraph{Prompt and parser.} The prompt states ``This statement is TRUE.'' before asking for confidence that it is true, and ``This statement is FALSE.'' before asking the reverse, and the parser takes the first number it finds. Of Llama's 569 incoherent pairs, 404 have both confidences at 1.0. About half the statements are true, so those pairs sit near an ECE of 0.5 by construction. Without them the ratio is 1.46$\times$ [1.19, 1.89].
+
+\paragraph{Gemma and Mistral.} Gemma's 56 coherent pairs are nearly all statements it calls false, with mean stated confidence 0.016 and 8.9\% true, so its low ECE reflects selection. Discrimination does not differ between its groups (AUROC .588 and .605). Mistral has 6 coherent pairs.
+
+\paragraph{What remains.} Llama's coherent responses separate true from false statements and its incoherent responses do not (AUROC .787 and .493). Each statement falls in one group, so this compares different statements. It is not a ceteris paribus comparison.
+
+\paragraph{Neutral prompt.} On the first 400 stored statements we reran Llama-3.1-70B with a prompt that asserts nothing, asks for a probability from 0 to 100, and accepts only a bare number. Extraction rises from 76.2\% to 99.8\%, and incoherence falls from 24.3\% to 5.0\%. The ratio falls from 2.76$\times$ [2.03, 3.80] to 1.26$\times$ [0.61, 2.22], on 20 incoherent pairs, and its interval includes 1. The discrimination gap persists at this small size (AUROC .714 and .438). So the rate of incoherence, and the size of the link, both depend on how confidence is elicited. On this evidence the link is at most weak, in one model.
+
+\paragraph{Renormalization.} Rescaling incoherent pairs to sum to 1 lowers ECE on Llama's from 0.502 to 0.076. A constant 0.5 gives 0.047 on the same responses, and AUROC stays at .535. Rescaling removes overconfidence and adds no information.
+
+\paragraph{Tolerance and scale.} The ratio does not depend on the 5\% tolerance: across tolerances from 0\% to 20\% it stays between 2.21$\times$ and 2.31$\times$ for Llama and between 3.55$\times$ and 4.18$\times$ for Gemma. An initial Llama run on $n=1000$ statements across 10 subjects gave 2.9$\times$; the run reported here covers $n=3000$ across 20.

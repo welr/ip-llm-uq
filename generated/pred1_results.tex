@@ -1,0 +1,44 @@
+\textbf{Evidence status:} Not registered, and all results below are exploratory. We first stated the prediction as linear, with damage growing with base-model diversity. The first run contradicted that, and we restated it after seeing the results, so the restated form is post hoc. The pairs compare base and instruction-tuned checkpoints and do not isolate RLHF from other tuning steps.
+
+\textbf{Protocol:} Four base and instruction-tuned pairs (Qwen2.5-7B \citep{qwen2024}, Mistral-7B \citep{jiang2023}, Llama-3.1-8B \citep{dubey2024}, and Gemma-2-9B \citep{gemma2024}) on the same $n=500$ TriviaQA questions \citep{joshi2017}. Semantic diversity, our proxy for credal width, is the proportion of unique normalized responses among 15 from the base model (3 samples $\times$ 5 temperatures: 0.3, 0.5, 0.7, 1.0, 1.3). Quartiles are computed per model.
+
+\textbf{Results as run:} The stored runs compare the mean accuracy of those 15 base responses with one instruct response at $T=1.0$. Table~\ref{tab:pred1-matched} gives the differences. They suggest two patterns: Qwen loses at moderate diversity (Q3), and Mistral and Llama lose at low diversity (Q1). Across the 16 quartile tests, only Mistral Q1 and Llama Q1 pass Holm correction at 0.05; Qwen Q3 ($p=0.015$) does not. Neither survives the checks below.
+
+\begin{table}[htbp]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{2pt}
+\begin{tabular}{llccccc}
+\toprule
+Model & Run & Q1 (low) & Q2 & Q3 & Q4 (high) & Overall \\
+\midrule
+Qwen & Stored, no template & $-$1.7 [$-$4, 0] & $-$0.1 [$-$9, $+$8] & $-$9.0 [$-$16, $-$2] & 0.0 [$-$4, $+$4] & $-$2.9 \\
+ & Matched, no template & $-$0.8 [$-$3, $+$1] & $+$5.6 [$-$1, $+$12] & $+$1.1 [$-$4, $+$7] & $+$3.6 [$-$1, $+$8] & $+$1.5 [$-$1, $+$3] \\
+ & Matched, chat & $-$7.9 [$-$12, $-$4] & $+$1.7 [$-$7, $+$10] & $+$1.4 [$-$6, $+$8] & $+$6.3 [$+$2, $+$11] & $-$1.1 [$-$4, $+$2] \\
+\midrule
+Mistral & Stored & $-$13.4 [$-$18, $-$9] & $-$5.3 [$-$13, $+$2] & $-$4.9 [$-$15, $+$5] & $+$1.2 [$-$6, $+$9] & $-$7.1 \\
+ & Matched & $-$6.9 [$-$10, $-$4] & $-$6.1 [$-$14, $+$1] & $-$0.8 [$-$10, $+$8] & $+$9.1 [$+$2, $+$17] & $-$1.9 [$-$5, $+$1] \\
+\midrule
+Llama & Stored, two tokens & $-$8.9 [$-$13, $-$5] & $-$2.4 [$-$10, $+$5] & $+$2.6 [$-$8, $+$13] & $+$5.0 [$-$2, $+$13] & $-$2.4 \\
+ & Matched, two tokens & $-$4.6 [$-$8, $-$2] & $-$12.3 [$-$19, $-$6] & $+$1.0 [$-$7, $+$9] & $+$4.8 [$-$2, $+$11] & $-$2.5 [$-$5, 0] \\
+ & Matched, one token & $-$1.4 [$-$4, $+$1] & $-$4.8 [$-$11, $+$1] & $+$7.5 [0, $+$15] & $+$7.7 [$+$1, $+$15] & $+$1.9 [$-$1, $+$5] \\
+\midrule
+Gemma & Stored & $-$0.5 [$-$2, $+$1] & $+$3.8 [$-$3, $+$11] & $+$3.9 [$-$2, $+$10] & $+$6.0 [$-$3, $+$15] & $+$2.4 \\
+ & Matched & $+$0.2 [$-$2, $+$2] & $-$3.1 [$-$11, $+$5] & $+$3.7 [$-$3, $+$10] & $+$4.5 [$-$4, $+$13] & $+$1.1 [$-$1, $+$4] \\
+\bottomrule
+\end{tabular}
+\caption{Instruct minus base accuracy (percentage points), by base-model diversity quartile, with 95\% bootstrap intervals over questions. Exploratory. Stored rows use the stored responses and scorer. Matched rows use regenerated responses, three draws per arm at $T=1.0$, and the repaired scorer. Quartiles come from the stored runs throughout.}
+\label{tab:pred1-matched}
+\end{table}
+
+\paragraph{Defects in the stored runs.} There are four. The arms are unmatched: base accuracy averages over five temperatures and instruct accuracy rests on one draw, and the quartiles are formed from the same base responses whose accuracy is measured. Qwen-Instruct ran with no chat template. Llama-Instruct's prompt carried two begin-of-text tokens. The scorer cut each response at its first period, which truncates at abbreviations and initials, and capped normalized text at 100 characters, which mislabels long responses. On regenerated Mistral responses, the cap and the cut alone move instruct accuracy from 64.3\% to 70.8\%.
+
+\paragraph{Matched rerun.} We regenerated both arms locally: three responses per question at $T=1.0$ from each base and instruct model, on all 500 questions, scored by one rule with the cut repaired and no cap. Quartiles stay those of the stored runs, so the new draws played no part in forming them. One difference remains: base models take a two-shot prompt and instruct models a direct one.
+
+Qwen's Q3 loss goes with matching alone: $-$9.0 as stored, $+$1.1 [$-$4, $+$7] matched on the same prompt, and $+$1.4 [$-$6, $+$8] with the chat template. Llama's Q1 loss falls from $-$8.9 to $-$4.6 [$-$8, $-$2] when matched and to $-$1.4 [$-$4, $+$1] with one begin-of-text token. Mistral's Q1 loss is $-$14.8 on matched responses under the stored scorer and $-$6.9 [$-$10, $-$4] under the repaired one. Qwen shows a Q1 loss under its chat template and none without it ($-$7.9 [$-$12, $-$4] against $-$0.8 [$-$3, $+$1]). Gemma shows none ($+$0.2 [$-$2, $+$2]). With prompts corrected, no model's Q3 interval lies below zero, and accuracy rises at Q4 in four of four models, with intervals above zero in three. Overall, accuracy moves by $-$1.1 [$-$4, $+$2], $-$1.9 [$-$5, $+$1], $+$1.9 [$-$1, $+$5], $+$1.1 [$-$1, $+$4] points for Qwen, Mistral, Llama, and Gemma, with every interval covering zero, which is compatible with the assumption in \S\ref{sec:rlhf-diagnosis} that accuracy is unchanged.
+
+\paragraph{Stratification check.} A question on which a model has low diversity is a question that model knows. A second model that knows partly different things will do worse there and better at high diversity, with no tuning involved. We tested this two ways on the same draws. First, we replaced the instruct model with another base model under the same prompt. Llama base minus Mistral base, on Mistral's quartiles, gives $-$5.3 [$-$8, $-$3] at Q1 and $+$9.5 [$+$3, $+$16] at Q4, close to Mistral-Instruct's $-$6.9 and $+$9.1. Among the six ordered pairs of Mistral, Llama, and Gemma base models, three have a Q1 interval below zero and two a Q4 interval above zero. Second, we kept instruct minus base and stratified on the mean diversity of the other three models, which does not favor either arm of the pair. Mistral's Q1 loss falls to $-$1.1 [$-$4, $+$2], and Llama and Gemma stay near zero ($-$0.2 and $+$0.2). Qwen's persists ($-$7.4 [$-$12, $-$3]). Mistral's intervals at Q2 and Q3 on these strata reach zero ($-$5.2 [$-$11, 0] and $-$6.9 [$-$14, 0]), so a moderate-diversity loss in Mistral is not excluded. Table~\ref{tab:pred1-strata} gives the full results.
+
+\paragraph{Spread.} The stored runs keep one instruct response per question, so they do not measure narrowing. The rerun allows a crude measure: the share of questions whose three draws are not all scored alike. On the other models' strata, instruct draws disagree less than base draws in 15 of 16 cells, with intervals below zero in five: Qwen Q3 ($-$11.0 [$-$21, $-$2]), Mistral Q3 ($-$12.3 [$-$22, $-$3]), Llama Q2 ($-$10.7 [$-$18, $-$4]), Gemma Q2 ($-$10.6 [$-$19, $-$2]), Gemma Q3 ($-$12.6 [$-$21, $-$4]). On a model's own strata the drops look larger, but another base model reproduces much of them (Mistral base minus Qwen base at Q2 is $-$18.6 [$-$34, $-$3], against Qwen-Instruct's $-$22.0 [$-$36, $-$8]), so we do not use those figures. This points toward narrowing without aggregate accuracy loss, as \S\ref{sec:rlhf-diagnosis} assumes. It does not measure the credal set: it compares correctness labels across three draws, and the prompt differs between arms.
+
+\paragraph{Status.} The first-stated prediction is not supported: with prompts corrected, loss does not grow with diversity, and no model's Q4 interval lies below zero on either stratification. The restated form was post hoc, and its two patterns do not survive. Qwen's moderate-diversity loss came from unmatched arms, Llama's low-diversity loss largely from the token defect, and Mistral's is reproduced by a different base model and disappears on other models' strata. The split between concise and verbose tuning fails as well: under its chat template Qwen answers in a median of 3 words and loses at Q1, where the restated form assigned concise tuning to moderate diversity. One effect remains, a single exploratory result: Qwen-Instruct under its chat template loses accuracy on questions the other models find easy.

@@ -1,0 +1,17 @@
+\begin{table}[h]
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Filter & Retained Acc & Rejected Acc & \% Rejected & Ratio \\
+\midrule
+Admissibility (string) & 79.2\% & 23.0\% & 7.1\% & 3.45$\times$ \\
+Consistency & 78.6\% & 28.4\% & 6.9\% & 2.77$\times$ \\
+Frequency & 78.7\% & 32.8\% & 7.6\% & 2.40$\times$ \\
+Length ($<$2 words) & 71.1\% & 80.5\% & 43.5\% & 0.88$\times$ \\
+\midrule
+\multicolumn{5}{l}{\footnotesize Random baseline accuracy: 75.2\%; Majority vote accuracy: 75.9\%} \\
+\bottomrule
+\end{tabular}
+\caption{String-based admissibility vs.\ heuristic filters on TriviaQA (post hoc; aggregate across 4 models, 12,000 responses). At comparable rejection rates, string-based admissibility has the highest ratio. The length filter is counterproductive: short responses are typically correct direct answers.}
+\label{tab:filter-comparison}
+\end{table}

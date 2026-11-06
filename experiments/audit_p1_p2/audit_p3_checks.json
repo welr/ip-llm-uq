@@ -1,0 +1,174 @@
+{
+ "triviaqa": {
+  "base": {
+   "ratio": 2.978059396130759,
+   "adm": 0.7789501450804537,
+   "rej": 0.26156299840510366,
+   "rejected": 627,
+   "admissible": 11373
+  },
+  "fragments": {
+   "n": 293,
+   "admissible": 272,
+   "rejected": 21,
+   "correct": 182
+  },
+  "without_fragments": {
+   "ratio": 3.059135038691661,
+   "adm": 0.7824520313485271,
+   "rej": 0.25577557755775576,
+   "rejected": 606,
+   "admissible": 11101
+  },
+  "identical_pairs": {
+   "n": 23665,
+   "below_95": 0.368096344813015,
+   "below_50": 0.0,
+   "median": 0.9577234983444214
+  },
+  "identical_forced": {
+   "ratio": 3.1361080343204515,
+   "adm": 0.7926807283216153,
+   "rej": 0.25275938189845476,
+   "rejected": 906,
+   "admissible": 11094
+  },
+  "questions_whose_partition_changes": 157,
+  "n_q": 2000
+ },
+ "nq_open": {
+  "base": {
+   "ratio": 1.6154299868365245,
+   "adm": 0.3103735303298304,
+   "rej": 0.1921305985768104,
+   "rejected": 2389,
+   "admissible": 9611
+  },
+  "fragments": {
+   "n": 310,
+   "admissible": 236,
+   "rejected": 74,
+   "correct": 109
+  },
+  "without_fragments": {
+   "ratio": 1.6109194883370959,
+   "adm": 0.3082666666666667,
+   "rej": 0.1913606911447084,
+   "rejected": 2315,
+   "admissible": 9375
+  },
+  "identical_pairs": {
+   "n": 8297,
+   "below_95": 0.246233578401832,
+   "below_50": 0.0001205254911413764,
+   "median": 0.9657168984413147
+  },
+  "identical_forced": {
+   "ratio": 1.7349938981878184,
+   "adm": 0.31800932451479996,
+   "rej": 0.1832913215700396,
+   "rejected": 2777,
+   "admissible": 9223
+  },
+  "questions_whose_partition_changes": 166,
+  "n_q": 2000
+ },
+ "truthfulqa": {
+  "base": {
+   "ratio": 1.8814769578918427,
+   "adm": 0.17606750840682697,
+   "rej": 0.09357941252924357,
+   "rejected": 3847,
+   "admissible": 15761
+  },
+  "fragments": {
+   "n": 963,
+   "admissible": 835,
+   "rejected": 128,
+   "correct": 574
+  },
+  "without_fragments": {
+   "ratio": 1.8567953941314004,
+   "adm": 0.1512796462548573,
+   "rej": 0.08147351438558752,
+   "rejected": 3719,
+   "admissible": 14926
+  },
+  "identical_pairs": {
+   "n": 12960,
+   "below_95": 0.24714506172839507,
+   "below_50": 0.0002314814814814815,
+   "median": 0.9725027084350586
+  },
+  "identical_forced": {
+   "ratio": 1.54354448041712,
+   "adm": 0.17454789015405225,
+   "rej": 0.11308251389482685,
+   "rejected": 4678,
+   "admissible": 14930
+  },
+  "questions_whose_partition_changes": 480,
+  "n_q": 3268
+ },
+ "labels": {
+  "nq_open": {
+   "Qwen": {
+    "total": 3000,
+    "mismatches_cap100": 28,
+    "mismatches_cap500": 0
+   },
+   "Mistral": {
+    "total": 3000,
+    "mismatches_cap100": 1,
+    "mismatches_cap500": 0
+   },
+   "Llama": {
+    "total": 3000,
+    "mismatches_cap100": 26,
+    "mismatches_cap500": 0
+   },
+   "Gemma": {
+    "total": 3000,
+    "mismatches_cap100": 2,
+    "mismatches_cap500": 0
+   }
+  },
+  "truthfulqa": {
+   "Qwen": {
+    "total": 4902,
+    "mismatches_cap100": 0,
+    "mismatches_cap500": 2
+   },
+   "Mistral": {
+    "total": 4902,
+    "mismatches_cap100": 0,
+    "mismatches_cap500": 2
+   },
+   "Llama": {
+    "total": 4902,
+    "mismatches_cap100": 0,
+    "mismatches_cap500": 3
+   },
+   "Gemma": {
+    "total": 4902,
+    "mismatches_cap100": 0,
+    "mismatches_cap500": 0
+   }
+  }
+ },
+ "nq_indices_match_frozen": {
+  "Qwen": true,
+  "Mistral": true,
+  "Llama": true,
+  "Gemma": true
+ },
+ "triviaqa_same_questions": {
+  "sizes": {
+   "Qwen": 498,
+   "Mistral": 498,
+   "Llama": 498,
+   "Gemma": 498
+  },
+  "intersection": 498
+ }
+}

@@ -1,0 +1,212 @@
+{
+ "mmlu": {
+  "ties_included_as_run": {
+   "total": 3000,
+   "rejected": 23,
+   "rejection_rate": 0.007666666666666666,
+   "adm_acc": 0.7991266375545851,
+   "rej_acc": 0.6521739130434783,
+   "ratio": 1.2253275109170305,
+   "ci_groups": [
+    0.9567915421742128,
+    1.8125151158884782
+   ],
+   "ci_pairs": [
+    0.8923328699379648,
+    1.9555862724202788
+   ],
+   "fisher_p": 0.11182147049012137,
+   "models_above_1": 1,
+   "per_model": {
+    "Qwen": {
+     "ratio": null,
+     "rejected": 0,
+     "adm_acc": null,
+     "rej_acc": null,
+     "p": null
+    },
+    "Mistral": {
+     "ratio": null,
+     "rejected": 0,
+     "adm_acc": null,
+     "rej_acc": null,
+     "p": null
+    },
+    "Llama": {
+     "ratio": null,
+     "rejected": 0,
+     "adm_acc": null,
+     "rej_acc": null,
+     "p": null
+    },
+    "Gemma": {
+     "ratio": 1.2253275109170305,
+     "rejected": 23,
+     "adm_acc": 0.7991266375545851,
+     "rej_acc": 0.6521739130434783,
+     "p": 0.11182147049012137
+    }
+   },
+   "stored_partition_reproduced": [
+    499,
+    500
+   ],
+   "questions_without_matrix": 1500
+  },
+  "registered_lowest_index": {
+   "total": 3000,
+   "rejected": 491,
+   "rejection_rate": 0.16366666666666665,
+   "adm_acc": 0.8345954563571144,
+   "rej_acc": 0.6109979633401222,
+   "ratio": 1.3659545635711439,
+   "ci_groups": [
+    1.2729407803135968,
+    1.4754099119221225
+   ],
+   "ci_pairs": [
+    1.249765987165219,
+    1.500415565642846
+   ],
+   "fisher_p": 3.503376735670153e-26,
+   "models_above_1": 1,
+   "per_model": {
+    "Qwen": {
+     "ratio": null,
+     "rejected": 0,
+     "adm_acc": null,
+     "rej_acc": null,
+     "p": null
+    },
+    "Mistral": {
+     "ratio": null,
+     "rejected": 0,
+     "adm_acc": null,
+     "rej_acc": null,
+     "p": null
+    },
+    "Llama": {
+     "ratio": null,
+     "rejected": 0,
+     "adm_acc": null,
+     "rej_acc": null,
+     "p": null
+    },
+    "Gemma": {
+     "ratio": 1.3659545635711439,
+     "rejected": 491,
+     "adm_acc": 0.8345954563571144,
+     "rej_acc": 0.6109979633401222,
+     "p": 3.503376735670153e-26
+    }
+   },
+   "stored_partition_reproduced": null,
+   "questions_without_matrix": 1500
+  }
+ },
+ "arc": {
+  "ties_included_as_run": {
+   "total": 12000,
+   "rejected": 659,
+   "rejection_rate": 0.05491666666666667,
+   "adm_acc": 0.8696763953795962,
+   "rej_acc": 0.7769347496206374,
+   "ratio": 1.119368641709285,
+   "ci_groups": [
+    1.0749369140003715,
+    1.168311949093021
+   ],
+   "ci_pairs": [
+    1.068149968721826,
+    1.1752726940046951
+   ],
+   "fisher_p": 2.581362139134128e-10,
+   "models_above_1": 3,
+   "per_model": {
+    "Qwen": {
+     "ratio": 1.0497175141242938,
+     "rejected": 50,
+     "adm_acc": 0.9447457627118644,
+     "rej_acc": 0.9,
+     "p": 0.19987266341916798
+    },
+    "Mistral": {
+     "ratio": 1.221197294189995,
+     "rejected": 123,
+     "adm_acc": 0.7744177963156066,
+     "rej_acc": 0.6341463414634146,
+     "p": 0.0006333752791139395
+    },
+    "Llama": {
+     "ratio": 1.056461846146817,
+     "rejected": 479,
+     "adm_acc": 0.8425228084093613,
+     "rej_acc": 0.7974947807933194,
+     "p": 0.018497733340722605
+    },
+    "Gemma": {
+     "ratio": 0.9101236217841631,
+     "rejected": 7,
+     "adm_acc": 0.9101236217841631,
+     "rej_acc": 1.0,
+     "p": 1.0
+    }
+   },
+   "stored_partition_reproduced": [
+    1977,
+    2000
+   ],
+   "questions_without_matrix": 0
+  },
+  "registered_lowest_index": {
+   "total": 12000,
+   "rejected": 1917,
+   "rejection_rate": 0.15975,
+   "adm_acc": 0.8968560944163444,
+   "rej_acc": 0.6948356807511737,
+   "ratio": 1.2907455953424416,
+   "ci_groups": [
+    1.2526172607127775,
+    1.3314389370843431
+   ],
+   "ci_pairs": [
+    1.240289528001577,
+    1.343887781244477
+   ],
+   "fisher_p": 6.145300448727989e-103,
+   "models_above_1": 4,
+   "per_model": {
+    "Qwen": {
+     "ratio": 1.108693483805697,
+     "rejected": 174,
+     "adm_acc": 0.9493984430290163,
+     "rej_acc": 0.8563218390804598,
+     "p": 7.0954578152124046e-06
+    },
+    "Mistral": {
+     "ratio": 1.6559866989020167,
+     "rejected": 621,
+     "adm_acc": 0.8373266078184111,
+     "rej_acc": 0.5056360708534622,
+     "p": 6.912439435628326e-61
+    },
+    "Llama": {
+     "ratio": 1.115491651205937,
+     "rejected": 888,
+     "adm_acc": 0.8617424242424242,
+     "rej_acc": 0.7725225225225225,
+     "p": 4.827931410753337e-09
+    },
+    "Gemma": {
+     "ratio": 1.1779097471640412,
+     "rejected": 234,
+     "adm_acc": 0.9211858279103399,
+     "rej_acc": 0.782051282051282,
+     "p": 4.2309941792018124e-10
+    }
+   },
+   "stored_partition_reproduced": null,
+   "questions_without_matrix": 0
+  }
+ }
+}

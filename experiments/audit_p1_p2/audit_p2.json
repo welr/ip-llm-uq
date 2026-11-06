@@ -1,0 +1,253 @@
+{
+ "Llama": {
+  "total": 3000,
+  "valid": 2180,
+  "coherent": {
+   "n": 1611,
+   "ece": 0.2271539568471136,
+   "mean_c_true": 0.5382637961013655,
+   "share_true": 0.5090006207324643,
+   "auroc": 0.7869368813789276,
+   "ece_renorm": 0.18788535252990943,
+   "auroc_renorm": 0.7896395424131233,
+   "brier_renorm": 0.21847693720531658,
+   "const_half_ece": 0.009000620732464326
+  },
+  "incoherent": {
+   "n": 569,
+   "ece": 0.5022627065026363,
+   "mean_c_true": 0.9441547978910368,
+   "share_true": 0.45342706502636204,
+   "auroc": 0.4930830778434158,
+   "ece_renorm": 0.07573305404183432,
+   "auroc_renorm": 0.5353136917669932,
+   "brier_renorm": 0.252698477012605,
+   "const_half_ece": 0.04657293497363796
+  },
+  "ratio": 2.211111413043468,
+  "ratio_ci": [
+   1.974116245128783,
+   2.515334152168873
+  ],
+  "incoherent_both_one": 404,
+  "incoherent_excl_both_one": {
+   "n": 165,
+   "ece": 0.3320453333333334,
+   "mean_c_true": 0.8074186666666667,
+   "share_true": 0.5151515151515151,
+   "auroc": 0.5678676470588235,
+   "ece_renorm": 0.09498194520980538,
+   "auroc_renorm": 0.5938235294117648,
+   "brier_renorm": 0.259305657091953,
+   "const_half_ece": 0.015151515151515138
+  },
+  "ratio_excl_both_one": 1.4617633693997996,
+  "ratio_excl_both_one_ci": [
+   1.1903561618054948,
+   1.8916513617151396
+  ],
+  "extreme_share_c_true": 0.8077981651376147,
+  "sum_exact_one": 1148,
+  "pct_coherent_by_subset": {
+   "abstract_algebra": 0.286,
+   "anatomy": 0.837,
+   "astronomy": 0.855,
+   "business_ethics": 0.845,
+   "clinical_knowledge": 0.845,
+   "college_biology": 0.8,
+   "college_chemistry": 0.55,
+   "college_computer_science": 0.467,
+   "college_mathematics": 0.721,
+   "college_medicine": 0.773,
+   "college_physics": 0.552,
+   "computer_security": 0.878,
+   "conceptual_physics": 0.762,
+   "econometrics": 0.725,
+   "electrical_engineering": 0.797,
+   "elementary_mathematics": 0.753,
+   "formal_logic": 0.241,
+   "global_facts": 0.618,
+   "high_school_biology": 0.825,
+   "high_school_chemistry": 0.701
+  },
+  "pair_kinds": {
+   "coh|any_stray": 324,
+   "coh|both_stated": 794,
+   "coh|unknown": 493,
+   "inc|any_stray": 286,
+   "inc|both_stated": 99,
+   "inc|unknown": 184
+  },
+  "both_stated": {
+   "coherent": {
+    "n": 794,
+    "ece": 0.18537027707808562,
+    "mean_c_true": 0.5978035264483627,
+    "share_true": 0.4924433249370277,
+    "auroc": 0.8170022783091012,
+    "ece_renorm": 0.19334409554797588,
+    "auroc_renorm": 0.815831392433983,
+    "brier_renorm": 0.1905897421771059,
+    "const_half_ece": 0.007556675062972307
+   },
+   "incoherent": {
+    "n": 99,
+    "ece": 0.4796565656565656,
+    "mean_c_true": 0.9645050505050505,
+    "share_true": 0.48484848484848486,
+    "auroc": 0.5269607843137255,
+    "ece_renorm": 0.029779041877222755,
+    "auroc_renorm": 0.49264705882352944,
+    "brier_renorm": 0.2478182750549515,
+    "const_half_ece": 0.015151515151515138
+   },
+   "ratio": 2.5875591989028233,
+   "ratio_ci": [
+    2.0026559586687287,
+    3.3067388731409313
+   ],
+   "incoherent_both_one": 79,
+   "incoherent_excl_both_one": {
+    "n": 20,
+    "ece": 0.4243,
+    "mean_c_true": 0.8243,
+    "share_true": 0.4,
+    "auroc": 0.53125,
+    "ece_renorm": 0.1724062572922526,
+    "auroc_renorm": 0.515625,
+    "brier_renorm": 0.23920046152200988,
+    "const_half_ece": 0.09999999999999998
+   }
+  },
+  "stated_verdict_follows_prompt": {
+   "true_prompt_says_true": 889,
+   "true_prompt_says_false": 515,
+   "false_prompt_says_false": 1543,
+   "false_prompt_says_true": 1069
+  }
+ },
+ "Gemma": {
+  "total": 1000,
+  "valid": 607,
+  "coherent": {
+   "n": 56,
+   "ece": 0.09107142857142857,
+   "mean_c_true": 0.016071428571428573,
+   "share_true": 0.08928571428571429,
+   "auroc": 0.5882352941176471,
+   "ece_renorm": 0.07142857142857142,
+   "auroc_renorm": 0.5901960784313726,
+   "brier_renorm": 0.08035714285714286,
+   "const_half_ece": 0.4107142857142857
+  },
+  "incoherent": {
+   "n": 551,
+   "ece": 0.381114337568058,
+   "mean_c_true": 0.9219491833030854,
+   "share_true": 0.5408348457350273,
+   "auroc": 0.6046568692468897,
+   "ece_renorm": 0.07586902901767152,
+   "auroc_renorm": 0.6184444385494867,
+   "brier_renorm": 0.24069689752732343,
+   "const_half_ece": 0.04083484573502727
+  },
+  "ratio": 4.184784883100245,
+  "ratio_ci": [
+   2.2410196162377654,
+   13.751712159709621
+  ],
+  "incoherent_both_one": 90,
+  "incoherent_excl_both_one": {
+   "n": 461,
+   "ece": 0.3709197396963125,
+   "mean_c_true": 0.9067114967462039,
+   "share_true": 0.5357917570498916,
+   "auroc": 0.6329883839721518,
+   "ece_renorm": 0.0776655856588655,
+   "auroc_renorm": 0.6398274622573688,
+   "brier_renorm": 0.23888067361725646,
+   "const_half_ece": 0.03579175704989157
+  },
+  "ratio_excl_both_one": 4.072844200586961,
+  "ratio_excl_both_one_ci": [
+   2.1694353236670856,
+   12.728054580834492
+  ],
+  "extreme_share_c_true": 0.3014827018121911,
+  "sum_exact_one": 33,
+  "pct_coherent_by_subset": {
+   "abstract_algebra": 0.0,
+   "anatomy": 0.08,
+   "astronomy": 0.062,
+   "business_ethics": 0.135,
+   "clinical_knowledge": 0.121,
+   "college_biology": 0.016,
+   "college_chemistry": 0.0,
+   "college_computer_science": 0.091,
+   "college_mathematics": 0.111,
+   "college_medicine": 0.157
+  }
+ },
+ "Mistral": {
+  "total": 1000,
+  "valid": 164,
+  "coherent": {
+   "n": 6,
+   "ece": 0.26666666666666666,
+   "mean_c_true": 0.39999999999999997,
+   "share_true": 0.6666666666666666,
+   "auroc": 0.625,
+   "ece_renorm": 0.24999999999999997,
+   "auroc_renorm": 0.6875,
+   "brier_renorm": 0.2916666666666667,
+   "const_half_ece": 0.16666666666666663
+  },
+  "incoherent": {
+   "n": 158,
+   "ece": 0.3455063291139242,
+   "mean_c_true": 0.9589240506329113,
+   "share_true": 0.6012658227848101,
+   "auroc": 0.5759398496240602,
+   "ece_renorm": 0.14233182509125347,
+   "auroc_renorm": 0.5481203007518797,
+   "brier_renorm": 0.2423809670179855,
+   "const_half_ece": 0.10126582278481011
+  },
+  "ratio": 1.2956487341772158,
+  "ratio_ci": [
+   0.47545624345674337,
+   4.022863924050633
+  ],
+  "incoherent_both_one": 112,
+  "incoherent_excl_both_one": {
+   "n": 46,
+   "ece": 0.3389130434782607,
+   "mean_c_true": 0.8589130434782608,
+   "share_true": 0.4782608695652174,
+   "auroc": 0.7073863636363636,
+   "ece_renorm": 0.1193136600960445,
+   "auroc_renorm": 0.6818181818181818,
+   "brier_renorm": 0.223830278018298,
+   "const_half_ece": 0.021739130434782594
+  },
+  "ratio_excl_both_one": 1.2709239130434775,
+  "ratio_excl_both_one_ci": [
+   0.42659172264006745,
+   4.055760869565215
+  ],
+  "extreme_share_c_true": 0.7621951219512195,
+  "sum_exact_one": 4,
+  "pct_coherent_by_subset": {
+   "abstract_algebra": 0.0,
+   "anatomy": 0.04,
+   "astronomy": 0.071,
+   "business_ethics": 0.067,
+   "clinical_knowledge": 0.0,
+   "college_biology": 0.0,
+   "college_chemistry": 0.25,
+   "college_computer_science": 0.071,
+   "college_mathematics": 0.0,
+   "college_medicine": 0.0
+  }
+ }
+}

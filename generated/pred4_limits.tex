@@ -1,0 +1,9 @@
+\textbf{Evidence status:} Not registered. The run's script states the prediction as optimal temperature varying with question difficulty, with intermediate temperatures best at moderate diversity and higher temperatures possibly helping at high diversity. All quartiles peak at low temperature, so that prediction did not hold. We restated it as temperature sensitivity after seeing these data, so the restated form is post hoc.
+
+\textbf{Results:} Table~\ref{tab:pred4-results} presents accuracy by quartile and temperature. Optimal temperature is similar across quartiles ($\tau = 0.1$--$0.5$).
+
+\input{generated/pred4_results}
+
+The standard deviation of accuracy across temperatures falls with diversity (.329, .310, .254, .162 for Q1 to Q4; Q1 minus Q4 [0.133, 0.200]), but that measure is tied to peak accuracy: a quartile that starts higher has further to fall. Divided by each quartile's own peak, it is flat (.359, .381, .371, .370; Q1 minus Q4 [$-$0.035, 0.024]). Retention at $\tau=1.0$ runs opposite to the restated prediction: 88\%, 89\%, 70\%, 64\% of peak accuracy (Q1 minus Q4 [0.143, 0.370]).
+
+The run gave an instruction-tuned model a plain completion prompt with no chat template. We reran 250 of the questions with the template (exploratory). The pattern holds: peaks at $\tau = 0.1$--$0.3$, standard deviation .239, .244, .210, .121, normalized .259, .286, .283, .280 (Q1 minus Q4 [$-$0.064, 0.023]), retention 94\%, 86\%, 84\%, 83\% (Q1 minus Q4 [$-$0.029, 0.255]). Accuracy at high temperature is much better with the template: at $\tau=1.3$ on Q1 it is 73.6\% against 46.2\% on the same questions, so part of the decline in the table reflects the prompt format. Prediction 4 is not supported, in either form, in this one model.

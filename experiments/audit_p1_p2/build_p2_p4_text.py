@@ -1,0 +1,39 @@
+"""Writes the Prediction 2 and Prediction 4 findings for the manuscript from audit results, so no number is typed. Run from this folder.
+
+Sources: audit_p2.json, audit_p2_neutral.json, audit_p4.json, audit_p4_template.json."""
+import json
+L = lambda f: json.load(open(f)); P2 = L('audit_p2.json'); NE = L('audit_p2_neutral.json'); P4 = L('audit_p4.json')['rules']['A_manuscript_full_text']; T4 = L('audit_p4_template.json')
+x = lambda v: f"{v:.2f}$\\times$"; neg = lambda t: t.replace('-', '$-$'); ci = lambda c: neg(f"[{c[0]:.2f}, {c[1]:.2f}]"); pc = lambda v: f"{100 * v:.1f}\\%"; a3 = lambda v: f"{v:.3f}".lstrip('0'); e3 = lambda v: f"{v:.3f}"; c3 = lambda c: neg(f"[{c[0]:.3f}, {c[1]:.3f}]"); pc0 = lambda v: f"{100 * v:.0f}\\%"
+TOL = lambda k: [v['ratio'] for v in L('audit_p2_tolerance.json')[k].values()]; L7, G, M = P2['Llama'], P2['Gemma'], P2['Mistral']; O, N = NE['original_same_statements'], NE['neutral']
+g = rf"""Llama-3.1-70B gives {x(L7['ratio'])} {ci(L7['ratio_ci'])} and Gemma-2-9B gives {x(G['ratio'])} {ci(G['ratio_ci'])}. These ratios do not establish that incoherence degrades calibration. The checks below are post hoc and exploratory.
+
+\paragraph{{Prompt and parser.}} The prompt states ``This statement is TRUE.'' before asking for confidence that it is true, and ``This statement is FALSE.'' before asking the reverse, and the parser takes the first number it finds. Of Llama's {L7['incoherent']['n']} incoherent pairs, {L7['incoherent_both_one']} have both confidences at 1.0. About half the statements are true, so those pairs sit near an ECE of 0.5 by construction. Without them the ratio is {x(L7['ratio_excl_both_one'])} {ci(L7['ratio_excl_both_one_ci'])}.
+
+\paragraph{{Gemma and Mistral.}} Gemma's {G['coherent']['n']} coherent pairs are nearly all statements it calls false, with mean stated confidence {e3(G['coherent']['mean_c_true'])} and {pc(G['coherent']['share_true'])} true, so its low ECE reflects selection. Discrimination does not differ between its groups (AUROC {a3(G['coherent']['auroc'])} and {a3(G['incoherent']['auroc'])}). Mistral has {M['coherent']['n']} coherent pairs.
+
+\paragraph{{What remains.}} Llama's coherent responses separate true from false statements and its incoherent responses do not (AUROC {a3(L7['coherent']['auroc'])} and {a3(L7['incoherent']['auroc'])}). Each statement falls in one group, so this compares different statements. It is not a ceteris paribus comparison.
+
+\paragraph{{Neutral prompt.}} On the first {N['statements']} stored statements we reran Llama-3.1-70B with a prompt that asserts nothing, asks for a probability from 0 to 100, and accepts only a bare number. Extraction rises from {pc(O['extraction'])} to {pc(N['extraction'])}, and incoherence falls from {pc(O['incoherent_share'])} to {pc(N['incoherent_share'])}. The ratio falls from {x(O['ece_ratio'])} {ci(O['ece_ratio_ci'])} to {x(N['ece_ratio'])} {ci(N['ece_ratio_ci'])}, on {N['incoherent']['n']} incoherent pairs, and its interval includes 1. The discrimination gap persists at this small size (AUROC {a3(N['coherent']['auroc'])} and {a3(N['incoherent']['auroc'])}). So the rate of incoherence, and the size of the link, both depend on how confidence is elicited. On this evidence the link is at most weak, in one model.
+
+\paragraph{{Renormalization.}} Rescaling incoherent pairs to sum to 1 lowers ECE on Llama's from {e3(L7['incoherent']['ece'])} to {e3(L7['incoherent']['ece_renorm'])}. A constant 0.5 gives {e3(L7['incoherent']['const_half_ece'])} on the same responses, and AUROC stays at {a3(L7['incoherent']['auroc_renorm'])}. Rescaling removes overconfidence and adds no information.
+
+\paragraph{{Tolerance and scale.}} The ratio does not depend on the 5\% tolerance: across tolerances from 0\% to 20\% it stays between {x(min(TOL('Llama')))} and {x(max(TOL('Llama')))} for Llama and between {x(min(TOL('Gemma')))} and {x(max(TOL('Gemma')))} for Gemma. An initial Llama run on $n=1000$ statements across 10 subjects gave 2.9$\times$; the run reported here covers $n=3000$ across 20.
+"""
+open('../../generated/pred2_limits.tex', 'w').write(g)
+open('../../generated/pred2_falsifier.tex', 'w').write(rf"Our evidence is weak: Llama's {x(L7['ratio'])} falls to {x(L7['ratio_excl_both_one'])} without its both-1.0 pairs, its interval includes 1 under a neutral prompt ({x(N['ece_ratio'])} {ci(N['ece_ratio_ci'])}), and Gemma's value reflects selection.%" + "\n")
+TC = T4['chat_template']['full_text']; TP = T4['stored_plain']['full_text']; Q = ['Q1', 'Q2', 'Q3', 'Q4']; v3 = lambda d: ', '.join(a3(d[q]) for q in Q); v0 = lambda d: ', '.join(pc0(d[q]) for q in Q)
+h = rf"""\textbf{{Evidence status:}} Not registered. The run's script states the prediction as optimal temperature varying with question difficulty, with intermediate temperatures best at moderate diversity and higher temperatures possibly helping at high diversity. All quartiles peak at low temperature, so that prediction did not hold. We restated it as temperature sensitivity after seeing these data, so the restated form is post hoc.
+
+\textbf{{Results:}} Table~\ref{{tab:pred4-results}} presents accuracy by quartile and temperature. Optimal temperature is similar across quartiles ($\tau = 0.1$--$0.5$).
+
+\input{{generated/pred4_results}}
+
+The standard deviation of accuracy across temperatures falls with diversity ({v3(P4['sd'])} for Q1 to Q4; Q1 minus Q4 {c3(P4['sd_diff_ci']['Q1-Q4'])}), but that measure is tied to peak accuracy: a quartile that starts higher has further to fall. Divided by each quartile's own peak, it is flat ({v3(P4['normalized_sd'])}; Q1 minus Q4 {c3(P4['normalized_sd_diff_ci']['Q1-Q4'])}). Retention at $\tau=1.0$ runs opposite to the restated prediction: {v0(P4['keep_at_1'])} of peak accuracy (Q1 minus Q4 {c3(P4['keep_diff_ci']['Q1-Q4'])}).
+
+The run gave an instruction-tuned model a plain completion prompt with no chat template. We reran {T4['n']} of the questions with the template (exploratory). The pattern holds: peaks at $\tau = 0.1$--$0.3$, standard deviation {v3(TC['sd'])}, normalized {v3(TC['normalized_sd'])} (Q1 minus Q4 {c3(TC['normalized_q1_q4_ci'])}), retention {v0(TC['keep_at_1'])} (Q1 minus Q4 {c3(TC['keep_q1_q4_ci'])}). Accuracy at high temperature is much better with the template: at $\tau=1.3$ on Q1 it is {TC['acc']['Q1']['1.3']:.1f}\% against {TP['acc']['Q1']['1.3']:.1f}\% on the same questions, so part of the decline in the table reflects the prompt format. Prediction 4 is not supported, in either form, in this one model.
+"""
+open('../../generated/pred4_limits.tex', 'w').write(h)
+open('../../generated/pred4_falsifier.tex', 'w').write(rf"Our evidence does not support it: the absolute measure favors Q1, the peak-normalized measure is flat (Q1 minus Q4 {c3(P4['normalized_sd_diff_ci']['Q1-Q4'])}), and retention runs the other way. The restated form was written after the data, and we do not count it as a commitment.%" + "\n")
+open('../../generated/audit_macros.tex', 'w').write(''.join(f"\\newcommand{{\\{k}}}{{{v}}}\n" for k, v in dict(PtwoLlama=x(L7['ratio']), PtwoLlamaNoBoth=x(L7['ratio_excl_both_one']), PtwoNeutral=x(N['ece_ratio']), PtwoNeutralCI=ci(N['ece_ratio_ci']), PtwoIncOriginal=pc(O['incoherent_share']), PtwoIncNeutral=pc(N['incoherent_share']), PtwoAucCoh=a3(L7['coherent']['auroc']), PtwoAucInc=a3(L7['incoherent']['auroc'])).items()))
+open('generated_rows.json', 'w').write(json.dumps(dict(P2=f"Llama {x(L7['ratio'])}, {x(L7['ratio_excl_both_one'])} without both-1.0 pairs, {x(N['ece_ratio'])} {ci(N['ece_ratio_ci'])} under a neutral prompt ($n={N['statements']}$); Gemma reflects selection; Mistral $n_{{\\text{{coh}}}}={M['coherent']['n']}$", P4="Peaks at low $\\tau$ in every quartile; standard deviation falls with diversity, peak-normalized does not; retention runs opposite (\\S\\ref{sec:validation})")))
+print(g); print(h)

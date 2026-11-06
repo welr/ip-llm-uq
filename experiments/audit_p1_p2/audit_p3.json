@@ -1,0 +1,386 @@
+{
+ "triviaqa": {
+  "total": 12000,
+  "admissible": 11373,
+  "rejected": 627,
+  "adm_acc": 0.7789501450804537,
+  "rej_acc": 0.26156299840510366,
+  "ratio": 2.978059396130759,
+  "fisher_p": 3.855767171079073e-156,
+  "ci_question_reg": [
+   2.5523328708812776,
+   3.5529748491096287
+  ],
+  "models_without_text": [],
+  "empty": 0,
+  "empty_admissible": 0,
+  "empty_rejected": 0,
+  "empty_scored_correct": 0,
+  "per_model": {
+   "Qwen": {
+    "ratio": 3.1346326164874556,
+    "ratio_no_empty": 3.1346326164874556,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 210,
+    "rejected_acc": 0.22857142857142856
+   },
+   "Mistral": {
+    "ratio": 2.9911562397641664,
+    "ratio_no_empty": 2.9911562397641664,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 160,
+    "rejected_acc": 0.26875
+   },
+   "Llama": {
+    "ratio": 3.4321482514232606,
+    "ratio_no_empty": 3.4321482514232606,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 131,
+    "rejected_acc": 0.22900763358778625
+   },
+   "Gemma": {
+    "ratio": 2.367432150313152,
+    "ratio_no_empty": 2.367432150313152,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 126,
+    "rejected_acc": 0.3412698412698413
+   }
+  },
+  "sim_reproduces": {
+   "checked": 2000,
+   "same": 2000
+  },
+  "ratio_no_empty": 2.978059396130759,
+  "rej_acc_no_empty": 0.26156299840510366,
+  "adm_acc_no_empty": 0.7789501450804537,
+  "rejected_no_empty": 627,
+  "fisher_p_no_empty": 3.855767171079073e-156,
+  "ci_question_no_empty": [
+   2.5523328708812776,
+   3.5529748491096287
+  ],
+  "repartition": {
+   "admissible": 11373,
+   "rejected": 627,
+   "adm_acc": 0.7789501450804537,
+   "rej_acc": 0.26156299840510366,
+   "ratio": 2.978059396130759,
+   "ci_question": [
+    2.5523328708812776,
+    3.5529748491096287
+   ]
+  }
+ },
+ "nq_open": {
+  "total": 12000,
+  "admissible": 9611,
+  "rejected": 2389,
+  "adm_acc": 0.3103735303298304,
+  "rej_acc": 0.1921305985768104,
+  "ratio": 1.6154299868365245,
+  "fisher_p": 5.194055769276543e-32,
+  "ci_question_reg": [
+   1.447340379205819,
+   1.8100825337170932
+  ],
+  "models_without_text": [],
+  "empty": 263,
+  "empty_admissible": 190,
+  "empty_rejected": 73,
+  "empty_scored_correct": 0,
+  "per_model": {
+   "Qwen": {
+    "ratio": 1.6245769504809404,
+    "ratio_no_empty": 1.6245769504809404,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 594,
+    "rejected_acc": 0.18855218855218855
+   },
+   "Mistral": {
+    "ratio": 1.8053992955154827,
+    "ratio_no_empty": 1.7327087734904925,
+    "empty": 183,
+    "empty_rejected": 48,
+    "rejected": 519,
+    "rejected_acc": 0.17726396917148363
+   },
+   "Llama": {
+    "ratio": 1.2264150943396228,
+    "ratio_no_empty": 1.2247798742138365,
+    "empty": 1,
+    "empty_rejected": 1,
+    "rejected": 750,
+    "rejected_acc": 0.212
+   },
+   "Gemma": {
+    "ratio": 1.920144502829426,
+    "ratio_no_empty": 1.8741990491938818,
+    "empty": 79,
+    "empty_rejected": 24,
+    "rejected": 526,
+    "rejected_acc": 0.18250950570342206
+   }
+  },
+  "sim_reproduces": {
+   "checked": 2000,
+   "same": 2000
+  },
+  "ratio_no_empty": 1.5976517486660657,
+  "rej_acc_no_empty": 0.19818652849740934,
+  "adm_acc_no_empty": 0.3166330538159431,
+  "rejected_no_empty": 2316,
+  "fisher_p_no_empty": 8.727229274905428e-31,
+  "ci_question_no_empty": [
+   1.434091382485957,
+   1.7888988559976646
+  ],
+  "repartition": {
+   "admissible": 9421,
+   "rejected": 2316,
+   "adm_acc": 0.3166330538159431,
+   "rej_acc": 0.19818652849740934,
+   "ratio": 1.5976517486660657,
+   "ci_question": [
+    1.434091382485957,
+    1.7888988559976646
+   ]
+  }
+ },
+ "truthfulqa": {
+  "total": 19608,
+  "admissible": 15761,
+  "rejected": 3847,
+  "adm_acc": 0.17606750840682697,
+  "rej_acc": 0.09357941252924357,
+  "ratio": 1.8814769578918427,
+  "fisher_p": 1.5614129775839628e-39,
+  "ci_question_reg": [
+   1.650601170340389,
+   2.154874656602977
+  ],
+  "models_without_text": [],
+  "empty": 101,
+  "empty_admissible": 66,
+  "empty_rejected": 35,
+  "empty_scored_correct": 0,
+  "per_model": {
+   "Qwen": {
+    "ratio": 1.7685280898876405,
+    "ratio_no_empty": 1.760925876446682,
+    "empty": 10,
+    "empty_rejected": 5,
+    "rejected": 902,
+    "rejected_acc": 0.09866962305986696
+   },
+   "Mistral": {
+    "ratio": 2.4258541326241816,
+    "ratio_no_empty": 2.3921496685263723,
+    "empty": 62,
+    "empty_rejected": 20,
+    "rejected": 831,
+    "rejected_acc": 0.08303249097472924
+   },
+   "Llama": {
+    "ratio": 1.8344374186057457,
+    "ratio_no_empty": 1.8219291350960483,
+    "empty": 17,
+    "empty_rejected": 10,
+    "rejected": 1153,
+    "rejected_acc": 0.07372072853425846
+   },
+   "Gemma": {
+    "ratio": 1.5631201243989876,
+    "ratio_no_empty": 1.567894225058898,
+    "empty": 12,
+    "empty_rejected": 0,
+    "rejected": 961,
+    "rejected_acc": 0.12174817898022892
+   }
+  },
+  "sim_reproduces": {
+   "checked": 3268,
+   "same": 2964
+  },
+  "ratio_no_empty": 1.8721992141871084,
+  "rej_acc_no_empty": 0.0944386149003148,
+  "adm_acc_no_empty": 0.1768079006052883,
+  "rejected_no_empty": 3812,
+  "fisher_p_no_empty": 5.73973552950802e-39,
+  "ci_question_no_empty": [
+   1.6421196060817056,
+   2.145807722170505
+  ],
+  "repartition": {
+   "admissible": 15213,
+   "rejected": 4294,
+   "adm_acc": 0.17688818773417472,
+   "rej_acc": 0.10340009315323707,
+   "ratio": 1.7107159417354645,
+   "ci_question": [
+    1.51127583395949,
+    1.9419970346724296
+   ]
+  }
+ },
+ "mmlu": {
+  "total": 12000,
+  "admissible": 11382,
+  "rejected": 618,
+  "adm_acc": 0.7794763661922334,
+  "rej_acc": 0.6585760517799353,
+  "ratio": 1.1835783643901725,
+  "fisher_p": 2.7544697348379752e-11,
+  "ci_question_reg": [
+   1.1044779574425982,
+   1.2742067294116768
+  ],
+  "models_without_text": [
+   "Qwen",
+   "Mistral",
+   "Llama"
+  ],
+  "empty": 7,
+  "empty_admissible": 7,
+  "empty_rejected": 0,
+  "empty_scored_correct": 0,
+  "per_model": {
+   "Qwen": {
+    "ratio": 0.9682658204218779,
+    "ratio_no_empty": null,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 78,
+    "rejected_acc": 0.8461538461538461
+   },
+   "Mistral": {
+    "ratio": 1.341016042780749,
+    "ratio_no_empty": null,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 195,
+    "rejected_acc": 0.5128205128205128
+   },
+   "Llama": {
+    "ratio": 1.1577825159914712,
+    "ratio_no_empty": null,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 320,
+    "rejected_acc": 0.7
+   },
+   "Gemma": {
+    "ratio": 1.1749876421156698,
+    "ratio_no_empty": 1.1777588393848104,
+    "empty": 7,
+    "empty_rejected": 0,
+    "rejected": 25,
+    "rejected_acc": 0.68
+   }
+  },
+  "sim_reproduces": {
+   "checked": 500,
+   "same": 499
+  },
+  "ratio_no_empty": 1.1777588393848104,
+  "rej_acc_no_empty": 0.68,
+  "adm_acc_no_empty": 0.8008760107816711,
+  "rejected_no_empty": 25,
+  "fisher_p_no_empty": 0.13538285894233465,
+  "ci_question_no_empty": [
+   0.8810803892162832,
+   1.7800650582813762
+  ],
+  "repartition": {
+   "admissible": 2970,
+   "rejected": 23,
+   "adm_acc": 0.8010101010101011,
+   "rej_acc": 0.6521739130434783,
+   "ratio": 1.2282154882154883,
+   "ci_question": [
+    0.8945127085378923,
+    1.9617365437096936
+   ]
+  }
+ },
+ "arc": {
+  "total": 12000,
+  "admissible": 11364,
+  "rejected": 636,
+  "adm_acc": 0.8687961985216474,
+  "rej_acc": 0.789308176100629,
+  "ratio": 1.1007059407565094,
+  "fisher_p": 7.09491279360463e-08,
+  "ci_question_reg": [
+   1.0508467693166605,
+   1.1551398251902212
+  ],
+  "models_without_text": [],
+  "empty": 178,
+  "empty_admissible": 161,
+  "empty_rejected": 17,
+  "empty_scored_correct": 0,
+  "per_model": {
+   "Qwen": {
+    "ratio": 1.0389715832205684,
+    "ratio_no_empty": 1.0389715832205684,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 44,
+    "rejected_acc": 0.9090909090909091
+   },
+   "Mistral": {
+    "ratio": 1.146632713105939,
+    "ratio_no_empty": 1.0771122994652407,
+    "empty": 160,
+    "empty_rejected": 11,
+    "rejected": 101,
+    "rejected_acc": 0.6732673267326733
+   },
+   "Llama": {
+    "ratio": 1.053306384359736,
+    "ratio_no_empty": 1.0452340854116617,
+    "empty": 18,
+    "empty_rejected": 6,
+    "rejected": 484,
+    "rejected_acc": 0.7995867768595041
+   },
+   "Gemma": {
+    "ratio": 0.9101236217841631,
+    "ratio_no_empty": 0.9101236217841631,
+    "empty": 0,
+    "empty_rejected": 0,
+    "rejected": 7,
+    "rejected_acc": 1.0
+   }
+  },
+  "sim_reproduces": {
+   "checked": 2000,
+   "same": 1977
+  },
+  "ratio_no_empty": 1.0866801472144094,
+  "rej_acc_no_empty": 0.8109854604200323,
+  "adm_acc_no_empty": 0.8812817995179862,
+  "rejected_no_empty": 619,
+  "fisher_p_no_empty": 1.0470945100179282e-06,
+  "ci_question_no_empty": [
+   1.041474783024069,
+   1.1364023812913129
+  ],
+  "repartition": {
+   "admissible": 11184,
+   "rejected": 638,
+   "adm_acc": 0.8818848354792561,
+   "rej_acc": 0.8025078369905956,
+   "ratio": 1.0989111817104793,
+   "ci_question": [
+    1.052789597885936,
+    1.149582151555115
+   ]
+  }
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "overall": {
+  "stored": -7.053333333333334,
+  "cap_fixed": -4.453333333333333
+ },
+ "by_q": [
+  {
+   "q": 1,
+   "n": 207,
+   "stored": -13.365539452495975,
+   "cap_fixed": -9.500805152979067,
+   "wrong_cut_at_abbrev": 6
+  },
+  {
+   "q": 2,
+   "n": 88,
+   "stored": -5.3030303030303045,
+   "cap_fixed": -5.3030303030303045,
+   "wrong_cut_at_abbrev": 1
+  },
+  {
+   "q": 3,
+   "n": 88,
+   "stored": -4.924242424242425,
+   "cap_fixed": -3.7878787878787894,
+   "wrong_cut_at_abbrev": 4
+  },
+  {
+   "q": 4,
+   "n": 117,
+   "stored": 1.1965811965811968,
+   "cap_fixed": 4.615384615384616,
+   "wrong_cut_at_abbrev": 4
+  }
+ ],
+ "q1_flips": {
+  "total": 29,
+  "correct_after_cap_fix": 8,
+  "wrong_and_cut_at_abbrev": 6
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "P3 base Qwen": {
+  "bos_id": null,
+  "n_bos": 0,
+  "first": [
+   "Answer",
+   "\u0120the"
+  ]
+ },
+ "P3 base Mistral": {
+  "bos_id": 1,
+  "n_bos": 1,
+  "first": [
+   "<s>",
+   "\u2581Answer"
+  ]
+ },
+ "P3 base Llama": {
+  "bos_id": 128000,
+  "n_bos": 1,
+  "first": [
+   "<|begin_of_text|>",
+   "Answer"
+  ]
+ },
+ "P3 base Gemma": {
+  "bos_id": 2,
+  "n_bos": 1,
+  "first": [
+   "<bos>",
+   "Answer"
+  ]
+ },
+ "P3 instruct LlamaInstruct": {
+  "n_bos": 2,
+  "n_bos_without_special": 1,
+  "first": [
+   "<|begin_of_text|>",
+   "<|begin_of_text|>",
+   "<|start_header_id|>"
+  ],
+  "template_head": "<|begin_of_text|><|start_header_id|>system<|end_header_id|>\n"
+ },
+ "P3 instruct Gemma4MoE": {
+  "n_bos": 1,
+  "n_bos_without_special": 1,
+  "first": [
+   "<bos>",
+   "<|turn>",
+   "user"
+  ],
+  "template_head": "<bos><|turn>user\nAnswer the following question concisely:\n\nW"
+ },
+ "P4 Llama instruct, no template": {
+  "n_bos": 0,
+  "first": [
+   "Answer",
+   "\u0120the",
+   "\u0120following"
+  ],
+  "has_template_tokens": false
+ }
+}

@@ -1,0 +1,18 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+Benchmark & $\Gamma$-maximin ($\theta=0.95$) & $\Gamma$-maximax ($\theta=0.50$) & $C_{\text{sem}}$ & Without singleton ties \\
+\midrule
+TriviaQA & 2.00$\times$ (8.4\%) & 3.15$\times$ (7.8\%) & 2.98$\times$ (5.2\%) & 3.21$\times$ (7.2\%) \\
+NQ-Open & 1.44$\times$ (25.8\%) & 1.86$\times$ (27.5\%) & 1.62$\times$ (19.9\%) & 1.85$\times$ (26.7\%) \\
+TruthfulQA$^\dagger$ & 1.57$\times$ (29.5\%) & 1.81$\times$ (29.2\%) & 1.72$\times$ (22.1\%) & 1.94$\times$ (27.7\%) \\
+ARC-Challenge$^\dagger$ & 1.06$\times$ (9.6\%) & 1.24$\times$ (15.8\%) & 1.12$\times$ (5.5\%) & 1.29$\times$ (14.3\%) \\
+MMLU (Gemma)$^\dagger$ & 1.39$\times$ (1.9\%) & 1.37$\times$ (16.4\%) & 1.23$\times$ (0.8\%) & 1.39$\times$ (15.2\%) \\
+\bottomrule
+\end{tabular}
+\caption{Post hoc comparison of decision rules on the threshold credal set: admissibility ratio (rejection rate). The text gives intervals on the main differences. $^\dagger$Stored similarity matrices that do not exactly reproduce the registered partition.}
+\label{tab:decision-rules}
+\end{table}

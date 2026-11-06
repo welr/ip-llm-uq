@@ -1,0 +1,1 @@
+{"P2": "Llama 2.21$\\times$, 1.46$\\times$ without both-1.0 pairs, 1.26$\\times$ [0.61, 2.22] under a neutral prompt ($n=400$); Gemma reflects selection; Mistral $n_{\\text{coh}}=6$", "P4": "Peaks at low $\\tau$ in every quartile; standard deviation falls with diversity, peak-normalized does not; retention runs opposite (\\S\\ref{sec:validation})"}

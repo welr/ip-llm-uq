@@ -1,0 +1,180 @@
+{
+  "dataset": "triviaqa",
+  "models": [
+    "Qwen",
+    "Mistral",
+    "Llama",
+    "Gemma"
+  ],
+  "thresholds": [
+    0.5,
+    0.55,
+    0.6,
+    0.65,
+    0.7,
+    0.75,
+    0.8,
+    0.85,
+    0.9,
+    0.95
+  ],
+  "n_random_reps": 50,
+  "results": [
+    {
+      "policy": "top_3",
+      "k": 3,
+      "ratio": 2.353327620679806,
+      "ci_lo": 1.9375417079084158,
+      "ci_hi": 3.012577869241594,
+      "n_admissible": 5835,
+      "n_rejected": 165,
+      "adm_acc": 0.7701799485861183,
+      "rej_acc": 0.32727272727272727,
+      "rejection_rate": 0.0275
+    },
+    {
+      "policy": "top_4",
+      "k": 4,
+      "ratio": 2.9877289731682146,
+      "ci_lo": 2.472043215260778,
+      "ci_hi": 3.8007762940522754,
+      "n_admissible": 7752,
+      "n_rejected": 248,
+      "adm_acc": 0.7710268317853457,
+      "rej_acc": 0.25806451612903225,
+      "rejection_rate": 0.031
+    },
+    {
+      "policy": "top_5",
+      "k": 5,
+      "ratio": 2.7524960588544407,
+      "ci_lo": 2.406475145996686,
+      "ci_hi": 3.2121392417801204,
+      "n_admissible": 9515,
+      "n_rejected": 485,
+      "adm_acc": 0.7775091960063059,
+      "rej_acc": 0.2824742268041237,
+      "rejection_rate": 0.0485
+    },
+    {
+      "policy": "top_6",
+      "k": 6,
+      "ratio": 2.978059396130759,
+      "ci_lo": 2.639153308217875,
+      "ci_hi": 3.415873400800028,
+      "n_admissible": 11373,
+      "n_rejected": 627,
+      "adm_acc": 0.7789501450804537,
+      "rej_acc": 0.26156299840510366,
+      "rejection_rate": 0.05225
+    },
+    {
+      "policy": "random_3_of_6",
+      "k": 3,
+      "ratio_mean": 2.4620576941103973,
+      "ratio_std": 0.18519677541062052,
+      "ratio_min": 2.013457394623314,
+      "ratio_max": 3.0419200233663473,
+      "rejection_rate_mean": 0.034133333333333335,
+      "n_reps": 50,
+      "first_rep_detail": {
+        "ratio": 2.567670780524309,
+        "ci_lo": 2.088213912345838,
+        "ci_hi": 3.2542978978726262,
+        "n_admissible": 5806,
+        "n_rejected": 194,
+        "adm_acc": 0.7676541508784016,
+        "rej_acc": 0.29896907216494845,
+        "rejection_rate": 0.03233333333333333
+      }
+    },
+    {
+      "policy": "random_4_of_6",
+      "k": 4,
+      "ratio_mean": 3.1320521447577114,
+      "ratio_std": 0.20360322739399817,
+      "ratio_min": 2.740967764634137,
+      "ratio_max": 3.617503002856772,
+      "rejection_rate_mean": 0.03744,
+      "n_reps": 50,
+      "first_rep_detail": {
+        "ratio": 3.1207479161973417,
+        "ci_lo": 2.5893124693945597,
+        "ci_hi": 3.9453044195557907,
+        "n_admissible": 7720,
+        "n_rejected": 280,
+        "adm_acc": 0.7690414507772021,
+        "rej_acc": 0.24642857142857144,
+        "rejection_rate": 0.035
+      }
+    },
+    {
+      "policy": "random_5_of_6",
+      "k": 5,
+      "ratio_mean": 2.7646220498372207,
+      "ratio_std": 0.09632475150158601,
+      "ratio_min": 2.611077156643587,
+      "ratio_max": 2.9921644246514547,
+      "rejection_rate_mean": 0.051053999999999995,
+      "n_reps": 50,
+      "first_rep_detail": {
+        "ratio": 2.707314904683228,
+        "ci_lo": 2.3760966268613655,
+        "ci_hi": 3.1319921283290673,
+        "n_admissible": 9505,
+        "n_rejected": 495,
+        "adm_acc": 0.7766438716465018,
+        "rej_acc": 0.2868686868686869,
+        "rejection_rate": 0.0495
+      }
+    },
+    {
+      "policy": "bottom_3",
+      "k": 3,
+      "ratio": 2.327614379084967,
+      "ci_lo": 1.9450160298615802,
+      "ci_hi": 2.8746316913819476,
+      "n_admissible": 5780,
+      "n_rejected": 220,
+      "adm_acc": 0.7617647058823529,
+      "rej_acc": 0.32727272727272727,
+      "rejection_rate": 0.03666666666666667
+    },
+    {
+      "policy": "bottom_4",
+      "k": 4,
+      "ratio": 3.0871011850501366,
+      "ci_lo": 2.591714578382001,
+      "ci_hi": 3.814689382669246,
+      "n_admissible": 7679,
+      "n_rejected": 321,
+      "adm_acc": 0.7693710118505014,
+      "rej_acc": 0.24922118380062305,
+      "rejection_rate": 0.040125
+    },
+    {
+      "policy": "bottom_5",
+      "k": 5,
+      "ratio": 2.8358331643132404,
+      "ci_lo": 2.4923006743811635,
+      "ci_hi": 3.283813165089771,
+      "n_admissible": 9461,
+      "n_rejected": 539,
+      "adm_acc": 0.778670330831836,
+      "rej_acc": 0.274582560296846,
+      "rejection_rate": 0.0539
+    },
+    {
+      "policy": "full_6",
+      "k": 6,
+      "ratio": 2.978059396130759,
+      "ci_lo": 2.639153308217875,
+      "ci_hi": 3.415873400800028,
+      "n_admissible": 11373,
+      "n_rejected": 627,
+      "adm_acc": 0.7789501450804537,
+      "rej_acc": 0.26156299840510366,
+      "rejection_rate": 0.05225
+    }
+  ]
+}

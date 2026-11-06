@@ -1,0 +1,30 @@
+"""Assert every qualitative TriviaQA claim in the manuscript against the rescored results, and compare per-benchmark results files with what the claims say."""
+import json
+C = json.load(open('../cf_integration/cf_results.json')); D = json.load(open('../replication/discovery_scorer_check.json')); RS = json.load(open('../new_problems/readmitted_and_strict.json'))['readmitted']; CC = json.load(open('../new_problems/criteria_comparison.json'))
+SW = json.load(open('results_full/interval_endpoint_sweep_results.json'))['datasets']['triviaqa']; T = C['triviaqa']['pooled']; S = C['string_filters']; BN = ['triviaqa', 'nq_open', 'truthfulqa', 'arc', 'mmlu']; ok = 0
+def check(name, cond):
+    global ok; assert cond, name; ok += 1; print('ok', name)
+check('labels: full-list correct equals independent rule count', sum(v['ac'] + v['rc'] for v in C['triviaqa']['per_model'].values()) == D['triviaqa']['counts']['registered_full_correct'])
+check('partition unchanged: 627 rejected of 12000', T['rt'] == 627 and T['at'] == 11373)
+check('pooled ratio above 1 on all five benchmarks', all(C[b]['pooled']['ratio'] > 1 for b in BN))
+check('sweep: every interval excludes 1', SW and min(x['ratio_ci_lo'] for x in SW) > 1)
+check('scalar AUROC takes one value per theta_min', all(len({round(x['auroc_one_minus_maxcp'], 9) for x in SW if x['theta_min'] == t}) == 1 for t in {x['theta_min'] for x in SW}))
+check('scalar offers no gain over SE, KLE, SNNE on TriviaQA', all(C['scalar_triviaqa']['1-maxCP']['AUROC'] <= C['scalar_triviaqa'][k]['AUROC'] for k in ['SE(0.75)', 'KLE', '-SNNE']))
+check('stratifiers without outcome conditioning: peak smaller than 3-4/6 bin', C['external_strat']['max'] < C['triviaqa']['bins']['3-4/6']['ratio'])
+check('stratifiers: no inversion', C['external_strat']['min'] > 1)
+check('Gamma-maximax ratio above C_sem on all five', all(CC[b]['Gmaximax']['ratio'] > CC[b]['C_sem']['ratio'] for b in BN))
+check('singleton-tie responses below rejected on all five', all(RS[b]['tie_acc'] < RS[b]['rej_acc'] for b in BN))
+check('cluster>=2 responses above rejected on exactly four of five', sum(RS[b]['real_acc'] > RS[b]['rej_acc'] for b in BN) == 4)
+tf, nf = D['triviaqa']['registered_full'], D['nq_open']['stored']; H2, H1, G = 'H2_logratio_no_ties_minus_union', 'H1_tie_gap', 'S2_logratio_no_ties_minus_gmax'
+check('log-ratio gain: only the NQ-Open interval excludes zero', tf[H2]['ci'][0] < 0 < tf[H2]['ci'][1] and nf[H2]['ci'][0] > 0)
+check('no-ties vs Gamma-maximax indistinguishable on both', all(a[G]['ci'][0] < 0 < a[G]['ci'][1] for a in (tf, nf)))
+check('no-ties rejects fewer than Gamma-maximax on both', all(a['counts']['no_ties']['rej_rate'] <= a['counts']['gmax']['rej_rate'] for a in (tf, nf)))
+check('multi-argmax: admissibility ratio above plurality on TriviaQA', C['multi_argmax']['triviaqa']['multi_argmax']['adm']['ratio'] > C['multi_argmax']['triviaqa']['multi_argmax']['s075']['ratio'])
+check('multi-argmax: plurality retained set more accurate on TriviaQA', C['multi_argmax']['triviaqa']['multi_argmax']['s075']['adm_acc'] > C['multi_argmax']['triviaqa']['multi_argmax']['adm']['adm_acc'])
+check('matched retention: largest-cluster score above partition', C['matched_retention']['response_level_s']['acc'] > C['matched_retention']['admissibility']['acc'] and C['matched_retention']['paired_bootstrap_A_minus_B']['ci_hi'] < 0)
+check('string and embedding admissibility both exceed NLI on TriviaQA', S['string']['ratio'] > T['ratio'] and C['embedding_triviaqa']['ratio'] > T['ratio'])
+check('filter table: string has the highest ratio', S['string']['ratio'] == max(S[k]['ratio'] for k in ['string', 'consistency', 'frequency', 'length']))
+check('filter table: length filter counterproductive', S['length']['ratio'] < 1)
+check('logprob weighting: higher ratio at higher rejection than C_sem, same direction as the variant', C['logprob']['ratio'] > T['ratio'] and C['logprob']['rejection_rate'] > T['rej_rate'])
+check('self-consistency: lower ratio, more rejection than NLI', C['self_consistency_partition']['ratio'] < T['ratio'] and C['self_consistency_partition']['rej_rate'] > T['rej_rate'])
+print(ok, 'claims hold')

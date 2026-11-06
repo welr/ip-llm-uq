@@ -1,0 +1,1150 @@
+{
+ "nq_open": {
+  "n": 2000,
+  "auroc": {
+   "one_minus_maxcp": 0.7104798735478721,
+   "se_075": 0.707633756296341,
+   "se_avg": 0.7203905236454382,
+   "kle": 0.7286225429957303,
+   "kle_avg": 0.7252770862181109,
+   "neg_snne": 0.5880307253172222
+  },
+  "auroc_runner_label": {
+   "one_minus_maxcp": 0.7104798735478721,
+   "se_075": 0.707633756296341,
+   "kle": 0.7286225429957303,
+   "neg_snne": 0.5880307253172222
+  },
+  "mv_overall": 0.3045,
+  "mv_admissible": 0.3055,
+  "mv_n": 2000,
+  "se_width_detects_1_2": 0.47360180898913296,
+  "grid": {
+   "mean_distinct": 1.419,
+   "share_one": 0.6545,
+   "maximum": 4
+  }
+ },
+ "truthfulqa": {
+  "n": 3268,
+  "auroc": {
+   "one_minus_maxcp": 0.6492230611903629,
+   "se_075": 0.6903410041033688,
+   "se_avg": 0.6900892064676296,
+   "kle": 0.6917157613099908,
+   "kle_avg": 0.6970559293037136,
+   "neg_snne": 0.5032064804929187
+  },
+  "auroc_runner_label": {
+   "one_minus_maxcp": 0.648878787820398,
+   "se_075": 0.6895424395814586,
+   "kle": 0.6910315871416267,
+   "neg_snne": 0.503323846721531
+  },
+  "mv_overall": 0.17686658506731945,
+  "mv_admissible": 0.1762545899632803,
+  "mv_n": 3268,
+  "se_width_detects_1_2": 0.5142605417879553,
+  "grid": {
+   "mean_distinct": 1.458078335373317,
+   "share_one": 0.6230110159118727,
+   "maximum": 5
+  },
+  "strata": {
+   "type:Adversarial": {
+    "ratio": 1.8285661802224715,
+    "rejected": 2123,
+    "rejection_rate": 0.20242181540808543,
+    "adm_acc": 0.17656903765690377,
+    "rej_acc": 0.09656146961846444,
+    "pairs": 1748,
+    "ci_pairs": [
+     1.5344814627645584,
+     2.2077682974877173
+    ]
+   },
+   "type:Non-Adversarial": {
+    "ratio": 1.9520159109544826,
+    "rejected": 1724,
+    "rejection_rate": 0.18903508771929825,
+    "adm_acc": 0.1755002704164413,
+    "rej_acc": 0.08990719257540604,
+    "pairs": 1520,
+    "ci_pairs": [
+     1.6027297886618137,
+     2.4300598272496696
+    ]
+   }
+  },
+  "categories": {
+   "n": 38,
+   "with_30_rejected": 30,
+   "low": 0.5862068965517241,
+   "high": 8.132478632478632,
+   "below_1": 8,
+   "per_category": {
+    "Misconceptions": {
+     "ratio": 1.5459030046767892,
+     "rejected": 508,
+     "rejection_rate": 0.21166666666666667,
+     "adm_acc": 0.20084566596194503,
+     "rej_acc": 0.12992125984251968,
+     "pairs": 400
+    },
+    "Proverbs": {
+     "ratio": 1.6398378691372322,
+     "rejected": 118,
+     "rejection_rate": 0.27314814814814814,
+     "adm_acc": 0.15286624203821655,
+     "rej_acc": 0.09322033898305085,
+     "pairs": 72
+    },
+    "Misquotations": {
+     "ratio": 8.132478632478632,
+     "rejected": 33,
+     "rejection_rate": 0.0859375,
+     "adm_acc": 0.4928774928774929,
+     "rej_acc": 0.06060606060606061,
+     "pairs": 64
+    },
+    "Conspiracies": {
+     "ratio": 3.8421052631578947,
+     "rejected": 125,
+     "rejection_rate": 0.20833333333333334,
+     "adm_acc": 0.15368421052631578,
+     "rej_acc": 0.04,
+     "pairs": 100
+    },
+    "Superstitions": {
+     "ratio": 1.62434554973822,
+     "rejected": 146,
+     "rejection_rate": 0.2765151515151515,
+     "adm_acc": 0.04450261780104712,
+     "rej_acc": 0.0273972602739726,
+     "pairs": 88
+    },
+    "Paranormal": {
+     "ratio": 0.9592450765864332,
+     "rejected": 167,
+     "rejection_rate": 0.2676282051282051,
+     "adm_acc": 0.045951859956236324,
+     "rej_acc": 0.04790419161676647,
+     "pairs": 104
+    },
+    "Fiction": {
+     "ratio": 1.8266199649737302,
+     "rejected": 149,
+     "rejection_rate": 0.20694444444444443,
+     "adm_acc": 0.09807355516637478,
+     "rej_acc": 0.053691275167785234,
+     "pairs": 120
+    },
+    "Myths and Fairytales": {
+     "ratio": 1.9960732984293192,
+     "rejected": 122,
+     "rejection_rate": 0.24206349206349206,
+     "adm_acc": 0.06544502617801047,
+     "rej_acc": 0.03278688524590164,
+     "pairs": 84
+    },
+    "Indexical Error: Identity": {
+     "ratio": 0.7727272727272727,
+     "rejected": 51,
+     "rejection_rate": 0.2361111111111111,
+     "adm_acc": 0.06060606060606061,
+     "rej_acc": 0.0784313725490196,
+     "pairs": 36
+    },
+    "Indexical Error: Other": {
+     "ratio": 1.842233009708738,
+     "rejected": 92,
+     "rejection_rate": 0.18253968253968253,
+     "adm_acc": 0.08009708737864078,
+     "rej_acc": 0.043478260869565216,
+     "pairs": 84
+    },
+    "Indexical Error: Time": {
+     "ratio": 1.7625231910946197,
+     "rejected": 76,
+     "rejection_rate": 0.19791666666666666,
+     "adm_acc": 0.16233766233766234,
+     "rej_acc": 0.09210526315789473,
+     "pairs": 64
+    },
+    "Indexical Error: Location": {
+     "ratio": 2.153846153846154,
+     "rejected": 56,
+     "rejection_rate": 0.21212121212121213,
+     "adm_acc": 0.15384615384615385,
+     "rej_acc": 0.07142857142857142,
+     "pairs": 44
+    },
+    "Distraction": {
+     "ratio": 0.6365138372573317,
+     "rejected": 67,
+     "rejection_rate": 0.19940476190476192,
+     "adm_acc": 0.08550185873605948,
+     "rej_acc": 0.13432835820895522,
+     "pairs": 56
+    },
+    "Subjective": {
+     "ratio": 0.6181818181818182,
+     "rejected": 51,
+     "rejection_rate": 0.2361111111111111,
+     "adm_acc": 0.012121212121212121,
+     "rej_acc": 0.0196078431372549,
+     "pairs": 36
+    },
+    "Advertising": {
+     "ratio": 0.5862068965517241,
+     "rejected": 51,
+     "rejection_rate": 0.16346153846153846,
+     "adm_acc": 0.011494252873563218,
+     "rej_acc": 0.0196078431372549,
+     "pairs": 52
+    },
+    "Religion": {
+     "ratio": 2.199300699300699,
+     "rejected": 74,
+     "rejection_rate": 0.20555555555555555,
+     "adm_acc": 0.23776223776223776,
+     "rej_acc": 0.10810810810810811,
+     "pairs": 60
+    },
+    "Logical Falsehood": {
+     "ratio": 1.322378716744914,
+     "rejected": 52,
+     "rejection_rate": 0.15476190476190477,
+     "adm_acc": 0.45774647887323944,
+     "rej_acc": 0.34615384615384615,
+     "pairs": 56
+    },
+    "Stereotypes": {
+     "ratio": 0.9079545454545455,
+     "rejected": 136,
+     "rejection_rate": 0.2361111111111111,
+     "adm_acc": 0.10681818181818181,
+     "rej_acc": 0.11764705882352941,
+     "pairs": 96
+    },
+    "Misconceptions: Topical": {
+     "ratio": null,
+     "rejected": 10,
+     "rejection_rate": 0.10416666666666667,
+     "adm_acc": 0.43023255813953487,
+     "rej_acc": 0.0,
+     "pairs": 16
+    },
+    "Education": {
+     "ratio": 2.15,
+     "rejected": 40,
+     "rejection_rate": 0.16666666666666666,
+     "adm_acc": 0.215,
+     "rej_acc": 0.1,
+     "pairs": 40
+    },
+    "Nutrition": {
+     "ratio": 1.975535168195719,
+     "rejected": 57,
+     "rejection_rate": 0.1484375,
+     "adm_acc": 0.3119266055045872,
+     "rej_acc": 0.15789473684210525,
+     "pairs": 64
+    },
+    "Health": {
+     "ratio": 2.1341090018371096,
+     "rejected": 255,
+     "rejection_rate": 0.19318181818181818,
+     "adm_acc": 0.19248826291079812,
+     "rej_acc": 0.09019607843137255,
+     "pairs": 220
+    },
+    "Psychology": {
+     "ratio": 1.9028871391076114,
+     "rejected": 75,
+     "rejection_rate": 0.16447368421052633,
+     "adm_acc": 0.07611548556430446,
+     "rej_acc": 0.04,
+     "pairs": 76
+    },
+    "Sociology": {
+     "ratio": 1.330482897384306,
+     "rejected": 184,
+     "rejection_rate": 0.1393939393939394,
+     "adm_acc": 0.30369718309859156,
+     "rej_acc": 0.22826086956521738,
+     "pairs": 220
+    },
+    "Economics": {
+     "ratio": 0.9671052631578948,
+     "rejected": 155,
+     "rejection_rate": 0.20833333333333334,
+     "adm_acc": 0.2495755517826825,
+     "rej_acc": 0.25806451612903225,
+     "pairs": 124
+    },
+    "Politics": {
+     "ratio": 1.4329479768786129,
+     "rejected": 67,
+     "rejection_rate": 0.2791666666666667,
+     "adm_acc": 0.2138728323699422,
+     "rej_acc": 0.14925373134328357,
+     "pairs": 40
+    },
+    "Law": {
+     "ratio": 1.1599740407236148,
+     "rejected": 362,
+     "rejection_rate": 0.23567708333333334,
+     "adm_acc": 0.06729131175468483,
+     "rej_acc": 0.058011049723756904,
+     "pairs": 256
+    },
+    "Science": {
+     "ratio": 2.183734939759036,
+     "rejected": 50,
+     "rejection_rate": 0.23148148148148148,
+     "adm_acc": 0.1746987951807229,
+     "rej_acc": 0.08,
+     "pairs": 36
+    },
+    "History": {
+     "ratio": 4.149797570850202,
+     "rejected": 82,
+     "rejection_rate": 0.1423611111111111,
+     "adm_acc": 0.20242914979757085,
+     "rej_acc": 0.04878048780487805,
+     "pairs": 96
+    },
+    "Language": {
+     "ratio": null,
+     "rejected": 102,
+     "rejection_rate": 0.20238095238095238,
+     "adm_acc": 0.07213930348258707,
+     "rej_acc": 0.0,
+     "pairs": 84
+    },
+    "Weather": {
+     "ratio": 0.8552631578947367,
+     "rejected": 104,
+     "rejection_rate": 0.2549019607843137,
+     "adm_acc": 0.01644736842105263,
+     "rej_acc": 0.019230769230769232,
+     "pairs": 68
+    },
+    "Confusion: People": {
+     "ratio": null,
+     "rejected": 10,
+     "rejection_rate": 0.018115942028985508,
+     "adm_acc": 0.23062730627306274,
+     "rej_acc": 0.0,
+     "pairs": 92
+    },
+    "Confusion: Places": {
+     "ratio": 1.990590248075278,
+     "rejected": 26,
+     "rejection_rate": 0.07222222222222222,
+     "adm_acc": 0.5359281437125748,
+     "rej_acc": 0.2692307692307692,
+     "pairs": 60
+    },
+    "Confusion: Other": {
+     "ratio": 0.22283609576427257,
+     "rejected": 11,
+     "rejection_rate": 0.057291666666666664,
+     "adm_acc": 0.12154696132596685,
+     "rej_acc": 0.5454545454545454,
+     "pairs": 32
+    },
+    "Finance": {
+     "ratio": null,
+     "rejected": 65,
+     "rejection_rate": 0.30092592592592593,
+     "adm_acc": 0.0,
+     "rej_acc": 0.0,
+     "pairs": 36
+    },
+    "Misinformation": {
+     "ratio": 0.0,
+     "rejected": 70,
+     "rejection_rate": 0.24305555555555555,
+     "adm_acc": 0.0,
+     "rej_acc": 0.014285714285714285,
+     "pairs": 48
+    },
+    "Statistics": {
+     "ratio": 3.264705882352941,
+     "rejected": 18,
+     "rejection_rate": 0.15,
+     "adm_acc": 0.3627450980392157,
+     "rej_acc": 0.1111111111111111,
+     "pairs": 20
+    },
+    "Mandela Effect": {
+     "ratio": 4.473684210526316,
+     "rejected": 30,
+     "rejection_rate": 0.20833333333333334,
+     "adm_acc": 0.2982456140350877,
+     "rej_acc": 0.06666666666666667,
+     "pairs": 24
+    }
+   }
+  },
+  "overlap_incorrect": {
+   "rejected": 0.1416688328567715,
+   "admissible": 0.284626609986676,
+   "rejected_n": 3847,
+   "admissible_n": 15761,
+   "pairs_unmatched": 0
+  }
+ },
+ "arc": {
+  "n": 2000,
+  "auroc": {
+   "one_minus_maxcp": 0.7366101228823803,
+   "se_075": 0.7280797659890137,
+   "se_avg": 0.7065714684899062,
+   "kle": 0.7204231802164026,
+   "kle_avg": 0.704745198139799,
+   "neg_snne": 0.7124561173958073
+  },
+  "auroc_runner_label": {
+   "one_minus_maxcp": 0.7353727783266139,
+   "se_075": 0.7267452985519629,
+   "kle": 0.719042310807323,
+   "neg_snne": 0.712079139187782
+  },
+  "mv_overall": 0.8705,
+  "mv_admissible": 0.8705,
+  "mv_n": 2000,
+  "se_width_detects_1_2": 0.25225647514829463,
+  "grid": {
+   "mean_distinct": 1.4525,
+   "share_one": 0.5885,
+   "maximum": 5
+  }
+ },
+ "mmlu_domains": {
+  "Social sciences": {
+   "ratio": 1.2945109526235354,
+   "rejected": 232,
+   "rejection_rate": 0.052823315118397086,
+   "adm_acc": 0.8425480769230769,
+   "rej_acc": 0.6508620689655172,
+   "pairs": 732,
+   "ci_pairs": [
+    1.1519113610162222,
+    1.4723836128844128
+   ]
+  },
+  "STEM": {
+   "ratio": 1.1003073112653785,
+   "rejected": 298,
+   "rejection_rate": 0.057484567901234566,
+   "adm_acc": 0.7273843634875153,
+   "rej_acc": 0.6610738255033557,
+   "pairs": 864,
+   "ci_pairs": [
+    0.994849868669588,
+    1.2246520811034545
+   ]
+  },
+  "Humanities": {
+   "ratio": 1.157592291618296,
+   "rejected": 88,
+   "rejection_rate": 0.036303630363036306,
+   "adm_acc": 0.7761130136986302,
+   "rej_acc": 0.6704545454545454,
+   "pairs": 404,
+   "ci_pairs": [
+    0.9895112813091346,
+    1.3940513652718054
+   ]
+  }
+ },
+ "jaccard": {
+  "mmlu": {
+   "freq_rejected": 0.21629213483146068,
+   "cons_rejected": 0.21679962458939464,
+   "len_rejected": 0.03293687099725526
+  },
+  "arc": {
+   "freq_rejected": 0.27644492911668483,
+   "cons_rejected": 0.27826564215148186,
+   "len_rejected": 0.025788534021027574
+  }
+ },
+ "range_width": {
+  "nq_open_control": {
+   "pairs": 35,
+   "ratio_low": 1.5199296817172465,
+   "ratio_high": 2.9303529972022146,
+   "rej_low": 0.074,
+   "rej_high": 0.27466666666666667,
+   "below_1": 0,
+   "detail": [
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.8,
+     "ratio": 2.9190079530992277,
+     "rejection_rate": 0.16416666666666666
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.85,
+     "ratio": 2.9303529972022146,
+     "rejection_rate": 0.16266666666666665
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.9,
+     "ratio": 2.873422566446398,
+     "rejection_rate": 0.158
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.95,
+     "ratio": 2.784013758037984,
+     "rejection_rate": 0.13316666666666666
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.99,
+     "ratio": 2.726847974611011,
+     "rejection_rate": 0.074
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.8,
+     "ratio": 2.5108044870866686,
+     "rejection_rate": 0.17783333333333334
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.85,
+     "ratio": 2.503575248195578,
+     "rejection_rate": 0.17625
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.9,
+     "ratio": 2.4471018943362597,
+     "rejection_rate": 0.17066666666666666
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.95,
+     "ratio": 2.4217498389734797,
+     "rejection_rate": 0.14366666666666666
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.99,
+     "ratio": 2.4537817485322835,
+     "rejection_rate": 0.07883333333333334
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.8,
+     "ratio": 1.74521249015326,
+     "rejection_rate": 0.24025
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.85,
+     "ratio": 1.7322097986549232,
+     "rejection_rate": 0.23766666666666666
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.9,
+     "ratio": 1.6927155798008109,
+     "rejection_rate": 0.2315
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.95,
+     "ratio": 1.6154299868365245,
+     "rejection_rate": 0.19908333333333333
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.99,
+     "ratio": 1.592800776030842,
+     "rejection_rate": 0.11558333333333333
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.8,
+     "ratio": 1.6707282525313292,
+     "rejection_rate": 0.2619166666666667
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.85,
+     "ratio": 1.664225859075755,
+     "rejection_rate": 0.25883333333333336
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.9,
+     "ratio": 1.6252069817313173,
+     "rejection_rate": 0.252
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.95,
+     "ratio": 1.5577829705243307,
+     "rejection_rate": 0.21666666666666667
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.99,
+     "ratio": 1.5532213358300313,
+     "rejection_rate": 0.12791666666666668
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.8,
+     "ratio": 1.656378423921454,
+     "rejection_rate": 0.26758333333333334
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.85,
+     "ratio": 1.6498119487582437,
+     "rejection_rate": 0.2645
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.9,
+     "ratio": 1.6125780593679626,
+     "rejection_rate": 0.2574166666666667
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.95,
+     "ratio": 1.5391713281402304,
+     "rejection_rate": 0.2215
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.99,
+     "ratio": 1.5626750941709764,
+     "rejection_rate": 0.12983333333333333
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.8,
+     "ratio": 1.6410949575965752,
+     "rejection_rate": 0.2715
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.85,
+     "ratio": 1.6344707845349864,
+     "rejection_rate": 0.2684166666666667
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.9,
+     "ratio": 1.5970378324439238,
+     "rejection_rate": 0.26125
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.95,
+     "ratio": 1.5218158497616383,
+     "rejection_rate": 0.22483333333333333
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.99,
+     "ratio": 1.549547884987118,
+     "rejection_rate": 0.13175
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.8,
+     "ratio": 1.6389774175924239,
+     "rejection_rate": 0.27466666666666667
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.85,
+     "ratio": 1.6323429098501316,
+     "rejection_rate": 0.27158333333333334
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.9,
+     "ratio": 1.595162658874976,
+     "rejection_rate": 0.2644166666666667
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.95,
+     "ratio": 1.5199296817172465,
+     "rejection_rate": 0.228
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.99,
+     "ratio": 1.5523035471072422,
+     "rejection_rate": 0.134
+    }
+   ]
+  },
+  "arc": {
+   "pairs": 35,
+   "ratio_low": 1.048345227241317,
+   "ratio_high": 1.3469416580823173,
+   "rej_low": 0.034166666666666665,
+   "rej_high": 0.156,
+   "below_1": 0,
+   "detail": [
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.8,
+     "ratio": 1.3469416580823173,
+     "rejection_rate": 0.12258333333333334
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.85,
+     "ratio": 1.3469416580823173,
+     "rejection_rate": 0.12258333333333334
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.9,
+     "ratio": 1.3466176834298573,
+     "rejection_rate": 0.12158333333333333
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.95,
+     "ratio": 1.18303834842932,
+     "rejection_rate": 0.041916666666666665
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.99,
+     "ratio": 1.1224132628203907,
+     "rejection_rate": 0.034166666666666665
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.8,
+     "ratio": 1.3405922899211025,
+     "rejection_rate": 0.12583333333333332
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.85,
+     "ratio": 1.3405922899211025,
+     "rejection_rate": 0.12583333333333332
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.9,
+     "ratio": 1.3402109875817145,
+     "rejection_rate": 0.12483333333333334
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.95,
+     "ratio": 1.1824371498502368,
+     "rejection_rate": 0.043583333333333335
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.99,
+     "ratio": 1.1243298544447176,
+     "rejection_rate": 0.035083333333333334
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.8,
+     "ratio": 1.2752593588182,
+     "rejection_rate": 0.14283333333333334
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.85,
+     "ratio": 1.2752593588182,
+     "rejection_rate": 0.14283333333333334
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.9,
+     "ratio": 1.2751353425820833,
+     "rejection_rate": 0.14166666666666666
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.95,
+     "ratio": 1.119368641709285,
+     "rejection_rate": 0.05491666666666667
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.99,
+     "ratio": 1.075013030313478,
+     "rejection_rate": 0.04441666666666667
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.8,
+     "ratio": 1.2591756875605995,
+     "rejection_rate": 0.147
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.85,
+     "ratio": 1.2591756875605995,
+     "rejection_rate": 0.147
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.9,
+     "ratio": 1.258922419732672,
+     "rejection_rate": 0.14583333333333334
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.95,
+     "ratio": 1.1046597398283433,
+     "rejection_rate": 0.0575
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.99,
+     "ratio": 1.0606032326276422,
+     "rejection_rate": 0.047
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.8,
+     "ratio": 1.2509490228297997,
+     "rejection_rate": 0.15083333333333335
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.85,
+     "ratio": 1.2509490228297997,
+     "rejection_rate": 0.15083333333333335
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.9,
+     "ratio": 1.251221549691381,
+     "rejection_rate": 0.1495
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.95,
+     "ratio": 1.0997690910833486,
+     "rejection_rate": 0.058833333333333335
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.99,
+     "ratio": 1.0571856951056509,
+     "rejection_rate": 0.04766666666666667
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.8,
+     "ratio": 1.2425252132932174,
+     "rejection_rate": 0.15391666666666667
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.85,
+     "ratio": 1.2425252132932174,
+     "rejection_rate": 0.15391666666666667
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.9,
+     "ratio": 1.2432751587817805,
+     "rejection_rate": 0.15241666666666667
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.95,
+     "ratio": 1.0923021116629223,
+     "rejection_rate": 0.060333333333333336
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.99,
+     "ratio": 1.0495052439187356,
+     "rejection_rate": 0.04925
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.8,
+     "ratio": 1.2367033329937218,
+     "rejection_rate": 0.156
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.85,
+     "ratio": 1.2367033329937218,
+     "rejection_rate": 0.156
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.9,
+     "ratio": 1.2379265490397038,
+     "rejection_rate": 0.15433333333333332
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.95,
+     "ratio": 1.0903076162591734,
+     "rejection_rate": 0.06075
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.99,
+     "ratio": 1.048345227241317,
+     "rejection_rate": 0.0495
+    }
+   ]
+  },
+  "mmlu_gemma": {
+   "pairs": 35,
+   "ratio_low": 1.1749876421156698,
+   "ratio_high": 1.4390342052313883,
+   "rej_low": 0.006,
+   "rej_high": 0.16566666666666666,
+   "below_1": 0,
+   "detail": [
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.8,
+     "ratio": 1.4251938432470186,
+     "rejection_rate": 0.131
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.85,
+     "ratio": 1.4251938432470186,
+     "rejection_rate": 0.131
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.9,
+     "ratio": 1.4264519722517595,
+     "rejection_rate": 0.13
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.95,
+     "ratio": 1.4390342052313883,
+     "rejection_rate": 0.006
+    },
+    {
+     "theta_min": 0.4,
+     "theta_max": 0.99,
+     "ratio": 1.4390342052313883,
+     "rejection_rate": 0.006
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.8,
+     "ratio": 1.4308154678421159,
+     "rejection_rate": 0.132
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.85,
+     "ratio": 1.4308154678421159,
+     "rejection_rate": 0.132
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.9,
+     "ratio": 1.4321058688147297,
+     "rejection_rate": 0.131
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.95,
+     "ratio": 1.4390342052313883,
+     "rejection_rate": 0.006
+    },
+    {
+     "theta_min": 0.45,
+     "theta_max": 0.99,
+     "ratio": 1.4390342052313883,
+     "rejection_rate": 0.006
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.8,
+     "ratio": 1.3988145023455396,
+     "rejection_rate": 0.144
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.85,
+     "ratio": 1.3988145023455396,
+     "rejection_rate": 0.144
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.9,
+     "ratio": 1.3996705333241815,
+     "rejection_rate": 0.143
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.95,
+     "ratio": 1.2253275109170305,
+     "rejection_rate": 0.007666666666666666
+    },
+    {
+     "theta_min": 0.5,
+     "theta_max": 0.99,
+     "ratio": 1.2253275109170305,
+     "rejection_rate": 0.007666666666666666
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.8,
+     "ratio": 1.408376116748191,
+     "rejection_rate": 0.147
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.85,
+     "ratio": 1.408376116748191,
+     "rejection_rate": 0.147
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.9,
+     "ratio": 1.4092664092664093,
+     "rejection_rate": 0.146
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.95,
+     "ratio": 1.1749876421156698,
+     "rejection_rate": 0.008333333333333333
+    },
+    {
+     "theta_min": 0.55,
+     "theta_max": 0.99,
+     "ratio": 1.1749876421156698,
+     "rejection_rate": 0.008333333333333333
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.8,
+     "ratio": 1.3905325443786984,
+     "rejection_rate": 0.155
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.85,
+     "ratio": 1.3905325443786984,
+     "rejection_rate": 0.155
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.9,
+     "ratio": 1.3912060151402652,
+     "rejection_rate": 0.154
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.95,
+     "ratio": 1.2223980378970687,
+     "rejection_rate": 0.008666666666666666
+    },
+    {
+     "theta_min": 0.6,
+     "theta_max": 0.99,
+     "ratio": 1.2223980378970687,
+     "rejection_rate": 0.008666666666666666
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.8,
+     "ratio": 1.384230572451822,
+     "rejection_rate": 0.16233333333333333
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.85,
+     "ratio": 1.384230572451822,
+     "rejection_rate": 0.16233333333333333
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.9,
+     "ratio": 1.3847921249210533,
+     "rejection_rate": 0.16133333333333333
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.95,
+     "ratio": 1.1987891019172554,
+     "rejection_rate": 0.009
+    },
+    {
+     "theta_min": 0.65,
+     "theta_max": 0.99,
+     "ratio": 1.1987891019172554,
+     "rejection_rate": 0.009
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.8,
+     "ratio": 1.3754673200106893,
+     "rejection_rate": 0.16566666666666666
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.85,
+     "ratio": 1.3754673200106893,
+     "rejection_rate": 0.16566666666666666
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.9,
+     "ratio": 1.3759457302474063,
+     "rejection_rate": 0.16466666666666666
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.95,
+     "ratio": 1.1987891019172554,
+     "rejection_rate": 0.009
+    },
+    {
+     "theta_min": 0.7,
+     "theta_max": 0.99,
+     "ratio": 1.1987891019172554,
+     "rejection_rate": 0.009
+    }
+   ]
+  }
+ },
+ "combined_stored": {
+  "arc": {
+   "mv": 0.8805,
+   "adm": 0.8805,
+   "n": 2000
+  },
+  "mmlu_gemma": {
+   "mv": 0.814,
+   "adm": 0.814,
+   "n": 500
+  }
+ }
+}

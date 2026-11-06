@@ -1,0 +1,60 @@
+\begin{table}[p]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{5.0cm}p{5.9cm}>{\raggedright\arraybackslash}p{2.2cm}@{}}
+\toprule
+Label & Criterion & Result & Outcome \\
+\midrule
+\multicolumn{4}{l}{\textit{Not pre-registered}} \\
+P1 & Accuracy loss grows with base-model diversity; restated after the data as non-linear, with location set by tuning style (TriviaQA) & Matched reruns: Qwen Q3 $-$9.0 becomes $+$1.4, Llama Q1 $-$8.9 becomes $-$1.4, Mistral Q1 $-$13.4 becomes $-$6.9 and is reproduced by another base model; Qwen's Q1 loss under its template remains (\S\ref{sec:pred1}) & Not supported \\
+P2 & ECE higher for incoherent responses (MMLU statements) & Llama 2.21$\times$, 1.46$\times$ without both-1.0 pairs, 1.26$\times$ [0.61, 2.22] under a neutral prompt ($n=400$); Gemma reflects selection; Mistral $n_{\text{coh}}=6$ & Weak: one model, prompt-dependent \\
+P3 & Admissible more accurate than rejected (TriviaQA) & 2.98$\times$ [2.64, 3.42] & Holds (discovery set) \\
+P4 & Optimal $\tau$ varies with difficulty; restated after the data as sensitivity falling with diversity (TriviaQA, one model) & Peaks at low $\tau$ in every quartile; standard deviation falls with diversity, peak-normalized does not; retention runs opposite (\S\ref{sec:validation}) & Not supported \\
+\midrule
+\multicolumn{4}{l}{\textit{MMLU, registration osf.io/ady3k, registered scorer; prompt, retention, and tie-rule deviations}} \\
+H1a & Pooled ratio $>1$ & 1.18$\times$ [1.12, 1.25], $<10^{-10}$ & Supported \\
+H1b & Pooled ratio $\geq 1.5$ & 1.18$\times$ & Not supported \\
+H1c & Ratio $>1$ for $\geq 3$ of 4 models & 3 of 4 & Supported \\
+\midrule
+\multicolumn{4}{l}{\textit{ARC-Challenge, registration osf.io/ady3k, registered scorer; prompt, retention, and tie-rule deviations}} \\
+H2a & Pooled ratio $>1$ & 1.10$\times$ [1.06, 1.15], $7.1\times 10^{-8}$ & Supported \\
+H2b & Pooled ratio $\geq 1.5$ & 1.10$\times$ & Not supported \\
+H2c & Ratio $>1$ for $\geq 3$ of 4 models & 3 of 4 & Supported \\
+\midrule
+\multicolumn{4}{l}{\textit{MMLU and ARC-Challenge, secondary, registration osf.io/ady3k}} \\
+H3 & String admissibility beats frequency and consistency filters, rejection rates within 3 pp & MMLU 1.48$\times$ vs.\ 1.23$\times$, 1.23$\times$; rejection gap 3.9, 3.9 pp. ARC 1.54$\times$ vs.\ 1.19$\times$, 1.19$\times$; rejection gap 5.4, 5.3 pp & Not supported (rates not comparable) \\
+H4 & SE interval width correlates positively with difficulty & Spearman $\rho=-0.54$ MMLU, $-0.46$ ARC & Not supported \\
+\bottomrule
+\end{tabular}
+\caption{All hypotheses in this paper. P1--P4 are this paper's predictions and were not registered; P1 and P4 were restated after their data were seen (\S\ref{sec:validation}). H-labels follow each registration. Implications: the direction holds on free-form factual QA; the registered format test (H6) fails on NQ-Open; registered pooled size criteria are met only on TruthfulQA under substring scoring; the bin peak recurs on two registered benchmarks; the bounded-inversion criterion fails on both. Bins count correct responses among six.}
+\label{tab:hypotheses}
+\end{table}
+\begin{table}[tbp]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lp{5.0cm}p{5.9cm}>{\raggedright\arraybackslash}p{2.2cm}@{}}
+\toprule
+Label & Criterion & Result & Outcome \\
+\midrule
+\multicolumn{4}{l}{\textit{TruthfulQA, registration osf.io/dqbmg, substring scorer}} \\
+H1 & Pooled ratio $>1$, $p<0.05$ & 1.88$\times$ [1.70, 2.09], $<10^{-10}$ & Supported \\
+H2 & Pooled ratio $\geq 1.5$ & 1.88$\times$ & Supported \\
+H3 & Ratio $>1$ for $\geq 3$ of 4 models, $p<0.05$ for $\geq 2$ & 4 of 4; 4 of 4 & Supported \\
+H4 & 3--4/6 bin: lower CI $\geq 2.0$ & 2.97$\times$ [2.38, 3.89] & Supported \\
+H5 & 1--2/6 bin: lower CI $\geq 0.5$ & 0.51$\times$ [0.45, 0.59] & Not supported \\
+H6 & Pooled ratio $\geq 1.71$ & 1.88$\times$ & Supported \\
+\midrule
+\multicolumn{4}{l}{\textit{NQ-Open, registration osf.io/78pb6, substring scorer}} \\
+H1 & Pooled ratio $>1$, $p<0.05$ & 1.62$\times$ [1.49, 1.77], $<10^{-10}$ & Supported \\
+H2 & Pooled ratio $\geq 2.0$ & 1.62$\times$ & Not supported \\
+H3 & Ratio $>1$ for $\geq 3$ of 4 models, $p<0.05$ for $\geq 2$ & 4 of 4; 4 of 4 & Supported \\
+H4 & 3--4/6 bin: lower CI $\geq 2.0$ & 2.66$\times$ [2.20, 3.32] & Supported \\
+H5 & 1--2/6 bin: lower CI $\geq 0.5$ & 0.48$\times$ [0.41, 0.57] & Not supported \\
+H6 & Pooled ratio $\geq 1.71$ & 1.62$\times$ & Not supported \\
+\bottomrule
+\end{tabular}
+\caption{All hypotheses in this paper, continued from Table~\ref{tab:hypotheses}: TruthfulQA and NQ-Open registrations.}
+\label{tab:hypotheses-2}
+\end{table}

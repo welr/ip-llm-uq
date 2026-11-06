@@ -1,0 +1,200 @@
+{
+ "Llama": {
+  "questions_with_both_versions": 445,
+  "of_which_split_across_groups": 91,
+  "within_subject": {
+   "abstract_algebra": {
+    "n_coh": 28,
+    "n_inc": 70,
+    "auc_coh": 0.671875,
+    "auc_inc": 0.5
+   },
+   "anatomy": {
+    "n_coh": 87,
+    "n_inc": 17,
+    "auc_coh": 0.7859408033826638,
+    "auc_inc": 0.5
+   },
+   "astronomy": {
+    "n_coh": 100,
+    "n_inc": 17,
+    "auc_coh": 0.813,
+    "auc_inc": 0.4444444444444444
+   },
+   "business_ethics": {
+    "n_coh": 60,
+    "n_inc": 11,
+    "auc_coh": 0.6582491582491582,
+    "auc_inc": 0.42857142857142855
+   },
+   "clinical_knowledge": {
+    "n_coh": 186,
+    "n_inc": 34,
+    "auc_coh": 0.8451368666278393,
+    "auc_inc": 0.5451388888888888
+   },
+   "college_biology": {
+    "n_coh": 80,
+    "n_inc": 20,
+    "auc_coh": 0.7848655409631019,
+    "auc_inc": 0.4090909090909091
+   },
+   "college_chemistry": {
+    "n_coh": 22,
+    "n_inc": 18,
+    "auc_coh": 0.756198347107438,
+    "auc_inc": 0.4
+   },
+   "college_computer_science": {
+    "n_coh": 21,
+    "n_inc": 24,
+    "auc_coh": 0.6173469387755102,
+    "auc_inc": 0.4666666666666667
+   },
+   "college_mathematics": {
+    "n_coh": 49,
+    "n_inc": 19,
+    "auc_coh": 0.6565656565656566,
+    "auc_inc": 0.5384615384615384
+   },
+   "college_medicine": {
+    "n_coh": 92,
+    "n_inc": 27,
+    "auc_coh": 0.7383996212121212,
+    "auc_inc": 0.31785714285714284
+   },
+   "college_physics": {
+    "n_coh": 32,
+    "n_inc": 26,
+    "auc_coh": 0.7202380952380952,
+    "auc_inc": 0.4583333333333333
+   },
+   "computer_security": {
+    "n_coh": 65,
+    "n_inc": 9,
+    "auc_coh": 0.8465909090909091,
+    "auc_inc": 0.5
+   },
+   "conceptual_physics": {
+    "n_coh": 122,
+    "n_inc": 38,
+    "auc_coh": 0.7215053763440861,
+    "auc_inc": 0.5434782608695652
+   },
+   "econometrics": {
+    "n_coh": 37,
+    "n_inc": 14,
+    "auc_coh": 0.7573099415204678,
+    "auc_inc": 0.5
+   },
+   "electrical_engineering": {
+    "n_coh": 63,
+    "n_inc": 16,
+    "auc_coh": 0.6404320987654321,
+    "auc_inc": 0.5555555555555556
+   },
+   "elementary_mathematics": {
+    "n_coh": 247,
+    "n_inc": 81,
+    "auc_coh": 0.8725901639344262,
+    "auc_inc": 0.5829253365973073
+   },
+   "formal_logic": {
+    "n_coh": 7,
+    "n_inc": 22,
+    "auc_coh": 0.875,
+    "auc_inc": 0.5
+   },
+   "global_facts": {
+    "n_coh": 47,
+    "n_inc": 29,
+    "auc_coh": 0.543040293040293,
+    "auc_inc": 0.41346153846153844
+   },
+   "high_school_biology": {
+    "n_coh": 170,
+    "n_inc": 36,
+    "auc_coh": 0.8198611111111112,
+    "auc_inc": 0.5869565217391305
+   },
+   "high_school_chemistry": {
+    "n_coh": 96,
+    "n_inc": 41,
+    "auc_coh": 0.7264109347442681,
+    "auc_inc": 0.47625
+   }
+  },
+  "subjects_compared": 11,
+  "subjects_coh_better": 11,
+  "weighted_auc_gap": 0.2532367694146738
+ },
+ "Gemma": {
+  "questions_with_both_versions": 99,
+  "of_which_split_across_groups": 16,
+  "within_subject": {
+   "abstract_algebra": {
+    "n_coh": 0,
+    "n_inc": 8,
+    "auc_coh": NaN,
+    "auc_inc": 0.3333333333333333
+   },
+   "anatomy": {
+    "n_coh": 8,
+    "n_inc": 92,
+    "auc_coh": 0.5,
+    "auc_inc": 0.6033096926713948
+   },
+   "astronomy": {
+    "n_coh": 6,
+    "n_inc": 91,
+    "auc_coh": NaN,
+    "auc_inc": 0.6390503875968992
+   },
+   "business_ethics": {
+    "n_coh": 7,
+    "n_inc": 45,
+    "auc_coh": 0.5,
+    "auc_inc": 0.8005952380952381
+   },
+   "clinical_knowledge": {
+    "n_coh": 21,
+    "n_inc": 153,
+    "auc_coh": 0.5,
+    "auc_inc": 0.6070926966292135
+   },
+   "college_biology": {
+    "n_coh": 1,
+    "n_inc": 60,
+    "auc_coh": NaN,
+    "auc_inc": 0.5771531100478469
+   },
+   "college_chemistry": {
+    "n_coh": 0,
+    "n_inc": 25,
+    "auc_coh": NaN,
+    "auc_inc": 0.28525641025641024
+   },
+   "college_computer_science": {
+    "n_coh": 1,
+    "n_inc": 10,
+    "auc_coh": NaN,
+    "auc_inc": 0.54
+   },
+   "college_mathematics": {
+    "n_coh": 1,
+    "n_inc": 8,
+    "auc_coh": NaN,
+    "auc_inc": 0.5
+   },
+   "college_medicine": {
+    "n_coh": 11,
+    "n_inc": 59,
+    "auc_coh": 0.5,
+    "auc_inc": 0.6918202764976958
+   }
+  },
+  "subjects_compared": 1,
+  "subjects_coh_better": 0,
+  "weighted_auc_gap": -0.1070926966292135
+ }
+}

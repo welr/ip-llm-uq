@@ -1,0 +1,20 @@
+\begin{table}[h]
+\centering
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ccccccc}
+\toprule
+& \multicolumn{3}{c}{Llama-3.1-70B} & \multicolumn{3}{c}{Gemma-2-9B} \\
+\cmidrule(lr){2-4} \cmidrule(lr){5-7}
+Tolerance & $n_{\text{coh}}$ & $n_{\text{inc}}$ & Ratio & $n_{\text{coh}}$ & $n_{\text{inc}}$ & Ratio \\
+\midrule
+0\% & 1523 & 657 & 2.22$\times$ & 56 & 551 & 4.18$\times$ \\
+2\% & 1565 & 615 & 2.24$\times$ & 56 & 551 & 4.18$\times$ \\
+5\% & 1611 & 569 & 2.21$\times$ & 56 & 551 & 4.18$\times$ \\
+10\% & 1636 & 544 & 2.23$\times$ & 58 & 549 & 4.18$\times$ \\
+15\% & 1647 & 533 & 2.25$\times$ & 65 & 542 & 3.73$\times$ \\
+20\% & 1660 & 520 & 2.31$\times$ & 69 & 538 & 3.55$\times$ \\
+\bottomrule
+\end{tabular}
+\caption{ECE ratio (binned, 10 bins) as a function of coherence tolerance. The ratio ranges from 3.55$\times$ to 4.18$\times$ for Gemma and 2.21$\times$ to 2.31$\times$ for Llama, so it does not depend on the 5\% tolerance. This table does not address the limits in \S\ref{sec:pred2}.}
+\label{tab:pred2-robustness}
+\end{table}

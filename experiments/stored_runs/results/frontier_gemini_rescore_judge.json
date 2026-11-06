@@ -1,0 +1,2035 @@
+{
+  "rescoring": {
+    "judge_model": "claude-haiku-4-5",
+    "source": "frontier_gemini"
+  },
+  "summary": {
+    "judge_model": "claude-haiku-4-5",
+    "n_questions": 100,
+    "adm_acc": 0.7718696397941681,
+    "rej_acc": 0.9411764705882353,
+    "ratio": 0.8201114922813036,
+    "ci95": [
+      0.7461406518010292,
+      0.9622641509433963
+    ],
+    "fisher_p": 0.13866573998266352,
+    "n_adm": 583,
+    "n_rej": 17,
+    "ac": 450,
+    "rc": 16
+  },
+  "per_question": {
+    "tqa_68": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_62": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_170": {
+      "accuracies": [
+        true,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_128": {
+      "accuracies": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_135": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_195": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_102": {
+      "accuracies": [
+        false,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_114": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_69": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_262": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_180": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_33": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_255": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_64": {
+      "accuracies": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_146": {
+      "accuracies": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_251": {
+      "accuracies": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_149": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_119": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_51": {
+      "accuracies": [
+        false,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_60": {
+      "accuracies": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_280": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_274": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_125": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_234": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        2,
+        4,
+        5
+      ],
+      "rejected": [
+        1,
+        3
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_94": {
+      "accuracies": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_299": {
+      "accuracies": [
+        false,
+        true,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_314": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_209": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_331": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "rejected": [
+        0,
+        3
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_359": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "rejected": [
+        3
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_48": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_312": {
+      "accuracies": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_78": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_285": {
+      "accuracies": [
+        true,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_336": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "rejected": [
+        4,
+        5
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_423": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_290": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_269": {
+      "accuracies": [
+        true,
+        true,
+        false,
+        true,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_316": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_340": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_416": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_478": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_471": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_321": {
+      "accuracies": [
+        false,
+        false,
+        true,
+        true,
+        true,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_376": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_532": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_383": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_519": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_533": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_449": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_384": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_377": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_349": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_530": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_525": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_505": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        5
+      ],
+      "rejected": [
+        4
+      ],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_543": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_575": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_612": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_579": {
+      "accuracies": [
+        false,
+        true,
+        true,
+        false,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_626": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_562": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_369": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_351": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_597": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_647": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_618": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_406": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [
+        1
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_667": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_365": {
+      "accuracies": [
+        true,
+        false,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_583": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_651": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_709": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        2,
+        3,
+        4
+      ],
+      "rejected": [
+        1,
+        5
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_580": {
+      "accuracies": [
+        false,
+        false,
+        true,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_624": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_671": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_686": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_556": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "rejected": [
+        5
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_681": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_683": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_717": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_746": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "rejected": [
+        3
+      ],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_666": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_576": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_740": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_537": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_815": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        3,
+        4,
+        5
+      ],
+      "rejected": [
+        0,
+        1,
+        2
+      ],
+      "num_distinct_Ostar": 1
+    },
+    "tqa_730": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_620": {
+      "accuracies": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_814": {
+      "accuracies": [
+        true,
+        false,
+        true,
+        true,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_805": {
+      "accuracies": [
+        false,
+        true,
+        true,
+        false,
+        false,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_750": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_711": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_729": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_775": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 5
+    },
+    "tqa_788": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 4
+    },
+    "tqa_756": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_801": {
+      "accuracies": [
+        false,
+        true,
+        false,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 2
+    },
+    "tqa_755": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        4,
+        5
+      ],
+      "rejected": [
+        3
+      ],
+      "num_distinct_Ostar": 3
+    },
+    "tqa_786": {
+      "accuracies": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        true
+      ],
+      "admissible": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "rejected": [],
+      "num_distinct_Ostar": 3
+    }
+  }
+}

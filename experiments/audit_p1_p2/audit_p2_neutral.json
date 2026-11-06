@@ -1,0 +1,232 @@
+{
+ "subsets": {
+  "high_school_chemistry": 32,
+  "college_biology": 16,
+  "conceptual_physics": 32,
+  "college_medicine": 19,
+  "clinical_knowledge": 34,
+  "high_school_biology": 43,
+  "electrical_engineering": 15,
+  "abstract_algebra": 15,
+  "elementary_mathematics": 42,
+  "college_physics": 14,
+  "econometrics": 18,
+  "global_facts": 11,
+  "business_ethics": 16,
+  "computer_security": 12,
+  "astronomy": 18,
+  "college_mathematics": 12,
+  "college_chemistry": 8,
+  "college_computer_science": 6,
+  "formal_logic": 17,
+  "anatomy": 20
+ },
+ "original_same_statements": {
+  "label": "original",
+  "statements": 400,
+  "valid": 305,
+  "extraction": 0.7625,
+  "incoherent_share": 0.24262295081967214,
+  "both_one": 53,
+  "mean_sum": 1.0797829508196721,
+  "median_sum": 1.0,
+  "all": {
+   "n": 305,
+   "ece": 0.28692131147540983,
+   "auroc": 0.7106768145854833,
+   "mean_c": 0.6493016393442623,
+   "share_true": 0.5016393442622951
+  },
+  "coherent": {
+   "n": 231,
+   "ece": 0.20403030303030303,
+   "auroc": 0.8093698300496315,
+   "mean_c": 0.5516753246753247,
+   "share_true": 0.5281385281385281
+  },
+  "incoherent": {
+   "n": 74,
+   "ece": 0.5621621621621622,
+   "auroc": 0.47936984246061515,
+   "mean_c": 0.954054054054054,
+   "share_true": 0.4189189189189189
+  },
+  "incoherent_without_both_one": {
+   "n": 21,
+   "ece": 0.4095238095238095,
+   "auroc": 0.5454545454545454,
+   "mean_c": 0.8380952380952381,
+   "share_true": 0.5238095238095238
+  },
+  "ece_ratio": 2.7552875911705557,
+  "ece_ratio_ci": [
+   2.033408269481972,
+   3.8029885437132633
+  ],
+  "ece_ratio_without_both_one": 2.007171500710785,
+  "ece_ratio_without_both_one_ci": [
+   1.1410175770580904,
+   3.3144993638844094
+  ],
+  "auroc_coherent_minus_incoherent_ci": [
+   0.23453368395199053,
+   0.42869707348666386
+  ]
+ },
+ "neutral": {
+  "label": "neutral",
+  "statements": 400,
+  "valid": 399,
+  "extraction": 0.9975,
+  "incoherent_share": 0.05012531328320802,
+  "both_one": 16,
+  "mean_sum": 0.9719799498746867,
+  "median_sum": 1.0,
+  "all": {
+   "n": 399,
+   "ece": 0.2896992481203008,
+   "auroc": 0.70565103774059,
+   "mean_c": 0.6543609022556391,
+   "share_true": 0.5037593984962406
+  },
+  "coherent": {
+   "n": 379,
+   "ece": 0.28598944591029024,
+   "auroc": 0.7143553327763854,
+   "mean_c": 0.6382321899736149,
+   "share_true": 0.49868073878627966
+  },
+  "incoherent": {
+   "n": 20,
+   "ece": 0.36000000000000004,
+   "auroc": 0.4375,
+   "mean_c": 0.96,
+   "share_true": 0.6
+  },
+  "incoherent_without_both_one": {
+   "n": 4,
+   "ece": 0.050000000000000044,
+   "auroc": 0.5,
+   "mean_c": 0.8,
+   "share_true": 0.75
+  },
+  "ece_ratio": 1.2587877110434542,
+  "ece_ratio_ci": [
+   0.6068092641617767,
+   2.219589648225564
+  ],
+  "ece_ratio_without_both_one": 0.17483162653381323,
+  "ece_ratio_without_both_one_ci": [
+   0.0,
+   2.567323019221751
+  ],
+  "auroc_coherent_minus_incoherent_ci": [
+   0.08133550427998396,
+   0.459353524561858
+  ]
+ },
+ "original_where_neutral_parsed": {
+  "label": "original on shared",
+  "statements": 305,
+  "valid": 305,
+  "extraction": 1.0,
+  "incoherent_share": 0.24262295081967214,
+  "both_one": 53,
+  "mean_sum": 1.0797829508196721,
+  "median_sum": 1.0,
+  "all": {
+   "n": 305,
+   "ece": 0.28692131147540983,
+   "auroc": 0.7106768145854833,
+   "mean_c": 0.6493016393442623,
+   "share_true": 0.5016393442622951
+  },
+  "coherent": {
+   "n": 231,
+   "ece": 0.20403030303030303,
+   "auroc": 0.8093698300496315,
+   "mean_c": 0.5516753246753247,
+   "share_true": 0.5281385281385281
+  },
+  "incoherent": {
+   "n": 74,
+   "ece": 0.5621621621621622,
+   "auroc": 0.47936984246061515,
+   "mean_c": 0.954054054054054,
+   "share_true": 0.4189189189189189
+  },
+  "incoherent_without_both_one": {
+   "n": 21,
+   "ece": 0.4095238095238095,
+   "auroc": 0.5454545454545454,
+   "mean_c": 0.8380952380952381,
+   "share_true": 0.5238095238095238
+  },
+  "ece_ratio": 2.7552875911705557,
+  "ece_ratio_ci": [
+   2.033408269481972,
+   3.8029885437132633
+  ],
+  "ece_ratio_without_both_one": 2.007171500710785,
+  "ece_ratio_without_both_one_ci": [
+   1.1410175770580904,
+   3.3144993638844094
+  ],
+  "auroc_coherent_minus_incoherent_ci": [
+   0.23453368395199053,
+   0.42869707348666386
+  ]
+ },
+ "neutral_where_both_parsed": {
+  "label": "neutral on shared",
+  "statements": 305,
+  "valid": 305,
+  "extraction": 1.0,
+  "incoherent_share": 0.03934426229508197,
+  "both_one": 9,
+  "mean_sum": 0.9597377049180329,
+  "median_sum": 1.0,
+  "all": {
+   "n": 305,
+   "ece": 0.25636065573770495,
+   "auroc": 0.7425825593395253,
+   "mean_c": 0.6284918032786885,
+   "share_true": 0.5016393442622951
+  },
+  "coherent": {
+   "n": 293,
+   "ece": 0.2518430034129693,
+   "auroc": 0.75,
+   "mean_c": 0.6153242320819113,
+   "share_true": 0.49829351535836175
+  },
+  "incoherent": {
+   "n": 12,
+   "ece": 0.3666666666666667,
+   "auroc": 0.45714285714285713,
+   "mean_c": 0.9500000000000001,
+   "share_true": 0.5833333333333334
+  },
+  "incoherent_without_both_one": {
+   "n": 3,
+   "ece": 0.13333333333333353,
+   "auroc": 0.5,
+   "mean_c": 0.8000000000000002,
+   "share_true": 0.6666666666666666
+  },
+  "ece_ratio": 1.455933504991643,
+  "ece_ratio_ci": [
+   0.4882642877169419,
+   2.8419439890253257
+  ],
+  "ece_ratio_without_both_one": 0.5294303654515073,
+  "ece_ratio_without_both_one_ci": [
+   0.0,
+   3.41385794879213
+  ],
+  "auroc_coherent_minus_incoherent_ci": [
+   0.011799884191712878,
+   0.5493265979613646
+  ]
+ }
+}

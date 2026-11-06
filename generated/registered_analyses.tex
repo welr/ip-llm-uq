@@ -1,0 +1,32 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\begin{tabular}{lp{5.4cm}p{6.2cm}}
+\toprule
+Benchmark & Analysis & Result \\
+\midrule
+NQ-Open & AUROC for majority-vote error & KLE .729, averaged KLE .725, averaged SE .720, $1-\max$CP .710, SE(0.75) .708, SNNE .588 \\
+ & Majority-vote accuracy, all and admissible & 30.4\%, 30.6\% \\
+ & SE width as detector of the 1--2/6 bin & AUROC .474 \\
+ & Distinct largest-cluster sets across the grid & mean 1.42; one set on 65.5\% \\
+TruthfulQA & AUROC for majority-vote error & KLE .692, SE(0.75) .690, $1-\max$CP .649, SNNE .503 \\
+ & Majority-vote accuracy, all and admissible & 17.7\%, 17.6\% \\
+ & Adversarial; non-adversarial & 1.83$\times$ [1.53, 2.21]; 1.95$\times$ [1.60, 2.43] \\
+ & By category & 30 of 38 have at least 30 rejected: 0.59$\times$ to 8.13$\times$, 8 below 1 \\
+ & Matches a listed incorrect answer, rejected and admissible & 14.2\%, 28.5\% \\
+MMLU & STEM; social sciences; humanities & 1.10$\times$ [0.99, 1.22]; 1.29$\times$ [1.15, 1.47]; 1.16$\times$ [0.99, 1.39] \\
+ & Jaccard with frequency, consistency, length filters & .216, .217, .033 \\
+ & Threshold range, 35 endpoint pairs (Gemma) & 1.17$\times$ to 1.44$\times$, rejection 0.6\% to 16.6\% \\
+ & Majority vote, all and admissible (Gemma) & 81.4\%, 81.4\% \\
+ & Best of six, read as at least one correct: all, admissible & 92.5\%, 90.4\% \\
+ & Admissibility rate against difficulty & Spearman $\rho=-0.21$ [$-0.29$, $-0.13$] \\
+ARC-Challenge & Jaccard with frequency, consistency, length filters & .276, .278, .026 \\
+ & Threshold range, 35 endpoint pairs & 1.05$\times$ to 1.35$\times$, rejection 3.4\% to 15.6\% \\
+ & Majority vote, all and admissible: stored labels; recomputed from text & 88.0\%, 88.0\%; 87.1\%, 87.1\% \\
+ & Best of six, read as at least one correct: all, admissible & 96.2\%, 94.7\% \\
+ & Admissibility rate against difficulty & Spearman $\rho=-0.18$ [$-0.26$, $-0.09$] \\
+\bottomrule
+\end{tabular}
+\caption{Secondary and exploratory analyses named in the registrations, computed after the fact from stored data. Intervals resample question-model pairs, except those on Spearman correlations, which resample questions. Best of six is our reading of an analysis the MMLU/ARC form names without defining. TruthfulQA AUROCs use cached matrices that reproduce 2,964 of 3,268 partitions and are indicative. The MMLU domain assignment is ours. Jaccard values pool over question-model pairs.}
+\label{tab:registered-analyses}
+\end{table}

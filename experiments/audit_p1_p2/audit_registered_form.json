@@ -1,0 +1,79 @@
+{
+ "mmlu": {
+  "pairs": 2000,
+  "best_of_six_all": 0.925,
+  "best_of_six_admissible": 0.904,
+  "questions": 500,
+  "rate_vs_difficulty": {
+   "rho": -0.21224438900184198,
+   "p": 1.6785199676080195e-06,
+   "ci_questions": [
+    -0.2939509634737357,
+    -0.12947168069343554
+   ],
+   "mean_rate": 0.9485
+  },
+  "empty_rule": {
+   "models_with_samples": [
+    "Gemma"
+   ],
+   "pairs_checked": 500,
+   "per_model": {
+    "Gemma": {
+     "empty_in_six": 7,
+     "pairs_with_empty": 3
+    }
+   },
+   "empty_in_six": 7,
+   "pairs_with_empty": 3,
+   "ratio_as_run": 1.1749876421156698,
+   "ratio_pairs_dropped": 1.1791561399669777
+  }
+ },
+ "arc": {
+  "pairs": 2000,
+  "best_of_six_all": 0.9625,
+  "best_of_six_admissible": 0.947,
+  "questions": 500,
+  "rate_vs_difficulty": {
+   "rho": -0.17903527645258424,
+   "p": 5.6756810312914936e-05,
+   "ci_questions": [
+    -0.26422183741601596,
+    -0.09387043841458709
+   ],
+   "mean_rate": 0.947
+  },
+  "empty_rule": {
+   "models_with_samples": [
+    "Qwen",
+    "Mistral",
+    "Llama",
+    "Gemma"
+   ],
+   "pairs_checked": 2000,
+   "per_model": {
+    "Qwen": {
+     "empty_in_six": 0,
+     "pairs_with_empty": 0
+    },
+    "Mistral": {
+     "empty_in_six": 160,
+     "pairs_with_empty": 94
+    },
+    "Llama": {
+     "empty_in_six": 18,
+     "pairs_with_empty": 15
+    },
+    "Gemma": {
+     "empty_in_six": 0,
+     "pairs_with_empty": 0
+    }
+   },
+   "empty_in_six": 178,
+   "pairs_with_empty": 109,
+   "ratio_as_run": 1.1007059407565094,
+   "ratio_pairs_dropped": 1.0931525672757862
+  }
+ }
+}

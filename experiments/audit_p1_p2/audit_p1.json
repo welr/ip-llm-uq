@@ -1,0 +1,2111 @@
+{
+ "Qwen": {
+  "inst_label_mismatch": 0,
+  "base9_out_of_range": 0,
+  "table": [
+   {
+    "q": 1,
+    "n": 198,
+    "base": 96.12794612794612,
+    "inst": 94.44444444444444,
+    "delta": -1.6835016835016838,
+    "ci": [
+     -0.04141414141414141,
+     0.004040404040404037
+    ],
+    "p_one_sided": 0.0608,
+    "p_two_sided": 0.1216
+   },
+   {
+    "q": 2,
+    "n": 59,
+    "base": 71.2994350282486,
+    "inst": 71.1864406779661,
+    "delta": -0.11299435028248772,
+    "ci": [
+     -0.088135593220339,
+     0.08135593220338982
+    ],
+    "p_one_sided": 0.489,
+    "p_two_sided": 0.978
+   },
+   {
+    "q": 3,
+    "n": 121,
+    "base": 56.088154269972456,
+    "inst": 47.107438016528924,
+    "delta": -8.980716253443527,
+    "ci": [
+     -0.16363636363636364,
+     -0.0181818181818182
+    ],
+    "p_one_sided": 0.0076,
+    "p_two_sided": 0.0152
+   },
+   {
+    "q": 4,
+    "n": 122,
+    "base": 17.21311475409836,
+    "inst": 17.21311475409836,
+    "delta": 1.820037745287142e-16,
+    "ci": [
+     -0.04316939890710382,
+     0.042622950819672135
+    ],
+    "p_one_sided": 0.5052,
+    "p_two_sided": 0.991
+   }
+  ],
+  "overall": {
+   "base": 64.25333333333333,
+   "inst": 61.4
+  },
+  "scorer": [
+   {
+    "q": 1,
+    "delta_reg": -2.861952861952862,
+    "delta_wb": -2.525252525252525,
+    "inst_lost": 0.5050505050505051,
+    "base_lost": 0.8417508417508417
+   },
+   {
+    "q": 2,
+    "delta_reg": -6.779661016949152,
+    "delta_wb": -6.779661016949152,
+    "inst_lost": 1.694915254237288,
+    "base_lost": 1.694915254237288
+   },
+   {
+    "q": 3,
+    "delta_reg": -17.079889807162534,
+    "delta_wb": -16.666666666666668,
+    "inst_lost": 0.8264462809917356,
+    "base_lost": 1.2396694214876034
+   },
+   {
+    "q": 4,
+    "delta_reg": -3.1420765027322406,
+    "delta_wb": -1.9125683060109286,
+    "inst_lost": 1.639344262295082,
+    "base_lost": 2.8688524590163933
+   }
+  ],
+  "q6_n": [
+   278,
+   0,
+   125,
+   97
+  ],
+  "placebo_q6": [
+   {
+    "q": 1,
+    "n": 278,
+    "base6": 89.568345323741,
+    "base9": 82.2941646682654,
+    "inst": 82.01438848920863,
+    "placebo_base9_minus_base6": {
+     "mean": -0.07274180655475619,
+     "ci": [
+      -0.0915267785771383,
+      -0.05475619504396484
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": -0.002797761790567538,
+     "ci": [
+      -0.030775379696243,
+      0.023181454836131102
+     ],
+     "p_one_sided": 0.4309,
+     "p_two_sided": 0.8618
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.07553956834532374,
+     "ci": [
+      -0.11151079136690648,
+      -0.04316546762589928
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 2,
+    "n": 0,
+    "base6": NaN,
+    "base9": NaN,
+    "inst": NaN,
+    "placebo_base9_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "raw_inst_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 3,
+    "n": 125,
+    "base6": 53.6,
+    "base9": 46.488888888888894,
+    "inst": 45.6,
+    "placebo_base9_minus_base6": {
+     "mean": -0.07111111111111112,
+     "ci": [
+      -0.10311111111111111,
+      -0.040444444444444456
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": -0.008888888888888875,
+     "ci": [
+      -0.07022222222222221,
+      0.051555555555555556
+     ],
+     "p_one_sided": 0.3966,
+     "p_two_sided": 0.7932
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.08,
+     "ci": [
+      -0.14666666666666667,
+      -0.016000000000000007
+     ],
+     "p_one_sided": 0.0058,
+     "p_two_sided": 0.0116
+    }
+   },
+   {
+    "q": 4,
+    "n": 97,
+    "base6": 25.945017182130588,
+    "base9": 21.764032073310425,
+    "inst": 22.68041237113402,
+    "placebo_base9_minus_base6": {
+     "mean": -0.04180985108820161,
+     "ci": [
+      -0.07617411225658649,
+      -0.007445589919816727
+     ],
+     "p_one_sided": 0.0083,
+     "p_two_sided": 0.0166
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.009163802978235972,
+     "ci": [
+      -0.04467353951890034,
+      0.06414662084765178
+     ],
+     "p_one_sided": 0.6385,
+     "p_two_sided": 0.7254
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.03264604810996563,
+     "ci": [
+      -0.09106529209621991,
+      0.022336769759450176
+     ],
+     "p_one_sided": 0.1358,
+     "p_two_sided": 0.2716
+    }
+   }
+  ],
+  "paper_quartiles_inst_minus_base9": [
+   {
+    "q": 1,
+    "mean": -0.008978675645342304,
+    "ci": [
+     -0.033108866442199764,
+     0.012345679012345685
+    ],
+    "p_one_sided": 0.2401,
+    "p_two_sided": 0.4802
+   },
+   {
+    "q": 2,
+    "mean": 0.0433145009416196,
+    "ci": [
+     -0.039548022598870046,
+     0.12429378531073448
+    ],
+    "p_one_sided": 0.8593,
+    "p_two_sided": 0.2818
+   },
+   {
+    "q": 3,
+    "mean": -0.03581267217630854,
+    "ci": [
+     -0.10651974288337922,
+     0.03122130394857669
+    ],
+    "p_one_sided": 0.1601,
+    "p_two_sided": 0.3202
+   },
+   {
+    "q": 4,
+    "mean": 0.020947176684881608,
+    "ci": [
+     -0.02185792349726776,
+     0.06559653916211262
+    ],
+    "p_one_sided": 0.8225,
+    "p_two_sided": 0.3566
+   }
+  ],
+  "instruct_shape": {
+   "median_words": 2.0,
+   "max_words": 32,
+   "empty": 0,
+   "cut_at_abbrev_or_initial": 13
+  },
+  "external": [
+   {
+    "q": 1,
+    "n": 155,
+    "base": 87.95698924731181,
+    "mean": -0.034408602150537634,
+    "ci": [
+     -0.07311827956989249,
+     0.0004301075268817147
+    ],
+    "p_one_sided": 0.0256,
+    "p_two_sided": 0.0512
+   },
+   {
+    "q": 2,
+    "n": 112,
+    "base": 77.91666666666667,
+    "mean": -0.06488095238095239,
+    "ci": [
+     -0.11726190476190478,
+     -0.01785714285714286
+    ],
+    "p_one_sided": 0.0022,
+    "p_two_sided": 0.0044
+   },
+   {
+    "q": 3,
+    "n": 110,
+    "base": 59.51515151515152,
+    "mean": -0.004242424242424244,
+    "ci": [
+     -0.06969696969696969,
+     0.05939393939393939
+    ],
+    "p_one_sided": 0.4439,
+    "p_two_sided": 0.8878
+   },
+   {
+    "q": 4,
+    "n": 123,
+    "base": 26.17886178861789,
+    "mean": -0.009756097560975608,
+    "ci": [
+     -0.05907859078590785,
+     0.03794037940379404
+    ],
+    "p_one_sided": 0.3526,
+    "p_two_sided": 0.7052
+   }
+  ],
+  "q1_flips": {
+   "q1": 198,
+   "base_correct": 193,
+   "flips": 6,
+   "rate": 3.1088082901554404,
+   "examples": [
+    {
+     "q": "Which notorious murderer lived at 10 Rillington Place?",
+     "gold": [
+      "John Christie (footballer)",
+      "John Christie (disambiguation)"
+     ],
+     "value": "John Christie",
+     "resp": "Oswald Rayner",
+     "modal": "John Christie"
+    },
+    {
+     "q": "\"What English model, with her short-haired androgynous look, born Lesl",
+     "gold": [
+      "Twigy",
+      "Twiggy (model)"
+     ],
+     "value": "Twiggy",
+     "resp": "Jean Shrimpton",
+     "modal": "Twiggy"
+    },
+    {
+     "q": "Who wrote the classic ghost story The Monkey's Paw ?",
+     "gold": [
+      "William Wymark Jacobs",
+      "W W Jacobs"
+     ],
+     "value": "(W.W.) JACOBS",
+     "resp": "William Butler Yeats wrote \"The Monkey's Paw,\" but it was actually written by W",
+     "modal": "W"
+    },
+    {
+     "q": "Tomorrow marks the 109th anniversary of which great American taking th",
+     "gold": [
+      "T Ros",
+      "Feddy Roosevelt"
+     ],
+     "value": "Theodore Roosevelt",
+     "resp": "Woodrow Wilson",
+     "modal": "Theodore Roosevelt"
+    },
+    {
+     "q": "\"Which make of car is advertised under the slogan \"\"Vorsprung Durch Te",
+     "gold": [
+      "Audi Automobilwerke GmbH",
+      "AUDI"
+     ],
+     "value": "Audi",
+     "resp": "BMW",
+     "modal": "Audi"
+    },
+    {
+     "q": "What was the name of the operation whereby 1,373 U.S. citizens and 5,5",
+     "gold": [
+      "Frequent Wind",
+      "Operation Frequent Wind"
+     ],
+     "value": "Operation Frequent Wind",
+     "resp": "Operation Eagle Claw",
+     "modal": "Operation Frequent Wind"
+    }
+   ]
+  }
+ },
+ "Mistral": {
+  "inst_label_mismatch": 13,
+  "base9_out_of_range": 0,
+  "table": [
+   {
+    "q": 1,
+    "n": 207,
+    "base": 97.42351046698874,
+    "inst": 84.05797101449275,
+    "delta": -13.365539452495975,
+    "ci": [
+     -0.18260869565217389,
+     -0.08888888888888888
+    ],
+    "p_one_sided": 0.0,
+    "p_two_sided": 0.0
+   },
+   {
+    "q": 2,
+    "n": 88,
+    "base": 82.5757575757576,
+    "inst": 77.27272727272727,
+    "delta": -5.3030303030303045,
+    "ci": [
+     -0.13333333333333333,
+     0.023484848484848483
+    ],
+    "p_one_sided": 0.0876,
+    "p_two_sided": 0.1752
+   },
+   {
+    "q": 3,
+    "n": 88,
+    "base": 67.42424242424244,
+    "inst": 62.5,
+    "delta": -4.924242424242425,
+    "ci": [
+     -0.14924242424242426,
+     0.04696969696969697
+    ],
+    "p_one_sided": 0.1543,
+    "p_two_sided": 0.3086
+   },
+   {
+    "q": 4,
+    "n": 117,
+    "base": 32.13675213675214,
+    "inst": 33.33333333333333,
+    "delta": 1.1965811965811968,
+    "ci": [
+     -0.06495726495726495,
+     0.08888888888888889
+    ],
+    "p_one_sided": 0.6247,
+    "p_two_sided": 0.7506
+   }
+  ],
+  "overall": {
+   "base": 74.25333333333333,
+   "inst": 67.2
+  },
+  "scorer": [
+   {
+    "q": 1,
+    "delta_reg": -10.144927536231885,
+    "delta_wb": -10.628019323671497,
+    "inst_lost": 0.966183574879227,
+    "base_lost": 0.4830917874396135
+   },
+   {
+    "q": 2,
+    "delta_reg": -9.090909090909092,
+    "delta_wb": -10.227272727272728,
+    "inst_lost": 2.272727272727273,
+    "base_lost": 1.1363636363636365
+   },
+   {
+    "q": 3,
+    "delta_reg": -9.84848484848485,
+    "delta_wb": -7.196969696969696,
+    "inst_lost": 0.0,
+    "base_lost": 2.6515151515151514
+   },
+   {
+    "q": 4,
+    "delta_reg": -0.8547008547008539,
+    "delta_wb": -0.8547008547008539,
+    "inst_lost": 3.418803418803419,
+    "base_lost": 3.418803418803419
+   }
+  ],
+  "q6_n": [
+   314,
+   0,
+   106,
+   80
+  ],
+  "placebo_q6": [
+   {
+    "q": 1,
+    "n": 314,
+    "base6": 90.76433121019109,
+    "base9": 86.09341825902337,
+    "inst": 78.02547770700637,
+    "placebo_base9_minus_base6": {
+     "mean": -0.046709129511677286,
+     "ci": [
+      -0.06086341118188253,
+      -0.033262561924982316
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": -0.08067940552016983,
+     "ci": [
+      -0.12244338287331917,
+      -0.03998584571832979
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.12738853503184713,
+     "ci": [
+      -0.17197452229299362,
+      -0.08280254777070063
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 2,
+    "n": 0,
+    "base6": NaN,
+    "base9": NaN,
+    "inst": NaN,
+    "placebo_base9_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "raw_inst_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 3,
+    "n": 106,
+    "base6": 68.71069182389937,
+    "base9": 61.63522012578616,
+    "inst": 61.32075471698113,
+    "placebo_base9_minus_base6": {
+     "mean": -0.07075471698113207,
+     "ci": [
+      -0.11163522012578618,
+      -0.03143343815513647
+     ],
+     "p_one_sided": 0.0001,
+     "p_two_sided": 0.0002
+    },
+    "net_inst_minus_base9": {
+     "mean": -0.003144654088050302,
+     "ci": [
+      -0.07966457023060795,
+      0.07130503144654052
+     ],
+     "p_one_sided": 0.4687,
+     "p_two_sided": 0.9374
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.0738993710691824,
+     "ci": [
+      -0.15408805031446543,
+      0.004716981132075475
+     ],
+     "p_one_sided": 0.0335,
+     "p_two_sided": 0.067
+    }
+   },
+   {
+    "q": 4,
+    "n": 80,
+    "base6": 37.291666666666664,
+    "base9": 30.833333333333336,
+    "inst": 32.5,
+    "placebo_base9_minus_base6": {
+     "mean": -0.06458333333333334,
+     "ci": [
+      -0.10694444444444444,
+      -0.022916666666666675
+     ],
+     "p_one_sided": 0.0005,
+     "p_two_sided": 0.001
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.01666666666666668,
+     "ci": [
+      -0.08055555555555553,
+      0.11531249999999953
+     ],
+     "p_one_sided": 0.6404,
+     "p_two_sided": 0.721
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.04791666666666666,
+     "ci": [
+      -0.15625,
+      0.0625
+     ],
+     "p_one_sided": 0.2057,
+     "p_two_sided": 0.4114
+    }
+   }
+  ],
+  "paper_quartiles_inst_minus_base9": [
+   {
+    "q": 1,
+    "mean": -0.12936124530327428,
+    "ci": [
+     -0.1782071926999463,
+     -0.08427267847557701
+    ],
+    "p_one_sided": 0.0,
+    "p_two_sided": 0.0
+   },
+   {
+    "q": 2,
+    "mean": -0.02777777777777776,
+    "ci": [
+     -0.10353535353535354,
+     0.04419191919191922
+    ],
+    "p_one_sided": 0.2361,
+    "p_two_sided": 0.4722
+   },
+   {
+    "q": 3,
+    "mean": -0.008838383838383822,
+    "ci": [
+     -0.10606060606060605,
+     0.08459595959595961
+    ],
+    "p_one_sided": 0.4288,
+    "p_two_sided": 0.8576
+   },
+   {
+    "q": 4,
+    "mean": 0.04843304843304845,
+    "ci": [
+     -0.027540360873694197,
+     0.12535612535612536
+    ],
+    "p_one_sided": 0.8978,
+    "p_two_sided": 0.2044
+   }
+  ],
+  "instruct_shape": {
+   "median_words": 13.5,
+   "max_words": 38,
+   "empty": 0,
+   "cut_at_abbrev_or_initial": 27
+  },
+  "external": [
+   {
+    "q": 1,
+    "n": 149,
+    "base": 94.58612975391499,
+    "mean": -0.05324384787472036,
+    "ci": [
+     -0.1029082774049217,
+     -0.00626398210290828
+    ],
+    "p_one_sided": 0.0106,
+    "p_two_sided": 0.0212
+   },
+   {
+    "q": 2,
+    "n": 102,
+    "base": 90.65359477124183,
+    "mean": -0.09281045751633989,
+    "ci": [
+     -0.16928104575163402,
+     -0.018954248366013077
+    ],
+    "p_one_sided": 0.0057,
+    "p_two_sided": 0.0114
+   },
+   {
+    "q": 3,
+    "n": 131,
+    "base": 72.77353689567431,
+    "mean": -0.1246819338422392,
+    "ci": [
+     -0.2035623409669211,
+     -0.048333333333333506
+    ],
+    "p_one_sided": 0.0006,
+    "p_two_sided": 0.0012
+   },
+   {
+    "q": 4,
+    "n": 118,
+    "base": 36.045197740113004,
+    "mean": -0.01299435028248587,
+    "ci": [
+     -0.09266949152542373,
+     0.06610169491525425
+    ],
+    "p_one_sided": 0.3728,
+    "p_two_sided": 0.7456
+   }
+  ],
+  "q1_flips": {
+   "q1": 207,
+   "base_correct": 203,
+   "flips": 29,
+   "rate": 14.285714285714286,
+   "examples": [
+    {
+     "q": "Which US gangster was released from Alcatraz prison in November 1939?",
+     "gold": [
+      "Alfonse %22Scarface%22 Capone",
+      "CaPone"
+     ],
+     "value": "Al Capone",
+     "resp": "The notorious US gangster who is believed to have escaped from Alcatraz prison in November 1939 is Robert Stro",
+     "modal": "Al Capone"
+    },
+    {
+     "q": "Which enduring cartoon character was created by Bob Clampett for the 1",
+     "gold": [
+      "BUGS BUNNY",
+      "Bugs' Bunny"
+     ],
+     "value": "BUGS BUNNY",
+     "resp": "The character created by Bob Clampett for the 1938 cartoon \"Porky's Hare Hunt\" and who went on to become endur",
+     "modal": "Bugs Bunny"
+    },
+    {
+     "q": "What novel was published by Bob Dylan in 1971?",
+     "gold": [
+      "Tarantel",
+      "Theraphosidae"
+     ],
+     "value": "Tarantula",
+     "resp": "Bob Dylan did not publish a novel in 1971",
+     "modal": "Tarantula"
+    },
+    {
+     "q": "Who had an 80s No 1 hit with Hold On To The Nights?",
+     "gold": [
+      "Richard Noel Marx",
+      "Richard Marx"
+     ],
+     "value": "Richard Marx",
+     "resp": "The band 'Night Ranger' had a No",
+     "modal": "Richard Marx"
+    },
+    {
+     "q": "Colin Firth starred in the film of the famous book, Girl with a Pearl.",
+     "gold": [
+      "Stud earring",
+      "Ear cuff"
+     ],
+     "value": "Earring",
+     "resp": "I'm sorry, it seems there's a missing word in the question",
+     "modal": "Earring"
+    },
+    {
+     "q": "What was the name of John Bunyan's autobiography, written in Bedford G",
+     "gold": [
+      "Grace Abounding",
+      "GRACE ABOUNDING"
+     ],
+     "value": "GRACE ABOUNDING",
+     "resp": "Gracy Abounding to the Chief of Sinners",
+     "modal": "Grace Abounding to the Chief of Sinners"
+    },
+    {
+     "q": "The six series of which sitcom featuring Richard O'Sullivan, Paula Wil",
+     "gold": [
+      "Man About the House (film)",
+      "One for the Road (Man About the House)"
+     ],
+     "value": "Man About the House",
+     "resp": "The sitcom \"Frost in May\" featuring Richard O'Sullivan, Paula Wilcox, and Sally Thomsett was first broadcast i",
+     "modal": "Man About the House"
+    },
+    {
+     "q": "In which novel by Alan Sillitoe is 'Arthur Seaton' employed at a bicyc",
+     "gold": [
+      "Saturday Night and Sunday Morning",
+      "Saturday Night and Sunday Morning (novel)"
+     ],
+     "value": "'SATURDAY NIGHT AND SUNDAY MORNING'",
+     "resp": "The novel where 'Arthur Seaton' is employed at a bicycle factory is called \"Saturday Night and Sunday Morning\"",
+     "modal": "Saturday Night and Sunday Morning"
+    },
+    {
+     "q": "Which singer had a number 1 hit album in 2008 entitled 'Hard Candy'?",
+     "gold": [
+      "Madonna",
+      "Madonna (disambiguation)"
+     ],
+     "value": "Madonna",
+     "resp": "The singer who had a number 1 hit album in 2008 entitled 'Hard Candy' was Beyonc\u00e9",
+     "modal": "Madonna"
+    },
+    {
+     "q": "In which US state is Denali National Park?",
+     "gold": [
+      "Forty-ninth State",
+      "Arasuka"
+     ],
+     "value": "ALASKA",
+     "resp": "Denali National Park is located in the U",
+     "modal": "Alaska"
+    },
+    {
+     "q": "The documentary about the making of which 1970s groundbreaking film wa",
+     "gold": [
+      "Charlie don't surf!",
+      "Charlie doesn't surf"
+     ],
+     "value": "Apocalypse Now",
+     "resp": "The documentary \"Hearts of Darkness\" refers to the chaotic production of the groundbreaking 1970s film \"Apocal",
+     "modal": "Apocalypse Now"
+    },
+    {
+     "q": "Which British group who had most success in the 1970\u2019s were fronted by",
+     "gold": [
+      "Dr. Feel Good",
+      "Dr. Feelgood (disambiguation)"
+     ],
+     "value": "DR FEELGOOD",
+     "resp": "The British group that had the most success in the 1970s and was fronted by lead singer Lee Brilleaux was Dr",
+     "modal": "Dr Feelgood"
+    },
+    {
+     "q": "What is the name of the dog in Jerome K Jerome\u2019s \u2018Three Men in a Boat\u2019",
+     "gold": [
+      "Montmorency (disambiguation)",
+      "MONTMORENCY"
+     ],
+     "value": "MONTMORENCY",
+     "resp": "The dog in Jerome K",
+     "modal": "Montmorency"
+    },
+    {
+     "q": "By what name was Australia known before British colonisation?",
+     "gold": [
+      "Nova Hollandia",
+      "New Holland (disambiguation)"
+     ],
+     "value": "New Holland",
+     "resp": "Australia was not known by a single name before British colonization",
+     "modal": "New Holland"
+    },
+    {
+     "q": "\"What English model, with her short-haired androgynous look, born Lesl",
+     "gold": [
+      "Twigy",
+      "Twiggy (model)"
+     ],
+     "value": "Twiggy",
+     "resp": "The model you're referring to is called Jean Shrimpton",
+     "modal": "Twiggy"
+    },
+    {
+     "q": "Can you name the singer of the title track in '1995 - GoldenEye'?",
+     "gold": [
+      "Anna Bullock",
+      "Tina Turner's"
+     ],
+     "value": "Tina Turner",
+     "resp": "The singer of the title track in '1995 - GoldenEye' is Shirley Bassey",
+     "modal": "Tina Turner"
+    },
+    {
+     "q": "In what year did the five founding members of OPEC hold their first me",
+     "gold": [
+      "one thousand, nine hundred and sixty",
+      "1960"
+     ],
+     "value": "1960",
+     "resp": "The first meeting of the five founding members of OPEC (Organization of the Petroleum Exporting Countries) was",
+     "modal": "1960"
+    },
+    {
+     "q": "Jazzman Joe Venuti pioneered which instrument in jazz?",
+     "gold": [
+      "The Violin (film)",
+      "The Violin (disambiguation)"
+     ],
+     "value": "The Violin",
+     "resp": "Jazzman Joe Venuti was a pioneer of the jazz violin",
+     "modal": "Violin"
+    },
+    {
+     "q": "In Buddhism, what is the state of blissful repose or absolute existenc",
+     "gold": [
+      "Nirvana (Philosophical concept)",
+      "NIRVANA"
+     ],
+     "value": "Nirvana",
+     "resp": "In Buddhism, the state of blissful repose or absolute existence free from the necessity of rebirth is called N",
+     "modal": "Nirvana"
+    },
+    {
+     "q": "What is the more common name for atmospheric vapour frozen in a crysta",
+     "gold": [
+      "Snowflake structure",
+      "Snow Water Equivalency"
+     ],
+     "value": "Snow",
+     "resp": "The common name for atmospheric vapour frozen in a crystalline form is frost",
+     "modal": "Snow"
+    },
+    {
+     "q": "In which film did Johnny Depp play a policeman called Ichabod Crane?",
+     "gold": [
+      "Sleepy Hollow (disambiguation)",
+      "Sleepy hollow"
+     ],
+     "value": "Sleepy Hollow",
+     "resp": "Johnny Depp did not play a policeman named Ichabod Crane in any film",
+     "modal": "Sleepy Hollow"
+    },
+    {
+     "q": "Rapunzel, Mother Gothel and Paulo are all characters in which 2010 ani",
+     "gold": [
+      "Rapunzel (2010 film)",
+      "Rapunzel Unbraided"
+     ],
+     "value": "Tangled",
+     "resp": "The characters Rapunzel, Mother Gothel, and Flynn Rider (not Paulo, but a main character) are from the animate",
+     "modal": "Tangled"
+    },
+    {
+     "q": "June 2, 2004 saw the beginning of the streak in which what Edmonds, WA",
+     "gold": [
+      "Ken William Jennings III",
+      "Ken Jennings"
+     ],
+     "value": "Ken Jennings",
+     "resp": "The Edmonds, WA native who won 74 consecutive games on Jeopardy starting on June 2, 2004 is Ken Jennings",
+     "modal": "Ken Jennings"
+    },
+    {
+     "q": "Dr Paul Gachet was the subject of two famous paintings by which artist",
+     "gold": [
+      "Vincent Willem Van Gogh",
+      "Vincent van Gogh"
+     ],
+     "value": "Vincent van Gogh",
+     "resp": "Dr",
+     "modal": "Vincent Van Gogh"
+    },
+    {
+     "q": "Andrew Robson writes a daily column for The Times on what topic?",
+     "gold": [
+      "Bridges",
+      "Bridge railing styles"
+     ],
+     "value": "BRIDGE",
+     "resp": "Andrew Robson writes a daily column for The Times on chess",
+     "modal": "Bridge"
+    },
+    {
+     "q": "Although not the state capital, which is the largest city in the U.S. ",
+     "gold": [
+      "Omaha, Nebraska",
+      "Songs about Omaha"
+     ],
+     "value": "OMAHA",
+     "resp": "The largest city in the U",
+     "modal": "Omaha"
+    },
+    {
+     "q": "What name is given to the declaration of aims and policies of a politi",
+     "gold": [
+      "Political Manifesto",
+      "Election manifesto"
+     ],
+     "value": "Manifesto",
+     "resp": "The name given to the declaration of aims and policies of a political party before an election is called a \"pa",
+     "modal": "Manifesto"
+    },
+    {
+     "q": "The UK television drama series \u2018Boys From the Black Stuff\u2019 was set in ",
+     "gold": [
+      "Liverpudlian",
+      "Liverpudlians"
+     ],
+     "value": "Liverpool",
+     "resp": "The UK television drama series 'Boys from the Black Stuff' is set in Newcastle upon Tyne",
+     "modal": "Liverpool"
+    },
+    {
+     "q": "\"Which movie of 1980 used the tag-line \"\"They'll never get caught. The",
+     "gold": [
+      "Blues bros",
+      "Jake Blues"
+     ],
+     "value": "'THE BLUES BROTHERS'",
+     "resp": "The movie \"Mission Impossible\" (released in 1996, not 1980) popularized the tagline \"They'll never get caught",
+     "modal": "The Blues Brothers"
+    }
+   ]
+  }
+ },
+ "Llama": {
+  "inst_label_mismatch": 0,
+  "base9_out_of_range": 0,
+  "table": [
+   {
+    "q": 1,
+    "n": 209,
+    "base": 94.54545454545456,
+    "inst": 85.64593301435407,
+    "delta": -8.89952153110048,
+    "ci": [
+     -0.1342902711323764,
+     -0.046251993620414676
+    ],
+    "p_one_sided": 0.0,
+    "p_two_sided": 0.0
+   },
+   {
+    "q": 2,
+    "n": 76,
+    "base": 81.31578947368422,
+    "inst": 78.94736842105263,
+    "delta": -2.3684210526315796,
+    "ci": [
+     -0.10087719298245616,
+     0.04736842105263155
+    ],
+    "p_one_sided": 0.2624,
+    "p_two_sided": 0.5248
+   },
+   {
+    "q": 3,
+    "n": 98,
+    "base": 65.78231292517007,
+    "inst": 68.36734693877551,
+    "delta": 2.585034013605441,
+    "ci": [
+     -0.07755102040816327,
+     0.12925170068027209
+    ],
+    "p_one_sided": 0.6885,
+    "p_two_sided": 0.6238
+   },
+   {
+    "q": 4,
+    "n": 117,
+    "base": 30.08547008547009,
+    "inst": 35.04273504273504,
+    "delta": 4.957264957264957,
+    "ci": [
+     -0.023931623931623926,
+     0.12592592592592594
+    ],
+    "p_one_sided": 0.905,
+    "p_two_sided": 0.19
+   }
+  ],
+  "overall": {
+   "base": 71.81333333333333,
+   "inst": 69.39999999999999
+  },
+  "scorer": [
+   {
+    "q": 1,
+    "delta_reg": -9.888357256778308,
+    "delta_wb": -9.888357256778308,
+    "inst_lost": 0.9569377990430622,
+    "base_lost": 0.9569377990430622
+   },
+   {
+    "q": 2,
+    "delta_reg": -7.675438596491229,
+    "delta_wb": -7.675438596491229,
+    "inst_lost": 0.0,
+    "base_lost": 0.0
+   },
+   {
+    "q": 3,
+    "delta_reg": -6.972789115646258,
+    "delta_wb": -7.9931972789115635,
+    "inst_lost": 2.0408163265306123,
+    "base_lost": 1.0204081632653061
+   },
+   {
+    "q": 4,
+    "delta_reg": -0.4273504273504266,
+    "delta_wb": -3.1339031339031327,
+    "inst_lost": 5.128205128205128,
+    "base_lost": 2.421652421652422
+   }
+  ],
+  "q6_n": [
+   328,
+   0,
+   110,
+   62
+  ],
+  "placebo_q6": [
+   {
+    "q": 1,
+    "n": 328,
+    "base6": 88.71951219512195,
+    "base9": 80.75880758807588,
+    "inst": 77.4390243902439,
+    "placebo_base9_minus_base6": {
+     "mean": -0.07960704607046071,
+     "ci": [
+      -0.0975609756097561,
+      -0.06266937669376695
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": -0.033197831978319776,
+     "ci": [
+      -0.07418699186991869,
+      0.006775067750677519
+     ],
+     "p_one_sided": 0.0558,
+     "p_two_sided": 0.1116
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.11280487804878049,
+     "ci": [
+      -0.15853658536585366,
+      -0.06707317073170732
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 2,
+    "n": 0,
+    "base6": NaN,
+    "base9": NaN,
+    "inst": NaN,
+    "placebo_base9_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "raw_inst_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 3,
+    "n": 110,
+    "base6": 61.66666666666666,
+    "base9": 56.36363636363636,
+    "inst": 62.727272727272734,
+    "placebo_base9_minus_base6": {
+     "mean": -0.05303030303030305,
+     "ci": [
+      -0.0888888888888889,
+      -0.017676767676767687
+     ],
+     "p_one_sided": 0.0009,
+     "p_two_sided": 0.0018
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.06363636363636363,
+     "ci": [
+      -0.012121212121212114,
+      0.1404040404040404
+     ],
+     "p_one_sided": 0.9514,
+     "p_two_sided": 0.0974
+    },
+    "raw_inst_minus_base6": {
+     "mean": 0.010606060606060601,
+     "ci": [
+      -0.06818181818181818,
+      0.0893939393939394
+     ],
+     "p_one_sided": 0.608,
+     "p_two_sided": 0.7886
+    }
+   },
+   {
+    "q": 4,
+    "n": 62,
+    "base6": 35.483870967741936,
+    "base9": 28.494623655913976,
+    "inst": 38.70967741935484,
+    "placebo_base9_minus_base6": {
+     "mean": -0.06989247311827958,
+     "ci": [
+      -0.12275985663082438,
+      -0.017898745519713582
+     ],
+     "p_one_sided": 0.0034,
+     "p_two_sided": 0.0068
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.10215053763440861,
+     "ci": [
+      -0.0017921146953404883,
+      0.20788530465949823
+     ],
+     "p_one_sided": 0.9743,
+     "p_two_sided": 0.0514
+    },
+    "raw_inst_minus_base6": {
+     "mean": 0.03225806451612904,
+     "ci": [
+      -0.08064516129032256,
+      0.14516129032258066
+     ],
+     "p_one_sided": 0.7247,
+     "p_two_sided": 0.551
+    }
+   }
+  ],
+  "paper_quartiles_inst_minus_base9": [
+   {
+    "q": 1,
+    "mean": -0.08240297713981924,
+    "ci": [
+     -0.12707336523125995,
+     -0.040404040404040394
+    ],
+    "p_one_sided": 0.0,
+    "p_two_sided": 0.0
+   },
+   {
+    "q": 2,
+    "mean": 0.01169590643274855,
+    "ci": [
+     -0.06432748538011694,
+     0.08040935672514622
+    ],
+    "p_one_sided": 0.6401,
+    "p_two_sided": 0.7198
+   },
+   {
+    "q": 3,
+    "mean": 0.08956916099773245,
+    "ci": [
+     -0.00907029478458048,
+     0.18710317460317422
+    ],
+    "p_one_sided": 0.961,
+    "p_two_sided": 0.078
+   },
+   {
+    "q": 4,
+    "mean": 0.0854700854700855,
+    "ci": [
+     0.01234567901234569,
+     0.16144349477682812
+    ],
+    "p_one_sided": 0.9906,
+    "p_two_sided": 0.0188
+   }
+  ],
+  "instruct_shape": {
+   "median_words": 2.0,
+   "max_words": 34,
+   "empty": 1,
+   "cut_at_abbrev_or_initial": 21
+  },
+  "external": [
+   {
+    "q": 1,
+    "n": 149,
+    "base": 94.80984340044746,
+    "mean": -0.015212527964205823,
+    "ci": [
+     -0.0505592841163311,
+     0.016554809843400443
+    ],
+    "p_one_sided": 0.1952,
+    "p_two_sided": 0.3904
+   },
+   {
+    "q": 2,
+    "n": 103,
+    "base": 85.95469255663431,
+    "mean": 0.014239482200647247,
+    "ci": [
+     -0.058899676375404546,
+     0.08414239482200647
+    ],
+    "p_one_sided": 0.6543,
+    "p_two_sided": 0.6918
+   },
+   {
+    "q": 3,
+    "n": 131,
+    "base": 67.32824427480915,
+    "mean": -0.06259541984732823,
+    "ci": [
+     -0.14147582697201017,
+     0.01475826972010179
+    ],
+    "p_one_sided": 0.0558,
+    "p_two_sided": 0.1116
+   },
+   {
+    "q": 4,
+    "n": 117,
+    "base": 35.0997150997151,
+    "mean": -0.026210826210826217,
+    "ci": [
+     -0.11509971509971509,
+     0.06438746438746437
+    ],
+    "p_one_sided": 0.2891,
+    "p_two_sided": 0.5782
+   }
+  ],
+  "q1_flips": {
+   "q1": 209,
+   "base_correct": 200,
+   "flips": 24,
+   "rate": 12.0,
+   "examples": [
+    {
+     "q": "Which film about a submarine had as one of its stars Denzil Washington",
+     "gold": [
+      "'CRIMSON TIDE'",
+      "Crimson Tide"
+     ],
+     "value": "'CRIMSON TIDE'",
+     "resp": "The film you're referring to is \"The Hunt for Red October\"",
+     "modal": "Crimson Tide"
+    },
+    {
+     "q": "What was James Herbert\u2019s first book, published in 1974?",
+     "gold": [
+      "\ud83d\udc00",
+      "Species of rat"
+     ],
+     "value": "Rats",
+     "resp": "The Survivor",
+     "modal": "The Rats"
+    },
+    {
+     "q": "Judith Keppel was the first winner of the top prize on which UK progra",
+     "gold": [
+      "Who Wants To Be a Millionaire?"
+     ],
+     "value": "Who Wants To Be a Millionaire?",
+     "resp": "Countdown",
+     "modal": "Who Wants to Be a Millionaire?"
+    },
+    {
+     "q": "Speculation towards the end of 2007 suggested that Rupert Murdoch's Ne",
+     "gold": [
+      "Dan Nye",
+      "LinkedIn Answers"
+     ],
+     "value": "Linkedin.com",
+     "resp": "Facebook",
+     "modal": "LinkedIn"
+    },
+    {
+     "q": "Who is the current presenter of BBC Radio 4 programme Desert Island Di",
+     "gold": [
+      "Kirsty Young"
+     ],
+     "value": "Kirsty Young",
+     "resp": "Lauren Laverne",
+     "modal": "Kirsty Young"
+    },
+    {
+     "q": "What novel was published by Bob Dylan in 1971?",
+     "gold": [
+      "Tarantel",
+      "Theraphosidae"
+     ],
+     "value": "Tarantula",
+     "resp": "Tarzan Boyle",
+     "modal": "Tarantula"
+    },
+    {
+     "q": "Bedrock is the home city of which eponymous 1960s cartoon show/family,",
+     "gold": [
+      "The Flinstones",
+      "Yaba Daba Doo"
+     ],
+     "value": "The Flintstones",
+     "resp": "Fred Flintstone",
+     "modal": "The Flintstones"
+    },
+    {
+     "q": "Which Scottish newspaper features the Broons and Oor Wullie?",
+     "gold": [
+      "Sunday Post",
+      "The Sunday Post"
+     ],
+     "value": "The Sunday Post",
+     "resp": "The Daily Record",
+     "modal": "The Sunday Post"
+    },
+    {
+     "q": "Name the town in the vicinity of Versailles famous for its hard-paste ",
+     "gold": [
+      "S\u00e8vres",
+      "S\u00e8vres, France"
+     ],
+     "value": "SEVRES",
+     "resp": "Meisenthal",
+     "modal": "S\u00e8vres"
+    },
+    {
+     "q": "Kelly Jones, Richard Jones and Richard Cable founded which group",
+     "gold": [
+      "Looks Like Chaplin",
+      "Stereophonics"
+     ],
+     "value": "Stereophonics",
+     "resp": "Starsailor",
+     "modal": "Stereophonics"
+    },
+    {
+     "q": "By what nickname was English serial killer and armed robber Donald Nei",
+     "gold": [
+      "Black Panther (disambiguation)",
+      "The Black Panther"
+     ],
+     "value": "The Black Panther",
+     "resp": "The Killer with the Acid Smile",
+     "modal": "The Black Panther"
+    },
+    {
+     "q": "What is the name of a calculating machine that originally consisted of",
+     "gold": [
+      "Abacus Calculation",
+      "Russian abacus"
+     ],
+     "value": "Abacus",
+     "resp": "A counting board",
+     "modal": "abacus"
+    },
+    {
+     "q": "Red Grant was a villain in which James Bond movie?",
+     "gold": [
+      "From Russia With Love (album)",
+      "From Russia with Love (album)"
+     ],
+     "value": "From Russia With Love",
+     "resp": "Diamonds Are Forever (1971)",
+     "modal": "From Russia with Love"
+    },
+    {
+     "q": "Who designed the Adidas sportswear for the British Olympic and Paralym",
+     "gold": [
+      "Stella Nina McCartney",
+      "Alasdhair Willis"
+     ],
+     "value": "Stella McCartney",
+     "resp": "Adidas did not just design the sportswear for the British teams",
+     "modal": "Stella McCartney"
+    },
+    {
+     "q": "Joe Gargery is a character in which Charles Dickens novel?",
+     "gold": [
+      "Herbert Pocket",
+      "Great Expectation"
+     ],
+     "value": "Great Expectations",
+     "resp": "David Copperfield",
+     "modal": "Great Expectations"
+    },
+    {
+     "q": "Which British group who had most success in the 1970\u2019s were fronted by",
+     "gold": [
+      "Dr. Feel Good",
+      "Dr. Feelgood (disambiguation)"
+     ],
+     "value": "DR FEELGOOD",
+     "resp": "The Answer: Dr",
+     "modal": "Dr"
+    },
+    {
+     "q": "Can you name the singer of the title track in '1995 - GoldenEye'?",
+     "gold": [
+      "Anna Bullock",
+      "Tina Turner's"
+     ],
+     "value": "Tina Turner",
+     "resp": "Tin Tin Out - \"Here's to Another One\"",
+     "modal": "Tina Turner"
+    },
+    {
+     "q": "In which county is the polo venue of Cowdray Park?",
+     "gold": [
+      "West sussex",
+      "West Sussex"
+     ],
+     "value": "(West) Sussex",
+     "resp": "Mid Sussex",
+     "modal": "West Sussex"
+    },
+    {
+     "q": "Who plays Dr Nikki Alexander in the BBC\u2019s crime drama Silent Witness?",
+     "gold": [
+      "Rose Gilley",
+      "Emilia Fox"
+     ],
+     "value": "Emilia Fox",
+     "resp": "Amanda Burton",
+     "modal": "Emilia Fox"
+    },
+    {
+     "q": "Kelly Jones, Richard Jones and Richard Cable founded which group",
+     "gold": [
+      "Looks Like Chaplin",
+      "Stereophonics"
+     ],
+     "value": "Stereophonics",
+     "resp": "Manic Street Preachers",
+     "modal": "Stereophonics"
+    },
+    {
+     "q": "There were three major sieges in the Boer War \u2013 Mafeking, Kimberley an",
+     "gold": [
+      "Ladysmith",
+      "Ladysmith (disambiguation)"
+     ],
+     "value": "Ladysmith",
+     "resp": "Middelburg",
+     "modal": "Ladysmith"
+    },
+    {
+     "q": "There are two forms of classical Japanese theatre, 'Noh' is mostly spo",
+     "gold": [
+      "\u6b4c\u821e\u4f0e",
+      "Kabuky"
+     ],
+     "value": "Kabuki",
+     "resp": "Kyogen",
+     "modal": "Kabuki"
+    },
+    {
+     "q": "What stone was used to decipher Ancient Egyptian hieroglyphics?",
+     "gold": [
+      "Stone of Rosetta",
+      "Pierre de Rosette"
+     ],
+     "value": "Rosetta Stone",
+     "resp": "Rhind Papyrus",
+     "modal": "Rosetta Stone"
+    },
+    {
+     "q": "How many characters are there in the Russian Cyrillic alphabet?",
+     "gold": [
+      "33",
+      "thirty-three"
+     ],
+     "value": "33",
+     "resp": "35",
+     "modal": "33"
+    }
+   ]
+  }
+ },
+ "Gemma": {
+  "inst_label_mismatch": 0,
+  "base9_out_of_range": 0,
+  "table": [
+   {
+    "q": 1,
+    "n": 217,
+    "base": 95.85253456221197,
+    "inst": 95.39170506912443,
+    "delta": -0.4608294930875578,
+    "ci": [
+     -0.023655913978494626,
+     0.011059907834101377
+    ],
+    "p_one_sided": 0.315,
+    "p_two_sided": 0.63
+   },
+   {
+    "q": 2,
+    "n": 87,
+    "base": 77.77777777777777,
+    "inst": 81.60919540229885,
+    "delta": 3.831417624521072,
+    "ci": [
+     -0.0314176245210728,
+     0.10651340996168582
+    ],
+    "p_one_sided": 0.8581,
+    "p_two_sided": 0.2838
+   },
+   {
+    "q": 3,
+    "n": 100,
+    "base": 68.06666666666666,
+    "inst": 72.0,
+    "delta": 3.933333333333333,
+    "ci": [
+     -0.024666666666666667,
+     0.10266666666666667
+    ],
+    "p_one_sided": 0.8884,
+    "p_two_sided": 0.2234
+   },
+   {
+    "q": 4,
+    "n": 96,
+    "base": 32.5,
+    "inst": 38.54166666666667,
+    "delta": 6.041666666666668,
+    "ci": [
+     -0.03055555555555554,
+     0.15208333333333332
+    ],
+    "p_one_sided": 0.8999,
+    "p_two_sided": 0.2004
+   }
+  ],
+  "overall": {
+   "base": 74.98666666666666,
+   "inst": 77.4
+  },
+  "scorer": [
+   {
+    "q": 1,
+    "delta_reg": -1.7665130568356378,
+    "delta_wb": -1.7665130568356378,
+    "inst_lost": 0.9216589861751152,
+    "base_lost": 0.9216589861751152
+   },
+   {
+    "q": 2,
+    "delta_reg": -2.2988505747126435,
+    "delta_wb": -5.747126436781609,
+    "inst_lost": 4.597701149425287,
+    "base_lost": 1.1494252873563218
+   },
+   {
+    "q": 3,
+    "delta_reg": -0.8333333333333329,
+    "delta_wb": -1.6666666666666667,
+    "inst_lost": 2.0,
+    "base_lost": 1.1666666666666665
+   },
+   {
+    "q": 4,
+    "delta_reg": -0.5208333333333319,
+    "delta_wb": -0.8680555555555544,
+    "inst_lost": 2.083333333333333,
+    "base_lost": 1.7361111111111112
+   }
+  ],
+  "q6_n": [
+   315,
+   0,
+   121,
+   64
+  ],
+  "placebo_q6": [
+   {
+    "q": 1,
+    "n": 315,
+    "base6": 91.11111111111111,
+    "base9": 84.55026455026456,
+    "inst": 86.98412698412699,
+    "placebo_base9_minus_base6": {
+     "mean": -0.0656084656084656,
+     "ci": [
+      -0.08324514991181658,
+      -0.049029982363315704
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.024338624338624344,
+     "ci": [
+      0.0014109347442680875,
+      0.04620811287477955
+     ],
+     "p_one_sided": 0.983,
+     "p_two_sided": 0.034
+    },
+    "raw_inst_minus_base6": {
+     "mean": -0.04126984126984127,
+     "ci": [
+      -0.06984126984126984,
+      -0.015873015873015872
+     ],
+     "p_one_sided": 0.0007,
+     "p_two_sided": 0.0014
+    }
+   },
+   {
+    "q": 2,
+    "n": 0,
+    "base6": NaN,
+    "base9": NaN,
+    "inst": NaN,
+    "placebo_base9_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "net_inst_minus_base9": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    },
+    "raw_inst_minus_base6": {
+     "mean": NaN,
+     "ci": [
+      NaN,
+      NaN
+     ],
+     "p_one_sided": 0.0,
+     "p_two_sided": 0.0
+    }
+   },
+   {
+    "q": 3,
+    "n": 121,
+    "base6": 65.84022038567493,
+    "base9": 60.78971533516988,
+    "inst": 66.11570247933885,
+    "placebo_base9_minus_base6": {
+     "mean": -0.05050505050505052,
+     "ci": [
+      -0.08677685950413223,
+      -0.01652892561983472
+     ],
+     "p_one_sided": 0.002,
+     "p_two_sided": 0.004
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.05325987144168962,
+     "ci": [
+      -0.012855831037649219,
+      0.12029384756657484
+     ],
+     "p_one_sided": 0.9443,
+     "p_two_sided": 0.1114
+    },
+    "raw_inst_minus_base6": {
+     "mean": 0.002754820936639116,
+     "ci": [
+      -0.0743801652892562,
+      0.07988980716253442
+     ],
+     "p_one_sided": 0.532,
+     "p_two_sided": 0.941
+    }
+   },
+   {
+    "q": 4,
+    "n": 64,
+    "base6": 42.96875000000001,
+    "base9": 34.72222222222222,
+    "inst": 51.5625,
+    "placebo_base9_minus_base6": {
+     "mean": -0.08246527777777779,
+     "ci": [
+      -0.13368055555555558,
+      -0.03298611111111111
+     ],
+     "p_one_sided": 0.0005,
+     "p_two_sided": 0.001
+    },
+    "net_inst_minus_base9": {
+     "mean": 0.1684027777777778,
+     "ci": [
+      0.06770833333333334,
+      0.2690972222222222
+     ],
+     "p_one_sided": 0.9997,
+     "p_two_sided": 0.0006
+    },
+    "raw_inst_minus_base6": {
+     "mean": 0.08593750000000001,
+     "ci": [
+      -0.028645833333333322,
+      0.20052083333333334
+     ],
+     "p_one_sided": 0.9353,
+     "p_two_sided": 0.131
+    }
+   }
+  ],
+  "paper_quartiles_inst_minus_base9": [
+   {
+    "q": 1,
+    "mean": 0.004096262160778296,
+    "ci": [
+     -0.01536098310291858,
+     0.02048131080389146
+    ],
+    "p_one_sided": 0.6963,
+    "p_two_sided": 0.6074
+   },
+   {
+    "q": 2,
+    "mean": 0.07918263090676886,
+    "ci": [
+     0.008939974457215852,
+     0.1494252873563218
+    ],
+    "p_one_sided": 0.9868,
+    "p_two_sided": 0.0264
+   },
+   {
+    "q": 3,
+    "mean": 0.07111111111111112,
+    "ci": [
+     0.011111111111111125,
+     0.13111111111111112
+    ],
+    "p_one_sided": 0.9896,
+    "p_two_sided": 0.0208
+   },
+   {
+    "q": 4,
+    "mean": 0.10416666666666667,
+    "ci": [
+     0.017361111111111115,
+     0.1909722222222222
+    ],
+    "p_one_sided": 0.9914,
+    "p_two_sided": 0.0174
+   }
+  ],
+  "instruct_shape": {
+   "median_words": 2.0,
+   "max_words": 13,
+   "empty": 0,
+   "cut_at_abbrev_or_initial": 14
+  },
+  "external": [
+   {
+    "q": 1,
+    "n": 146,
+    "base": 96.34703196347031,
+    "mean": 0.015981735159817347,
+    "ci": [
+     0.005022831050228308,
+     0.025114155251141548
+    ],
+    "p_one_sided": 0.9972,
+    "p_two_sided": 0.0056
+   },
+   {
+    "q": 2,
+    "n": 104,
+    "base": 91.73076923076924,
+    "mean": 0.015384615384615382,
+    "ci": [
+     -0.027564102564102574,
+     0.05833333333333331
+    ],
+    "p_one_sided": 0.7616,
+    "p_two_sided": 0.477
+   },
+   {
+    "q": 3,
+    "n": 136,
+    "base": 73.48039215686275,
+    "mean": 0.007843137254901962,
+    "ci": [
+     -0.05147058823529412,
+     0.06519607843137255
+    ],
+    "p_one_sided": 0.6065,
+    "p_two_sided": 0.7904
+   },
+   {
+    "q": 4,
+    "n": 114,
+    "base": 34.15204678362573,
+    "mean": 0.06198830409356726,
+    "ci": [
+     -0.01697368421052632,
+     0.1409356725146199
+    ],
+    "p_one_sided": 0.9374,
+    "p_two_sided": 0.1256
+   }
+  ],
+  "q1_flips": {
+   "q1": 217,
+   "base_correct": 211,
+   "flips": 4,
+   "rate": 1.8957345971563981,
+   "examples": [
+    {
+     "q": "Which member of Led Zeppelin appeared at Glastonbury this year with hi",
+     "gold": [
+      "Karac Plant",
+      "Rob Plant"
+     ],
+     "value": "Robert Plant",
+     "resp": "Jason Bonham",
+     "modal": "Robert Plant"
+    },
+    {
+     "q": "Who is the current presenter of BBC Radio 4 programme Desert Island Di",
+     "gold": [
+      "Kirsty Young"
+     ],
+     "value": "Kirsty Young",
+     "resp": "Lauren Laverne",
+     "modal": "Kirsty Young"
+    },
+    {
+     "q": "By what nickname was English serial killer and armed robber Donald Nei",
+     "gold": [
+      "Black Panther (disambiguation)",
+      "The Black Panther"
+     ],
+     "value": "The Black Panther",
+     "resp": "The Black Baas",
+     "modal": "The Black Panther"
+    },
+    {
+     "q": "Which former cabinet minister was debarred from Parliament because of ",
+     "gold": [
+      "Woolas",
+      "Philip James Woolas"
+     ],
+     "value": "PHIL WOOLAS",
+     "resp": "Eric Illsley",
+     "modal": "Phil Woolas"
+    }
+   ]
+  }
+ },
+ "holm": [
+  {
+   "model": "Llama",
+   "q": 1,
+   "p": 0.0,
+   "holm_threshold": 0.003125,
+   "reject": true
+  },
+  {
+   "model": "Mistral",
+   "q": 1,
+   "p": 0.0,
+   "holm_threshold": 0.0033333333333333335,
+   "reject": true
+  },
+  {
+   "model": "Qwen",
+   "q": 3,
+   "p": 0.0152,
+   "holm_threshold": 0.0035714285714285718,
+   "reject": false
+  },
+  {
+   "model": "Qwen",
+   "q": 1,
+   "p": 0.1216,
+   "holm_threshold": 0.0038461538461538464,
+   "reject": false
+  },
+  {
+   "model": "Mistral",
+   "q": 2,
+   "p": 0.1752,
+   "holm_threshold": 0.004166666666666667,
+   "reject": false
+  },
+  {
+   "model": "Llama",
+   "q": 4,
+   "p": 0.19,
+   "holm_threshold": 0.004545454545454546,
+   "reject": false
+  },
+  {
+   "model": "Gemma",
+   "q": 4,
+   "p": 0.2004,
+   "holm_threshold": 0.005,
+   "reject": false
+  },
+  {
+   "model": "Gemma",
+   "q": 3,
+   "p": 0.2234,
+   "holm_threshold": 0.005555555555555556,
+   "reject": false
+  },
+  {
+   "model": "Gemma",
+   "q": 2,
+   "p": 0.2838,
+   "holm_threshold": 0.00625,
+   "reject": false
+  },
+  {
+   "model": "Mistral",
+   "q": 3,
+   "p": 0.3086,
+   "holm_threshold": 0.0071428571428571435,
+   "reject": false
+  },
+  {
+   "model": "Llama",
+   "q": 2,
+   "p": 0.5248,
+   "holm_threshold": 0.008333333333333333,
+   "reject": false
+  },
+  {
+   "model": "Llama",
+   "q": 3,
+   "p": 0.6238,
+   "holm_threshold": 0.01,
+   "reject": false
+  },
+  {
+   "model": "Gemma",
+   "q": 1,
+   "p": 0.63,
+   "holm_threshold": 0.0125,
+   "reject": false
+  },
+  {
+   "model": "Mistral",
+   "q": 4,
+   "p": 0.7506,
+   "holm_threshold": 0.016666666666666666,
+   "reject": false
+  },
+  {
+   "model": "Qwen",
+   "q": 2,
+   "p": 0.978,
+   "holm_threshold": 0.025,
+   "reject": false
+  },
+  {
+   "model": "Qwen",
+   "q": 4,
+   "p": 0.991,
+   "holm_threshold": 0.05,
+   "reject": false
+  }
+ ]
+}

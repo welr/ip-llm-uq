@@ -1,0 +1,18 @@
+\begin{table}[h]
+\centering
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lcccc}
+\toprule
+Benchmark & In stratum & Admissibility & Plurality at $\theta=0.75$ & $n_{\text{rej}}$ adm.\ / plur. \\
+\midrule
+TriviaQA & 16.4\% & 2.13$\times$ [1.43, 3.94] & 1.59$\times$ & 52 / 467 \\
+ARC-Challenge & 41.1\% & 1.00$\times$ [0.93, 1.08] & 1.03$\times$ & 154 / 1530 \\
+MMLU (Gemma) & 50.6\% & 1.10$\times$ [0.76, 2.72] & 1.17$\times$ & 8 / 518 \\
+TruthfulQA$^\dagger$ & 37.7\% & 2.14$\times$ [1.72, 2.75] & 1.75$\times$ & 1042 / --- \\
+NQ-Open & 34.5\% & 1.34$\times$ [1.13, 1.62] & 1.39$\times$ & 511 / --- \\
+\bottomrule
+\end{tabular}
+\caption{Post hoc: questions where the argmax cluster changes with $\theta$. Off this stratum, admissibility and plurality at $\theta=0.75$ coincide. The two columns compare different operating points, since rejected pools differ in size. $^\dagger$Computed on rebuilt similarity matrices that do not reproduce the registered partition (pooled ratio 1.72$\times$ rather than 1.88$\times$).}
+\label{tab:multi-argmax}
+\end{table}
