@@ -1,0 +1,79 @@
+{
+ "triviaqa": {
+  "models": [
+   "Gemma",
+   "Llama",
+   "Mistral",
+   "Qwen"
+  ],
+  "question_model_pairs": 2000,
+  "share_scores_055_085": 0.029466666666666665,
+  "share_scores_049_050": 0.0048,
+  "share_scores_050_051": 0.0022,
+  "share_scores_ge_095": 0.5238333333333334,
+  "share_one_clustering_over_grid": 0.5715,
+  "share_all_singletons_at_095": 0.32,
+  "spearman_width_vs_se_min": -0.07296517010149346
+ },
+ "nq_open": {
+  "models": [
+   "Gemma",
+   "Llama",
+   "Mistral",
+   "Qwen"
+  ],
+  "question_model_pairs": 2000,
+  "share_scores_055_085": 0.029266666666666667,
+  "share_scores_049_050": 0.0415,
+  "share_scores_050_051": 0.0116,
+  "share_scores_ge_095": 0.25716666666666665,
+  "share_one_clustering_over_grid": 0.593,
+  "share_all_singletons_at_095": 0.3135,
+  "spearman_width_vs_se_min": -0.28893422629540305
+ },
+ "truthfulqa": {
+  "models": [
+   "Gemma",
+   "Llama",
+   "Mistral",
+   "Qwen"
+  ],
+  "question_model_pairs": 3268,
+  "share_scores_055_085": 0.03788249694002448,
+  "share_scores_049_050": 0.0390452876376989,
+  "share_scores_050_051": 0.009118727050183599,
+  "share_scores_ge_095": 0.2456956344349245,
+  "share_one_clustering_over_grid": 0.5526315789473685,
+  "share_all_singletons_at_095": 0.2689718482252142,
+  "spearman_width_vs_se_min": -0.3552325815317788
+ },
+ "arc": {
+  "models": [
+   "Gemma",
+   "Llama",
+   "Mistral",
+   "Qwen"
+  ],
+  "question_model_pairs": 2000,
+  "share_scores_055_085": 0.10066666666666667,
+  "share_scores_049_050": 0.0081,
+  "share_scores_050_051": 0.0014333333333333333,
+  "share_scores_ge_095": 0.06236666666666667,
+  "share_one_clustering_over_grid": 0.1125,
+  "share_all_singletons_at_095": 0.784,
+  "spearman_width_vs_se_min": -0.8942502336532677
+ },
+ "mmlu": {
+  "models": [
+   "Gemma"
+  ],
+  "question_model_pairs": 500,
+  "share_scores_055_085": 0.14133333333333334,
+  "share_scores_049_050": 0.0004,
+  "share_scores_050_051": 0.0024,
+  "share_scores_ge_095": 0.004533333333333334,
+  "share_one_clustering_over_grid": 0.012,
+  "share_all_singletons_at_095": 0.968,
+  "spearman_width_vs_se_min": -0.9900732911680731
+ }
+}

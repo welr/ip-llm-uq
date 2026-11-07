@@ -1,0 +1,128 @@
+{
+ "triviaqa": {
+  "responses": 12000,
+  "question_model_pairs": 2000,
+  "ratio_gamma_maximax": 3.149867642192728,
+  "ratio_gamma_maximin": 1.9987353285911993,
+  "ratio_csem": 2.978059396130759,
+  "rejection_gamma_maximax": 0.07799999999999996,
+  "rejection_gamma_maximin": 0.08383333333333332,
+  "log_ratio_maximax_minus_maximin": [
+   0.45484578875622705,
+   0.3352280546946172,
+   0.5781416118107299
+  ],
+  "auroc_one_threshold": 0.7788637301360004,
+  "auroc_profile": 0.7855939274509576,
+  "auroc_gain": [
+   0.006730197314957165,
+   -0.010063484385901522,
+   0.02277999775753904
+  ]
+ },
+ "nq_open": {
+  "responses": 12000,
+  "question_model_pairs": 2000,
+  "ratio_gamma_maximax": 1.8577854800172413,
+  "ratio_gamma_maximin": 1.435293556509304,
+  "ratio_csem": 1.6154299868365245,
+  "rejection_gamma_maximax": 0.27475000000000005,
+  "rejection_gamma_maximin": 0.2579166666666667,
+  "log_ratio_maximax_minus_maximin": [
+   0.25801577896780564,
+   0.17666529262965391,
+   0.3410644480200187
+  ],
+  "auroc_one_threshold": 0.7101650711235322,
+  "auroc_profile": 0.7063558954932939,
+  "auroc_gain": [
+   -0.003809175630238304,
+   -0.012296652086781514,
+   0.003911172617861851
+  ]
+ },
+ "truthfulqa": {
+  "responses": 19608,
+  "question_model_pairs": 3268,
+  "ratio_gamma_maximax": 1.8116014112203758,
+  "ratio_gamma_maximin": 1.5675403009517221,
+  "ratio_csem": 1.7187373941105284,
+  "rejection_gamma_maximax": 0.2922786617707058,
+  "rejection_gamma_maximin": 0.2951856385148919,
+  "log_ratio_maximax_minus_maximin": [
+   0.1447035081603124,
+   0.049067865445489973,
+   0.24350224082172134
+  ],
+  "auroc_one_threshold": 0.7028794689991481,
+  "auroc_profile": 0.7001683776003477,
+  "auroc_gain": [
+   -0.002711091398800436,
+   -0.009750573776696938,
+   0.004176936721605007
+  ]
+ },
+ "truthfulqa_judge": {
+  "responses": 19608,
+  "question_model_pairs": 3268,
+  "ratio_gamma_maximax": 1.0649066835196093,
+  "ratio_gamma_maximin": 0.973819679444632,
+  "ratio_csem": 1.0435520808655137,
+  "rejection_gamma_maximax": 0.2922786617707058,
+  "rejection_gamma_maximin": 0.2951856385148919,
+  "log_ratio_maximax_minus_maximin": [
+   0.0894163007335295,
+   0.03038392394919074,
+   0.15032573134080465
+  ],
+  "auroc_one_threshold": 0.5581595010090663,
+  "auroc_profile": 0.5583635581531304,
+  "auroc_gain": [
+   0.00020405714406412923,
+   -0.010400487013386367,
+   0.011469335848251584
+  ]
+ },
+ "arc": {
+  "responses": 12000,
+  "question_model_pairs": 2000,
+  "ratio_gamma_maximax": 1.2449577016598319,
+  "ratio_gamma_maximin": 1.063551196502688,
+  "ratio_csem": 1.119368641709285,
+  "rejection_gamma_maximax": 0.15766666666666662,
+  "rejection_gamma_maximin": 0.0964166666666667,
+  "log_ratio_maximax_minus_maximin": [
+   0.15748806063381238,
+   0.11326494819537557,
+   0.2024770362041945
+  ],
+  "auroc_one_threshold": 0.7369772011121408,
+  "auroc_profile": 0.7407618016682113,
+  "auroc_gain": [
+   0.0037846005560704388,
+   -0.013802144840072047,
+   0.019465672767722493
+  ]
+ },
+ "mmlu": {
+  "responses": 3000,
+  "question_model_pairs": 500,
+  "ratio_gamma_maximax": 1.3745179305820039,
+  "ratio_gamma_maximin": 1.385691780187193,
+  "ratio_csem": 1.2253275109170305,
+  "rejection_gamma_maximax": 0.16400000000000003,
+  "rejection_gamma_maximin": 0.019000000000000017,
+  "log_ratio_maximax_minus_maximin": [
+   -0.00809642151506157,
+   -0.47734481861355627,
+   0.30234181201762395
+  ],
+  "auroc_one_threshold": 0.7450153849971464,
+  "auroc_profile": 0.7449150930130607,
+  "auroc_gain": [
+   -0.00010029198408567641,
+   -0.017558728949963184,
+   0.015307372219563044
+  ]
+ }
+}

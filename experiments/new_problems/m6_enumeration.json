@@ -1,0 +1,91 @@
+{
+ "M=3": {
+  "M": 3,
+  "partitions": 5,
+  "chains": 15,
+  "csem_ne_max": 0,
+  "first_counterexample": null
+ },
+ "M=4": {
+  "M": 4,
+  "partitions": 15,
+  "chains": 127,
+  "csem_ne_max": 0,
+  "first_counterexample": null
+ },
+ "M=5": {
+  "M": 5,
+  "partitions": 52,
+  "chains": 1743,
+  "csem_ne_max": 0,
+  "first_counterexample": null
+ },
+ "M=6": {
+  "M": 6,
+  "partitions": 203,
+  "chains": 36047,
+  "csem_ne_max": 0,
+  "first_counterexample": null
+ },
+ "M=7": {
+  "M": 7,
+  "partitions": 877,
+  "chains": null,
+  "csem_ne_max": 1,
+  "first_counterexample": {
+   "clusterings_finest_first": [
+    [
+     [
+      0
+     ],
+     [
+      1
+     ],
+     [
+      2
+     ],
+     [
+      3
+     ],
+     [
+      4
+     ],
+     [
+      5,
+      6
+     ]
+    ],
+    [
+     [
+      0,
+      1,
+      2,
+      3
+     ],
+     [
+      4,
+      5,
+      6
+     ]
+    ]
+   ],
+   "C_sem": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    6
+   ],
+   "Max": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ }
+}

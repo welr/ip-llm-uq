@@ -1,4 +1,4 @@
-# LLM Uncertainty Methods as Imprecise Probabilities: code and data
+# Code and data for "Does Threshold Imprecision in Semantic Entropy Carry Information? A Credal-Set Analysis"
 
 Code and stored runs behind the paper's empirical results.
 
@@ -16,7 +16,7 @@ pip install -r requirements.txt
 These need model weights or API access, and regenerate the inputs rather than the analyses:
 
 - `experiments/stored_runs/run_preregistered.py` and `frontier_*_run*.py`: the registered and frontier-model runs.
-- `experiments/audit_p1_p2/regen_base.py`, `regen_instruct.py`, `neutral_prompt_test.py`, `rerun_p4_template.py`: the local reruns. Their outputs are in `regen/` and beside the scripts.
+- `experiments/audit_p1_p2/regen_base.py`, `regen_instruct.py`, `neutral_prompt_test.py`, `rerun_p4_template.py`, `measure_logit_width.py`: the local reruns. Their outputs are in `regen/` and beside the scripts.
 
 `experiments/triviaqa_rescore/` regenerates `results_full/` from the stored runs through a sandbox (`make_sandbox.py`, `run_sandbox.sh`, `collect_full.py`). It takes longer, so `reproduce.sh` leaves it out.
 

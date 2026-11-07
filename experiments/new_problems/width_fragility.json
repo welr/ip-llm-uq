@@ -1,0 +1,41 @@
+{
+ "Qwen": {
+  "pairs": 817,
+  "auroc_stored": 0.50703974149146,
+  "auroc_recomputed": 0.523411599311763,
+  "share_se095_differs": 0.06487148102815178,
+  "share_se050_differs": 0.04773561811505508,
+  "share_scores_within_002_of_095": 0.09685842513259894
+ },
+ "Mistral": {
+  "pairs": 817,
+  "auroc_stored": 0.3008708561910452,
+  "auroc_recomputed": 0.4299512972317274,
+  "share_se095_differs": 0.2141982864137087,
+  "share_se050_differs": 0.037943696450428395,
+  "share_scores_within_002_of_095": 0.10273357813137494
+ },
+ "Llama": {
+  "pairs": 817,
+  "auroc_stored": 0.48634923011654313,
+  "auroc_recomputed": 0.5178682837962616,
+  "share_se095_differs": 0.07588739290085679,
+  "share_se050_differs": 0.03182374541003672,
+  "share_scores_within_002_of_095": 0.07352101183190535
+ },
+ "Gemma": {
+  "pairs": 817,
+  "auroc_stored": 0.30416272934876765,
+  "auroc_recomputed": 0.5027462792345854,
+  "share_se095_differs": 0.193390452876377,
+  "share_se050_differs": 0.046511627906976744,
+  "share_scores_within_002_of_095": 0.10493676050591595
+ },
+ "pooled": {
+  "pairs": 3268,
+  "auroc_stored": 0.38420938371706903,
+  "auroc_recomputed": 0.48817128055128967,
+  "share_se095_differs": 0.13708690330477355,
+  "share_se050_differs": 0.04100367197062423
+ }
+}
